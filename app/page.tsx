@@ -67,8 +67,8 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-b border-hairline/50">
         <div className="mx-auto max-w-content px-4 py-24 text-center sm:px-6 md:py-32 lg:px-8">
           <FadeIn>
-            <Logo variant="mark" className="mx-auto h-24 w-auto" />
-            <p className="section-label mt-10">Titan Ear Piercing Technologies</p>
+            <Logo className="mx-auto h-44 w-auto md:h-52" />
+            <p className="section-label mt-12">Üdvözlünk a Lobelle oldalán</p>
             <h1 className="mx-auto mt-6 max-w-3xl font-serif text-4xl font-medium leading-tight text-ink md:text-6xl">
               Az innovatív füllyukasztás új generációja
             </h1>

@@ -32,8 +32,8 @@ export default function Logo({ variant = "full", className = "" }: LogoProps) {
     <Image
       src="/logo.png"
       alt="Lobelle – Titan Ear Piercing Technologies"
-      width={2271}
-      height={1941}
+      width={1312}
+      height={731}
       className={className}
       priority
     />
