@@ -44,7 +44,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-hairline/60 bg-cream/95 backdrop-blur-sm">
       <div className="mx-auto flex h-20 max-w-content items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link href="/" aria-label="Lobelle – főoldal" onClick={closeAll} className="shrink-0">
-          <Logo className="h-14 w-auto" />
+          <Logo className="h-16 w-auto" />
         </Link>
 
         {/* Asztali navigáció */}

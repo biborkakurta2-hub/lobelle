@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-content px-4 py-16 sm:px-6 lg:px-8">
         {/* Logó középen */}
         <div className="flex justify-center">
-          <Logo className="h-20 w-auto" />
+          <Logo className="h-28 w-auto" />
         </div>
         <div className="gold-hairline mx-auto mt-8" aria-hidden="true" />
 

@@ -41,8 +41,9 @@ npm run build    # produkciós build (minden oldal statikus)
 
 ## Élesítés előtt cserélendő placeholderek
 
-1. **Logó** — a végleges, átlátszó hátterű bronz logó `/public/logo.png` néven töltendő fel,
-   majd a `components/Logo.tsx`-ben jelölt módon `next/image`-re cserélendő az SVG placeholder.
+1. **Logó** — a brosúrából kinyert, átlátszó hátterű logó (`/public/logo.png` és
+   `/public/logo-mark.png`) már éles; ha nagyobb felbontású mesterfájl érkezik, elég a két
+   PNG-t lecserélni.
 2. **Formspree végpont** — `lib/forms.ts`: a `FORMSPREE_ENDPOINT` placeholder helyére a valós
    Formspree űrlap URL-je kerül (amíg placeholder, az űrlapok nem küldenek hálózati kérést).
 3. **Termékfotók** — minden termékkártyán és az Életképek galériában `ImagePlaceholder`
