@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans font-light antialiased;
+  }
+
+  ::selection {
+    @apply bg-bronze/20 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-bronze ring-offset-2 ring-offset-cream;
+  }
+}
+
+@layer components {
+  /* Kiskapitális, széles betűközű bronz feliratka a szekciócímek felett */
+  .section-label {
+    @apply block text-xs font-normal uppercase tracking-label text-bronze;
+  }
+
+  /* Vékony arany elválasztó vonal */
+  .gold-hairline {
+    @apply h-px w-16 bg-hairline;
+  }
+
+  /* Elsődleges (bronz) gomb */
+  .btn-primary {
+    @apply inline-block border border-bronze bg-bronze px-8 py-3.5 text-sm font-normal uppercase tracking-[0.15em] text-cream transition-colors duration-300 hover:bg-bronze-dark hover:border-bronze-dark;
+  }
+
+  /* Másodlagos (körvonalas) gomb */
+  .btn-outline {
+    @apply inline-block border border-bronze bg-transparent px-8 py-3.5 text-sm font-normal uppercase tracking-[0.15em] text-bronze transition-colors duration-300 hover:bg-bronze hover:text-cream;
+  }
+
+  /* Űrlapmező alapstílus */
+  .form-field {
+    @apply w-full border border-hairline bg-white px-4 py-3 text-sm text-ink placeholder:text-faded/60 transition-colors duration-300 focus:border-bronze focus:outline-none focus:ring-1 focus:ring-bronze;
+  }
+}
+
+/* Finom scroll fade-in animáció — a FadeIn komponens kapcsolja be */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-in-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
