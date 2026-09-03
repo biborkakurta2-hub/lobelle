@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
+import CartLink from "./CartLink";
 import { NAV, PHONE, PHONE_HREF } from "@/lib/navigation";
 
 /**
@@ -105,15 +106,18 @@ export default function Header() {
           )}
         </nav>
 
-        {/* Telefonszám CTA */}
-        <a href={PHONE_HREF} className="btn-primary hidden whitespace-nowrap !px-5 !py-2.5 text-xs xl:inline-block">
-          Hívjon: {PHONE}
-        </a>
+        {/* Kosár + telefonszám CTA */}
+        <div className="ml-auto flex items-center gap-5 lg:ml-0">
+          <CartLink />
+          <a href={PHONE_HREF} className="btn-primary hidden whitespace-nowrap !px-5 !py-2.5 text-xs xl:inline-block">
+            Hívjon: {PHONE}
+          </a>
+        </div>
 
         {/* Mobil menü gomb */}
         <button
           type="button"
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="-mr-2 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
           aria-label={mobileOpen ? "Menü bezárása" : "Menü megnyitása"}

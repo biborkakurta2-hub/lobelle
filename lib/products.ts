@@ -1,31 +1,26 @@
 /**
- * Termékkategóriák és placeholder termékek.
+ * Termékkategóriák.
  *
- * WEBSHOP-INTEGRÁCIÓ: később ide köthető be a webshop motor vagy a Shopify
- * Storefront API — a kategória- és terméklista lecserélhető API-hívásra
- * (pl. generateStaticParams + fetch a build idején, az SSG megtartásával).
- * A PLACEHOLDER termékek és árak valós adatokra cserélendők.
+ * A kategóriák leírásai a brosúrából származnak, a `sourcePath` pedig a
+ * lobelle.hu megfelelő kategóriaoldalára mutat — ebből dolgozik az
+ * `npm run scrape` parancs, amikor letölti a valós termékeket.
  */
-
-export type Product = {
-  name: string;
-  /** PLACEHOLDER ár — valós árra cserélendő */
-  price: string;
-  note?: string;
-};
 
 export type ProductCategory = {
   slug: string;
+  /** Teljes név a navigációban */
   name: string;
+  /** Rövid név a kártyákon */
   shortName: string;
+  /** Oldalcím */
   title: string;
+  /** Egymondatos leírás a brosúrából */
   description: string;
+  /** Bővebb kategórialeírás */
   longDescription: string;
-  products: Product[];
+  /** A megfelelő kategória útvonala a lobelle.hu oldalon (a letöltő szkripthez) */
+  sourcePath: string;
 };
-
-const placeholderProducts = (names: string[]): Product[] =>
-  names.map((name) => ({ name, price: "Ár feltöltés alatt" }));
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
@@ -36,14 +31,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Korosztály nélkül — letisztult formák minden napra.",
     longDescription:
       "Implantátum minőségű, ASTM F136 szabványú Grade 23 titánból készült fülbevalók, amelyeket korosztálytól függetlenül bárki biztonsággal viselhet. Teljesen nikkelmentesek, nem oxidálódnak és nem színeződnek el — a rendkívül vékony szár és a lekerekített hátsó kapocs pedig a mindennapi viseletet is kényelmessé teszi.",
-    products: placeholderProducts([
-      "Titánium golyós fülbevaló",
-      "Titánium kristályköves fülbevaló",
-      "Titánium csillag fülbevaló",
-      "Titánium szív fülbevaló",
-      "Titánium karika fülbevaló",
-      "Titánium gyöngyházfényű fülbevaló",
-    ]),
+    sourcePath: "/Standard-ekszerek-korosztaly-nelkul",
   },
   {
     slug: "gyerek-ekszerek",
@@ -53,14 +41,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Játékos, mégis elegáns darabok a legkisebbeknek.",
     longDescription:
       "Gyerekeknek tervezett titánium fülbevalók: játékos formák, biztonságos, lekerekített hátsó kapocs, amely alvás közben sem szúr. A nikkelmentes, biokompatibilis anyag az érzékeny gyerekbőrnek is kíméletes — a szülő nyugalma pedig nem extra, hanem alapfelszereltség.",
-    products: placeholderProducts([
-      "Titánium pillangó fülbevaló",
-      "Titánium virág fülbevaló",
-      "Titánium szívecske fülbevaló",
-      "Titánium csillag fülbevaló gyerekeknek",
-      "Titánium katica fülbevaló",
-      "Titánium színes köves fülbevaló",
-    ]),
+    sourcePath: "/Gyerek-ekszerek",
   },
   {
     slug: "baba-ekszerek",
@@ -70,14 +51,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Elegáns díszdobozzal — ajándéknak is tökéletes.",
     longDescription:
       "Az első fülbevaló egyszeri alkalom — ehhez méltó kivitelben kínáljuk. Minden baba ékszer elegáns díszdobozban érkezik, így ajándéknak is tökéletes. A rendkívül vékony titánium szár kíméletes lyukasztást tesz lehetővé, a lekerekített kapocs pedig a legkisebbeknek is kényelmes.",
-    products: placeholderProducts([
-      "Baba szett golyós fülbevalóval és díszdobozzal",
-      "Baba szett kristályköves fülbevalóval és díszdobozzal",
-      "Baba szett szíves fülbevalóval és díszdobozzal",
-      "Baba szett virágos fülbevalóval és díszdobozzal",
-      "Baba szett csillagos fülbevalóval és díszdobozzal",
-      "Baba szett gyöngyös fülbevalóval és díszdobozzal",
-    ]),
+    sourcePath: "/Baba-ekszerek-dobozzal-egyutt",
   },
   {
     slug: "orr-piercingek",
@@ -87,14 +61,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Precíz, kíméletes titánium orrékszerek.",
     longDescription:
       "Titánium orrékszerek, amelyek ugyanabból az implantátum minőségű alapanyagból készülnek, mint a fülbevalóink. A biokompatibilis, nikkelmentes titán gyorsabb gyógyulást és kevesebb irritációt jelent — pontosan ott, ahol a bőr a legérzékenyebb.",
-    products: placeholderProducts([
-      "Titánium orr stud golyós véggel",
-      "Titánium orr stud kristályköves véggel",
-      "Titánium orrkarika",
-      "Titánium L-szárú orrékszer",
-      "Titánium csavart szárú orrékszer",
-      "Titánium orrékszer szett",
-    ]),
+    sourcePath: "/Orr-piercingek",
   },
   {
     slug: "kellekek-eszkozok",
@@ -104,14 +71,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Utóápolók, csipeszek és minden, ami a munkához kell.",
     longDescription:
       "Minden, ami a professzionális munkához kell: utóápoló oldatok, speciális eltávolító csipeszek, sebészeti jelölőtollak, fertőtlenítők és gyakorló kellékek. Ugyanazzal az igényességgel válogatva, mint az ékszereink — mert a prémium szolgáltatás a részleteken múlik.",
-    products: placeholderProducts([
-      "Utóápoló oldat",
-      "Speciális eltávolító csipesz",
-      "Sebészeti jelölőtoll",
-      "Fertőtlenítő kendő",
-      "Gyakorló fül szúrási gyakorlathoz",
-      "Hozzájárulási nyilatkozat tömb",
-    ]),
+    sourcePath: "/Kellekek-eszkozok",
   },
   {
     slug: "ful-es-orrlyukaszto-keszulek",
@@ -121,14 +81,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "A Lobelle-rendszer szíve: professzionális készülék.",
     longDescription:
       "A Lobelle-rendszer szíve: professzionális fül- és orrlyukasztó készülék, amelyet kifejezetten a rendkívül vékony titánium ékszereinkhez terveztek. A precíz mechanika kíméletes, alig érezhető lyukasztást tesz lehetővé — babáknál és felnőtteknél egyaránt.",
-    products: placeholderProducts([
-      "Lobelle professzionális füllyukasztó készülék",
-      "Lobelle professzionális orrlyukasztó készülék",
-      "Készülék szett hordtáskával",
-      "Tartalék rugós egység",
-      "Készülék fertőtlenítő állvány",
-      "Kezdő készülékcsomag",
-    ]),
+    sourcePath: "/Ful-es-orrlyukaszto-keszulek",
   },
 ];
 

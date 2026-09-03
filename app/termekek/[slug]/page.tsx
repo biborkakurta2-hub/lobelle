@@ -4,16 +4,16 @@ import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
 import FramedCard from "@/components/FramedCard";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import ProductGrid from "@/components/ProductGrid";
 import { PRODUCT_CATEGORIES, getCategory } from "@/lib/products";
+import { getProductsByCategory } from "@/lib/shop";
 
 /*
- * Termékkategória oldalak — statikusan generálva (SSG).
+ * Termékkategória oldal — statikusan generálva (SSG).
  *
- * WEBSHOP-INTEGRÁCIÓ: ha később webshop motor vagy Shopify kerül az oldal mögé,
- * a lib/products.ts statikus adatai helyett itt hívható a termék API
- * (pl. Shopify Storefront API) a generateStaticParams-ban és a page-ben.
- * Az "Érdeklődöm" CTA ekkor cserélhető kosárba tétel gombra.
+ * A termékek a data/products.json fájlból jönnek, amelyet az `npm run scrape`
+ * tölt fel a lobelle.hu adataival. Shopify esetén elég a lib/shop.ts
+ * adatforrását kicserélni, ez az oldal változatlanul működik tovább.
  */
 
 type Props = { params: { slug: string } };
@@ -39,6 +39,8 @@ export default function ProductCategoryPage({ params }: Props) {
   const category = getCategory(params.slug);
   if (!category) notFound();
 
+  const products = getProductsByCategory(category.slug);
+
   return (
     <>
       <PageHero label="Kollekció" title={category.title}>
@@ -46,36 +48,36 @@ export default function ProductCategoryPage({ params }: Props) {
       </PageHero>
 
       <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {category.products.map((product, i) => (
-            <FadeIn key={product.name} delay={(i % 3) * 100}>
-              <FramedCard className="h-full">
-                <div className="flex h-full flex-col">
-                  {/* PLACEHOLDER termékfotó — valós fotóra cserélendő */}
-                  <ImagePlaceholder label="Termékfotó helye" />
-                  <h2 className="mt-5 font-serif text-lg text-ink">{product.name}</h2>
-                  {/* PLACEHOLDER ár — valós árra cserélendő */}
-                  <p className="mt-2 text-sm text-faded">{product.price}</p>
-                  <div className="mt-auto pt-5">
-                    <Link
-                      href={`/kapcsolat?targy=${encodeURIComponent(product.name)}`}
-                      className="btn-outline block w-full !px-4 text-center !text-xs"
-                    >
-                      Érdeklődöm
-                    </Link>
-                  </div>
-                </div>
-              </FramedCard>
-            </FadeIn>
-          ))}
-        </div>
+        {products.length > 0 ? (
+          <FadeIn>
+            <ProductGrid products={products} />
+          </FadeIn>
+        ) : (
+          <FadeIn>
+            <FramedCard className="mx-auto max-w-2xl">
+              <div className="py-10 text-center">
+                <span className="section-label">Feltöltés alatt</span>
+                <p className="mt-5 font-serif text-2xl leading-snug text-ink">
+                  A kategória termékei hamarosan elérhetők.
+                </p>
+                <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-faded">
+                  Amíg a webshop feltöltése tart, telefonon és emailben is szívesen adunk
+                  tájékoztatást a kínálatról, az árakról és a szállításról.
+                </p>
+                <Link href="/kapcsolat" className="btn-primary mt-8 inline-block">
+                  Érdeklődöm a kategóriáról
+                </Link>
+              </div>
+            </FramedCard>
+          </FadeIn>
+        )}
 
         <FadeIn>
           <div className="mt-16 border-t border-hairline/60 pt-10 text-center">
             <p className="text-sm text-faded">
               Kérdésed van a kollekcióról, vagy nagyobb mennyiséget rendelnél?
             </p>
-            <Link href="/kapcsolat" className="btn-primary mt-6 inline-block">
+            <Link href="/kapcsolat" className="btn-outline mt-6 inline-block">
               Kapcsolatfelvétel
             </Link>
           </div>

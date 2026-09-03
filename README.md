@@ -38,6 +38,40 @@ npm run build    # produkciós build (minden oldal statikus)
 | `/eletkepek` | Életképek (galéria) |
 | `/gyakori-kerdesek` | Gyakori kérdések (accordion) |
 | `/kapcsolat` | Kapcsolatfelvétel |
+| `/termekek/<kategória>/<termék>` | Termékoldal (galéria, ár, kosárba tétel) |
+| `/kosar` | Kosár és megrendelés |
+
+## Webshop — termékek betöltése
+
+A webshop (kategória-rács, termékoldal, kosár, megrendelés) készen áll; a termékadatok a
+`data/products.json` fájlból jönnek. Ez a fájl induláskor üres, ezért a kategóriaoldalak
+„feltöltés alatt" állapotot mutatnak — kitalált termék vagy ár sehol nem jelenik meg.
+
+### Termékek letöltése a lobelle.hu oldalról
+
+```bash
+npm run scrape                             # minden kategória, képekkel együtt
+npm run scrape -- --category gyerek-ekszerek   # csak egy kategória
+npm run scrape -- --no-images              # csak nevek, árak, leírások
+npm run scrape -- --no-details             # gyorsabb: csak a listaoldalak
+```
+
+A szkript végigjárja a `lib/products.ts`-ben megadott kategóriák (`sourcePath`) oldalait,
+lapoz az `?infinite_page=N` paraméterrel, kiolvassa a terméknevet, árat, leírást és
+cikkszámot (elsődlegesen a JSON-LD adatokból, ennek hiányában a HTML szerkezetéből),
+letölti a fotókat a `public/termekek/<kategória>/` mappába, és feltölti a
+`data/products.json` fájlt. Futtatás után `npm run build`, majd commit és push.
+
+Ha a szkript nem talál terméket, a lobelle.hu HTML-szerkezete eltér a vártól — ilyenkor a
+`scripts/scrape-lobelle.mjs` `CARD_SELECTORS` listája igazítandó a tényleges osztálynevekhez.
+
+### Shopify-integráció
+
+Az adatréteg egy helyen van: `lib/shop.ts`. Shopify esetén a `getProductsByCategory` és a
+`getProduct` függvényt kell a Shopify Storefront API hívásaira cserélni (build időben
+lekérve, így az oldal statikus maradhat). A kosár (`components/CartProvider.tsx`) a Shopify
+cart API-jára, a megrendelő űrlap (`components/CartView.tsx`) pedig a Shopify checkout
+átirányítására cserélhető. A `next.config.mjs` már engedélyezi a `cdn.shopify.com` képeket.
 
 ## Élesítés előtt cserélendő placeholderek
 
@@ -45,18 +79,16 @@ npm run build    # produkciós build (minden oldal statikus)
    `/public/logo-mark.png`) már éles; ha nagyobb felbontású mesterfájl érkezik, elég a két
    PNG-t lecserélni.
 2. **Formspree végpont** — `lib/forms.ts`: a `FORMSPREE_ENDPOINT` placeholder helyére a valós
-   Formspree űrlap URL-je kerül (amíg placeholder, az űrlapok nem küldenek hálózati kérést).
-3. **Termékfotók** — minden termékkártyán és az Életképek galériában `ImagePlaceholder`
-   szerepel; valós fotókra (`next/image`) cserélendők.
-4. **Árak** — `lib/products.ts`: minden termék ára „Ár feltöltés alatt" placeholder.
-5. **Terméknevek** — `lib/products.ts`: a terméklisták illusztratív placeholderek, a valós
-   katalógusra cserélendők (később webshop motor / Shopify API is beköthető, a fájl kommentje
-   szerint).
-6. **Képzési időpontok** — `app/kepzes/idopontok/page.tsx`: a `SESSIONS` tömb placeholder
+   Formspree űrlap URL-je kerül (amíg placeholder, az űrlapok — a megrendelés is — nem
+   küldenek hálózati kérést, csak visszaigazolnak).
+3. **Termékek, árak, fotók** — az `npm run scrape` tölti be őket (lásd feljebb). Az Életképek
+   galéria fotói külön cserélendők.
+4. **Képzési időpontok** — `app/kepzes/idopontok/page.tsx`: a `SESSIONS` tömb placeholder
    városokat és „egyeztetés alatt" időpontokat tartalmaz.
-7. **Jogi oldalak** — a lábléc ÁSZF / Adatkezelési tájékoztató / Elállási tájékoztató linkjei
+5. **Jogi oldalak** — a lábléc ÁSZF / Adatkezelési tájékoztató / Elállási tájékoztató linkjei
    jelenleg a kapcsolat oldalra mutatnak; a végleges dokumentumok oldalaira irányítandók.
-8. **Közösségi linkek** — a Facebook / Instagram URL-ek (`facebook.com/lobelle.hu`,
+   Webshop üzemeltetéséhez ezek kötelezők.
+6. **Közösségi linkek** — a Facebook / Instagram URL-ek (`facebook.com/lobelle.hu`,
    `instagram.com/lobelle.hu`) ellenőrizendők, szükség esetén a valós profilokra cserélendők.
-9. **Open Graph kép** — érdemes feltölteni egy `og-image` fájlt és beállítani az
+7. **Open Graph kép** — érdemes feltölteni egy `og-image` fájlt és beállítani az
    `app/layout.tsx` metadata blokkjában.

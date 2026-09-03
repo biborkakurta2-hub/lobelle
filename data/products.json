@@ -1,0 +1,6 @@
+{
+  "generatedAt": null,
+  "source": "https://lobelle.hu",
+  "note": "Ezt a fájlt az 'npm run scrape' parancs tölti fel valós termékadatokkal a lobelle.hu oldalról. Amíg üres, a kategóriaoldalak a 'feltöltés alatt' állapotot mutatják — kitalált termék vagy ár sehol nem jelenik meg.",
+  "products": []
+}
