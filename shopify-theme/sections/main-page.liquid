@@ -1,0 +1,32 @@
+{%- comment -%}
+  Általános oldal (Rólunk, ÁSZF, Adatkezelési tájékoztató stb.).
+{%- endcomment -%}
+
+<section class="page-hero">
+  <div class="container">
+    {%- if section.settings.label != blank -%}
+      <span class="section-label">{{ section.settings.label }}</span>
+    {%- endif -%}
+    <h1>{{ page.title }}</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 48rem;">
+    <div class="rte fade-in">{{ page.content }}</div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Oldal tartalma",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Feliratka a cím felett"
+    }
+  ]
+}
+{% endschema %}

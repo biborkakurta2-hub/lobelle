@@ -1,0 +1,28 @@
+{%- comment -%}
+  Kollekció fejléce: kiskapitális feliratka, cím, arany vonal, leírás.
+{%- endcomment -%}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">{{ section.settings.label | default: 'Kollekció' }}</span>
+    <h1>{{ collection.title }}</h1>
+    <hr class="gold-hairline gold-hairline--center">
+    {%- if collection.description != blank -%}
+      <div class="lede rte">{{ collection.description }}</div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kollekció fejléc",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Feliratka a cím felett",
+      "default": "Kollekció"
+    }
+  ]
+}
+{% endschema %}

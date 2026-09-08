@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "hero": {
+      "type": "main-page",
+      "settings": { "label": "Kapcsolat" }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": { "form_heading": "Írj nekünk üzenetet" }
+    }
+  },
+  "order": ["hero", "form"]
+}

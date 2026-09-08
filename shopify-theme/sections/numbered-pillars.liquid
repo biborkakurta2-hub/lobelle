@@ -1,0 +1,101 @@
+{%- comment -%}
+  Számozott pillérek (Miért a Lobelle?) záró idézettel — a brosúra 6. oldala nyomán.
+{%- endcomment -%}
+
+<section class="section">
+  <div class="container" style="max-width: 56rem;">
+    {%- for block in section.blocks -%}
+      <div class="numbered fade-in" {{ block.shopify_attributes }}>
+        <span class="numbered__index" aria-hidden="true">
+          {{ forloop.index | prepend: '0' | slice: -2, 2 }}
+        </span>
+        <div>
+          <h2>{{ block.settings.title }}</h2>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{%- if section.settings.quote != blank -%}
+  <section class="section section--deep text-center">
+    <div class="container fade-in">
+      <span class="diamond" aria-hidden="true">&#9670;</span>
+      <blockquote class="quote mt-4" style="max-width: 42rem; margin-inline: auto;">
+        {{ section.settings.quote }}
+      </blockquote>
+      <hr class="gold-hairline gold-hairline--center mt-6">
+      {%- if section.settings.quote_footer != blank -%}
+        <p class="mt-3" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--faded);">
+          {{ section.settings.quote_footer }}
+        </p>
+      {%- endif -%}
+      {%- if section.settings.cta_label != blank -%}
+        <a href="{{ section.settings.cta_link }}" class="btn btn--primary mt-6">{{ section.settings.cta_label }}</a>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Számozott pillérek",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Záró idézet",
+      "default": "„A minőség nem luxus. A biztonság nem opció. A szakmaiság nem kompromisszum kérdése.”"
+    },
+    { "type": "text", "id": "quote_footer", "label": "Idézet lábszöveg", "default": "Lobelle — ahol a profizmus kezdődik" },
+    { "type": "text", "id": "cta_label", "label": "Gomb felirata", "default": "Csatlakozz hozzánk" },
+    { "type": "url", "id": "cta_link", "label": "Gomb hivatkozása" }
+  ],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pillér",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Cím" },
+        { "type": "textarea", "id": "text", "label": "Szöveg" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Számozott pillérek",
+      "blocks": [
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Ultra-hipoallergén",
+            "text": "Implantátum minőségű titán, teljesen nikkelmentesen. A legbiztonságosabb választás — a legkisebbeknek is."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Oktatói háttér",
+            "text": "Nem csak forgalmazunk, értünk is hozzá. Tapasztalt oktatók kísérnek az első lépésektől a profi szintig."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Prémium garancia",
+            "text": "Szigorúan ellenőrzött, steril termékek, ASTM F136 szabvány szerint. Minőség, kompromisszumok nélkül."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Személyes figyelem",
+            "text": "Legyen szó kezdő szettről vagy szakmai váltásról — minden lépésnél számíthatsz ránk."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

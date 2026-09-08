@@ -1,0 +1,78 @@
+{%- comment -%}
+  Hírlevél feliratkozás — a Shopify vásárlói űrlapján keresztül.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.deep %}section--deep{% endif %}">
+  <div class="container text-center fade-in">
+    {%- if section.settings.label != blank -%}
+      <span class="section-label">{{ section.settings.label }}</span>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="mt-2">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <hr class="gold-hairline gold-hairline--center">
+    {%- if section.settings.text != blank -%}
+      <p class="lede">{{ section.settings.text }}</p>
+    {%- endif -%}
+
+    <div style="max-width: 34rem; margin: 2.5rem auto 0;">
+      {%- form 'customer' -%}
+        <input type="hidden" name="contact[tags]" value="hírlevél">
+
+        {%- if form.posted_successfully? -%}
+          <p class="form-success">Köszönjük a feliratkozást. Hamarosan jelentkezünk az első hírlevéllel.</p>
+        {%- else -%}
+          {%- if form.errors -%}
+            <p class="form-error">{{ form.errors.messages.email | default: 'Kérjük, ellenőrizd a megadott adatokat.' }}</p>
+          {%- endif -%}
+
+          <div class="grid grid--2" style="gap: 1rem;">
+            <div>
+              <label class="visually-hidden" for="newsletter-name">Név</label>
+              <input id="newsletter-name" type="text" name="contact[first_name]" placeholder="Név" autocomplete="name">
+            </div>
+            <div>
+              <label class="visually-hidden" for="newsletter-email">E-mail cím</label>
+              <input
+                id="newsletter-email"
+                type="email"
+                name="contact[email]"
+                placeholder="E-mail cím"
+                autocomplete="email"
+                required
+              >
+            </div>
+          </div>
+
+          <label class="checkbox-row mt-3" style="text-align: left;">
+            <input type="checkbox" name="contact[accepts_marketing]" value="true" required>
+            <span>
+              Hozzájárulok, hogy a Lobelle hírlevelet küldjön a megadott e-mail címemre. A
+              feliratkozás bármikor visszavonható.
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn--primary mt-3">Feliratkozom</button>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hírlevél",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Feliratka", "default": "Hírlevél" },
+    { "type": "text", "id": "heading", "label": "Cím", "default": "Maradjunk kapcsolatban" },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Bevezető",
+      "default": "Iratkozz fel, hogy elsőként értesülj az új kollekciókról, képzési időpontokról és szakmai újdonságokról."
+    },
+    { "type": "checkbox", "id": "deep", "label": "Másodlagos háttér", "default": false }
+  ],
+  "presets": [{ "name": "Hírlevél" }]
+}
+{% endschema %}

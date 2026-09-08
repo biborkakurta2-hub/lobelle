@@ -1,0 +1,29 @@
+{
+  "current": {
+    "color_bronze": "#C07F3F",
+    "color_bronze_dark": "#A76A2F",
+    "color_cream": "#FAF7F2",
+    "color_cream_deep": "#F3EDE3",
+    "color_ink": "#2B2B2B",
+    "color_faded": "#6E6659",
+    "color_hairline": "#DCC49F",
+    "phone": "+36 30 483 3814",
+    "email": "rendeles@lobelle.hu",
+    "address": "4031 Debrecen, Széchenyi u. 62. fszt. 26.",
+    "far_number": "B\/2021\/000190",
+    "show_vendor": false,
+    "show_sale_badge": true,
+    "show_sold_out_badge": true
+  },
+  "presets": {
+    "Lobelle": {
+      "color_bronze": "#C07F3F",
+      "color_bronze_dark": "#A76A2F",
+      "color_cream": "#FAF7F2",
+      "color_cream_deep": "#F3EDE3",
+      "color_ink": "#2B2B2B",
+      "color_faded": "#6E6659",
+      "color_hairline": "#DCC49F"
+    }
+  }
+}

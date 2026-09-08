@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "gallery": {
+      "type": "gallery",
+      "blocks": {
+        "g1": { "type": "image", "settings": { "caption": "Képzés közben" } },
+        "g2": { "type": "image", "settings": { "caption": "Gyakorlati tréning" } },
+        "g3": { "type": "image", "settings": { "caption": "A kezdőcsomag" } },
+        "g4": { "type": "image", "settings": { "caption": "Titánium kollekció" } },
+        "g5": { "type": "image", "settings": { "caption": "A készülék közelről" } },
+        "g6": { "type": "image", "settings": { "caption": "Tanúsítvány átadás" } }
+      },
+      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6"],
+      "settings": {
+        "label": "Galéria",
+        "heading": "Életképek",
+        "text": "Pillanatok a képzésekről, a műhelyünkből és a mindennapjainkból — mert a szakmaiság képeken is látszik.",
+        "deep": false
+      }
+    }
+  },
+  "order": ["gallery"]
+}

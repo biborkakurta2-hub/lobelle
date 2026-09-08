@@ -1,0 +1,82 @@
+{%- comment -%}
+  Keresési találatok.
+{%- endcomment -%}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Keresés</span>
+    <h1>
+      {%- if search.performed -%}
+        {{ search.results_count }} találat
+      {%- else -%}
+        Keresés
+      {%- endif -%}
+    </h1>
+    <hr class="gold-hairline gold-hairline--center">
+
+    <form action="{{ routes.search_url }}" method="get" role="search" class="mt-4" style="max-width: 32rem; margin-inline: auto;">
+      <label class="visually-hidden" for="search-input">Keresés a termékek között</label>
+      <input
+        id="search-input"
+        type="search"
+        name="q"
+        value="{{ search.terms | escape }}"
+        placeholder="Keresés a termékek között"
+      >
+      <button type="submit" class="btn btn--primary btn--full mt-2">Keresés</button>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {%- if search.performed and search.results_count > 0 -%}
+      {%- paginate search.results by 12 -%}
+        <div class="grid grid--3">
+          {%- for item in search.results -%}
+            {%- if item.object_type == 'product' -%}
+              <div class="fade-in">{% render 'product-card', product: item %}</div>
+            {%- else -%}
+              <div class="fade-in">
+                <div class="framed">
+                  {% render 'corners' %}
+                  <div class="framed__inner">
+                    <h3>{{ item.title }}</h3>
+                    <p class="small muted mt-1">{{ item.content | strip_html | truncate: 140 }}</p>
+                    <a href="{{ item.url }}" class="product-card__more">Megnézem</a>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        {%- if paginate.pages > 1 -%}
+          <nav class="pagination" aria-label="Lapozó">
+            {%- for part in paginate.parts -%}
+              {%- if part.is_link -%}
+                <a href="{{ part.url }}">{{ part.title }}</a>
+              {%- else -%}
+                <span class="{% if part.title == paginate.current_page %}current{% endif %}">{{ part.title }}</span>
+              {%- endif -%}
+            {%- endfor -%}
+          </nav>
+        {%- endif -%}
+      {%- endpaginate -%}
+    {%- elsif search.performed -%}
+      <div class="empty-state">
+        <span class="section-label">Nincs találat</span>
+        <h2>Erre nem találtunk semmit: {{ search.terms }}</h2>
+        <p>Próbáld más kifejezéssel, vagy nézd meg a teljes kínálatot.</p>
+        <a href="{{ routes.all_products_collection_url }}" class="btn btn--primary mt-4">Teljes kínálat</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Keresés",
+  "settings": []
+}
+{% endschema %}

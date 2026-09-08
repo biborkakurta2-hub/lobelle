@@ -1,0 +1,34 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Rendelés</span>
+    <h1>{{ order.name }}</h1>
+    <hr class="gold-hairline gold-hairline--center">
+    <p class="lede">{{ order.created_at | date: '%Y. %m. %d.' }} · {{ order.financial_status_label }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cart-items">
+      {%- for line_item in order.line_items -%}
+        <div class="cart-item">
+          <div class="cart-item__media">
+            {%- if line_item.image -%}
+              <img src="{{ line_item.image | image_url: width: 200 }}" alt="{{ line_item.title | escape }}" width="200" height="200">
+            {%- endif -%}
+          </div>
+          <div class="cart-item__body">
+            <span class="cart-item__title">{{ line_item.title }}</span>
+            <p class="cart-item__variant">{{ line_item.quantity }} db</p>
+          </div>
+          <p class="cart-item__price">{{ line_item.final_line_price | money }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="text-center mt-6">
+      <p class="quote">Végösszeg: {{ order.total_price | money }}</p>
+      <a href="{{ routes.account_url }}" class="btn btn--outline mt-4">Vissza a fiókomhoz</a>
+    </div>
+  </div>
+</section>

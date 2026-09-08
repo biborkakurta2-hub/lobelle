@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_bronze | default: '#C07F3F' }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 96 }}">
+    {%- endif -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; {{ current_tags | join: ', ' }}{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ current_page }}. oldal{% endif -%}
+      {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
+    </title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {% render 'meta-tags' %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap"
+    >
+
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+
+    {%- comment -%} A téma beállításaiban megadott színek felülírják az alapértelmezéseket. {%- endcomment -%}
+    <style>
+      :root {
+        --bronze: {{ settings.color_bronze | default: '#C07F3F' }};
+        --bronze-dark: {{ settings.color_bronze_dark | default: '#A76A2F' }};
+        --cream: {{ settings.color_cream | default: '#FAF7F2' }};
+        --cream-deep: {{ settings.color_cream_deep | default: '#F3EDE3' }};
+        --ink: {{ settings.color_ink | default: '#2B2B2B' }};
+        --faded: {{ settings.color_faded | default: '#6E6659' }};
+        --hairline: {{ settings.color_hairline | default: '#DCC49F' }};
+      }
+    </style>
+
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+
+    <script>
+      window.Shopify = window.Shopify || {};
+      window.Shopify.routes = window.Shopify.routes || {};
+      window.Shopify.routes.root = "{{ routes.root_url }}";
+    </script>
+
+    {{ content_for_header }}
+  </head>
+
+  <body class="template-{{ template.name | handle }}">
+    <a class="skip-link" href="#main-content">Ugrás a tartalomra</a>
+
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+
+    <main id="main-content" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+  </body>
+</html>

@@ -1,0 +1,116 @@
+{%- comment -%}
+  Kollekció terméklistája rendezéssel és lapozással.
+{%- endcomment -%}
+
+{%- paginate collection.products by section.settings.products_per_page -%}
+  <section class="section">
+    <div class="container">
+      {%- if collection.products.size > 0 -%}
+        <div class="collection-toolbar">
+          <p>{{ collection.products_count }} termék a kategóriában</p>
+          <div class="collection-toolbar__sort">
+            <label for="sort-by">Rendezés</label>
+            <select id="sort-by" data-sort-by>
+              {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
+              {%- for option in collection.sort_options -%}
+                <option value="{{ option.value }}" {% if option.value == current_sort %}selected{% endif %}>
+                  {{ option.name }}
+                </option>
+              {%- endfor -%}
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          {%- for product in collection.products -%}
+            <div class="fade-in">{% render 'product-card', product: product %}</div>
+          {%- endfor -%}
+        </div>
+
+        {%- if paginate.pages > 1 -%}
+          <nav class="pagination" aria-label="Lapozó">
+            {%- if paginate.previous -%}
+              <a href="{{ paginate.previous.url }}" aria-label="Előző oldal">&larr;</a>
+            {%- endif -%}
+            {%- for part in paginate.parts -%}
+              {%- if part.is_link -%}
+                <a href="{{ part.url }}">{{ part.title }}</a>
+              {%- else -%}
+                <span class="{% if part.title == paginate.current_page %}current{% endif %}">{{ part.title }}</span>
+              {%- endif -%}
+            {%- endfor -%}
+            {%- if paginate.next -%}
+              <a href="{{ paginate.next.url }}" aria-label="Következő oldal">&rarr;</a>
+            {%- endif -%}
+          </nav>
+        {%- endif -%}
+      {%- else -%}
+        <div class="framed empty-state">
+          {% render 'corners' %}
+          <div class="framed__inner" style="padding: 2.5rem 1.5rem;">
+            <span class="section-label">Feltöltés alatt</span>
+            <h2>A kategória termékei hamarosan elérhetők.</h2>
+            <p>
+              Amíg a feltöltés tart, telefonon és e-mailben is szívesen adunk tájékoztatást a
+              kínálatról, az árakról és a szállításról.
+            </p>
+            {%- if section.settings.empty_link != blank -%}
+              <a href="{{ section.settings.empty_link }}" class="btn btn--primary mt-4">Érdeklődöm</a>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.footer_text != blank -%}
+        <hr class="divider">
+        <div class="text-center mt-6 fade-in">
+          <p class="small muted">{{ section.settings.footer_text }}</p>
+          {%- if section.settings.footer_link != blank -%}
+            <a href="{{ section.settings.footer_link }}" class="btn btn--outline mt-3">
+              {{ section.settings.footer_link_label | default: 'Kapcsolatfelvétel' }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Terméklista",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "Termék oldalanként",
+      "min": 6,
+      "max": 48,
+      "step": 3,
+      "default": 12
+    },
+    {
+      "type": "url",
+      "id": "empty_link",
+      "label": "Üres kategória gomb hivatkozása"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Záró szöveg",
+      "default": "Kérdésed van a kollekcióról, vagy nagyobb mennyiséget rendelnél?"
+    },
+    {
+      "type": "text",
+      "id": "footer_link_label",
+      "label": "Záró gomb felirata",
+      "default": "Kapcsolatfelvétel"
+    },
+    {
+      "type": "url",
+      "id": "footer_link",
+      "label": "Záró gomb hivatkozása"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,157 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Lobelle",
+    "theme_version": "1.0.0",
+    "theme_author": "Lobelle",
+    "theme_documentation_url": "https://lobelle.hu",
+    "theme_support_url": "https://lobelle.hu"
+  },
+  {
+    "name": "Logó és arculat",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logó",
+        "info": "Ha üresen hagyod, a témába épített Lobelle logó jelenik meg."
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_mark",
+        "label": "Logó szimbólum",
+        "info": "Csak a fül-szimbólum. A nyitóoldal fejlécében használható."
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favikon",
+        "info": "32 x 32 képpont ajánlott."
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Megosztási kép",
+        "info": "Ez jelenik meg, ha valaki közösségi médiában osztja meg az oldalt."
+      }
+    ]
+  },
+  {
+    "name": "Színek",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "A színek a Lobelle brosúrájából származnak. Módosításuk az egész oldal megjelenését érinti."
+      },
+      {
+        "type": "color",
+        "id": "color_bronze",
+        "label": "Bronz (kiemelés)",
+        "default": "#C07F3F"
+      },
+      {
+        "type": "color",
+        "id": "color_bronze_dark",
+        "label": "Bronz sötét (hover)",
+        "default": "#A76A2F"
+      },
+      {
+        "type": "color",
+        "id": "color_cream",
+        "label": "Krém háttér",
+        "default": "#FAF7F2"
+      },
+      {
+        "type": "color",
+        "id": "color_cream_deep",
+        "label": "Másodlagos felület",
+        "default": "#F3EDE3"
+      },
+      {
+        "type": "color",
+        "id": "color_ink",
+        "label": "Szöveg",
+        "default": "#2B2B2B"
+      },
+      {
+        "type": "color",
+        "id": "color_faded",
+        "label": "Halvány szöveg",
+        "default": "#6E6659"
+      },
+      {
+        "type": "color",
+        "id": "color_hairline",
+        "label": "Arany elválasztó vonal",
+        "default": "#DCC49F"
+      }
+    ]
+  },
+  {
+    "name": "Elérhetőségek",
+    "settings": [
+      {
+        "type": "text",
+        "id": "phone",
+        "label": "Telefonszám",
+        "default": "+36 30 483 3814"
+      },
+      {
+        "type": "text",
+        "id": "email",
+        "label": "E-mail cím",
+        "default": "rendeles@lobelle.hu"
+      },
+      {
+        "type": "textarea",
+        "id": "address",
+        "label": "Cím",
+        "default": "4031 Debrecen, Széchenyi u. 62. fszt. 26."
+      },
+      {
+        "type": "text",
+        "id": "far_number",
+        "label": "Felnőttképzési nyilvántartási szám",
+        "default": "B/2021/000190"
+      }
+    ]
+  },
+  {
+    "name": "Közösségi média",
+    "settings": [
+      {
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook oldal"
+      },
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram oldal"
+      }
+    ]
+  },
+  {
+    "name": "Termékkártyák",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Márka megjelenítése a kártyán",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_sale_badge",
+        "label": "Akció jelölése",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_sold_out_badge",
+        "label": "Elfogyott jelölése",
+        "default": true
+      }
+    ]
+  }
+]

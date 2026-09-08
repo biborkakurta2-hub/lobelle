@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "hero": {
+      "type": "main-page",
+      "settings": { "label": "Négy pillér" }
+    },
+    "pillars": {
+      "type": "numbered-pillars",
+      "blocks": {
+        "p1": {
+          "type": "pillar",
+          "settings": {
+            "title": "Ultra-hipoallergén",
+            "text": "Implantátum minőségű titán, teljesen nikkelmentesen. A legbiztonságosabb választás — a legkisebbeknek is."
+          }
+        },
+        "p2": {
+          "type": "pillar",
+          "settings": {
+            "title": "Oktatói háttér",
+            "text": "Nem csak forgalmazunk, értünk is hozzá. Tapasztalt oktatók kísérnek az első lépésektől a profi szintig."
+          }
+        },
+        "p3": {
+          "type": "pillar",
+          "settings": {
+            "title": "Prémium garancia",
+            "text": "Szigorúan ellenőrzött, steril termékek, ASTM F136 szabvány szerint. Minőség, kompromisszumok nélkül."
+          }
+        },
+        "p4": {
+          "type": "pillar",
+          "settings": {
+            "title": "Személyes figyelem",
+            "text": "Legyen szó kezdő szettről vagy szakmai váltásról — minden lépésnél számíthatsz ránk."
+          }
+        }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"],
+      "settings": {
+        "quote": "„A minőség nem luxus. A biztonság nem opció. A szakmaiság nem kompromisszum kérdése.”",
+        "quote_footer": "Lobelle — ahol a profizmus kezdődik",
+        "cta_label": "Csatlakozz hozzánk",
+        "cta_link": "/pages/kepzes"
+      }
+    }
+  },
+  "order": ["hero", "pillars"]
+}

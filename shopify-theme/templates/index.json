@@ -1,0 +1,191 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "show_logo": true,
+        "label": "Üdvözlünk a Lobelle oldalán",
+        "heading": "Az innovatív füllyukasztás új generációja",
+        "pillars": "Biztonság, Innováció, Szakmaiság",
+        "cta_primary_label": "Fedezd fel a rendszert",
+        "cta_primary_link": "/collections",
+        "cta_secondary_label": "Jelentkezz képzésre",
+        "cta_secondary_link": "/pages/kepzes"
+      }
+    },
+    "pillars": {
+      "type": "pillars",
+      "blocks": {
+        "biztonsag": {
+          "type": "pillar",
+          "settings": {
+            "title": "Biztonság",
+            "text": "ASTM F136 szabványú, Grade 23 titán — ugyanaz az anyag, amelyet orvosi implantátumokhoz használnak."
+          }
+        },
+        "innovacio": {
+          "type": "pillar",
+          "settings": {
+            "title": "Innováció",
+            "text": "Rendkívül vékony kivitel és lekerekített hátsó kapocs: kíméletes lyukasztás, kényelmes viselet babáknak és felnőtteknek."
+          }
+        },
+        "szakmaisag": {
+          "type": "pillar",
+          "settings": {
+            "title": "Szakmaiság",
+            "text": "Nem csak forgalmazunk — oktatunk is. Képzett szakemberek, valós gyakorlati tudás, folyamatos támogatás."
+          }
+        }
+      },
+      "block_order": ["biztonsag", "innovacio", "szakmaisag"],
+      "settings": {
+        "label": "A márkáról",
+        "heading": "Nem csupán rendszer. Szemlélet.",
+        "text": "A Lobelle ott kezdődik, ahol a kompromisszum véget ér. Magyarországon egyedülálló, implantátum minőségű titánium fülbelövő rendszereket adunk a szakemberek kezébe — és melléjük azt a tudást, amitől a szolgáltatásuk valóban prémium lesz.",
+        "deep": false
+      }
+    },
+    "benefits": {
+      "type": "benefits",
+      "blocks": {
+        "nikkelmentes": {
+          "type": "benefit",
+          "settings": {
+            "title": "Teljesen nikkelmentes",
+            "text": "A leggyakoribb allergén nélkül — érzékeny bőrnek is."
+          }
+        },
+        "biokompatibilis": {
+          "type": "benefit",
+          "settings": {
+            "title": "Biokompatibilis",
+            "text": "A szervezet sajátjaként fogadja, nem lép reakcióba a bőrrel."
+          }
+        },
+        "oxidacio": {
+          "type": "benefit",
+          "settings": {
+            "title": "Nem oxidálódik",
+            "text": "Évek múlva is ugyanolyan, mint az első napon."
+          }
+        },
+        "korrozio": {
+          "type": "benefit",
+          "settings": {
+            "title": "Nem korrodál",
+            "text": "Víz, izzadság, kozmetikum — semmi nem árt neki."
+          }
+        },
+        "szinezodes": {
+          "type": "benefit",
+          "settings": {
+            "title": "Nem színeződik el",
+            "text": "Tartós, elegáns megjelenés kompromisszum nélkül."
+          }
+        },
+        "kimeletes": {
+          "type": "benefit",
+          "settings": {
+            "title": "Kíméletes kivitel",
+            "text": "Rendkívül vékony szár — a lyukasztás alig érezhető."
+          }
+        }
+      },
+      "block_order": [
+        "nikkelmentes",
+        "biokompatibilis",
+        "oxidacio",
+        "korrozio",
+        "szinezodes",
+        "kimeletes"
+      ],
+      "settings": {
+        "label": "Anyag és technológia",
+        "heading": "A titánium ereje",
+        "text": "A titánium jelenleg a világ egyik legbiztonságosabb fémje füllyukasztáshoz. Nem véletlen, hogy orvosi implantátumoknál is ezt használják: gyorsabb gyógyulás, kevesebb gyulladás, minimális irritáció.",
+        "deep": true
+      }
+    },
+    "band": {
+      "type": "highlight-band",
+      "settings": {
+        "label": "Prémium garancia",
+        "heading": "ASTM F136 szabvány · Grade 23 implantátum minőségű titán",
+        "text": "Szigorúan ellenőrzött, steril termékek — kompromisszumok nélkül."
+      }
+    },
+    "collections": {
+      "type": "collection-list",
+      "blocks": {
+        "kat1": { "type": "collection", "settings": {} },
+        "kat2": { "type": "collection", "settings": {} },
+        "kat3": { "type": "collection", "settings": {} },
+        "kat4": { "type": "collection", "settings": {} },
+        "kat5": { "type": "collection", "settings": {} },
+        "kat6": { "type": "collection", "settings": {} }
+      },
+      "block_order": ["kat1", "kat2", "kat3", "kat4", "kat5", "kat6"],
+      "settings": {
+        "label": "Kollekció",
+        "heading": "Termékkínálat",
+        "text": "Minden darab ugyanabból az alapanyagból, ugyanazzal az igényességgel készül — a legkisebbeknek szánt első fülbevalótól a professzionális eszközökig.",
+        "quote": "A prémium vendég prémium minőséget vár.",
+        "deep": false
+      }
+    },
+    "training": {
+      "type": "training-teaser",
+      "blocks": {
+        "p1": {
+          "type": "item",
+          "settings": { "text": "Elméleti alapozás: anatómia, higiénia, anyagtudomány, jogi háttér" }
+        },
+        "p2": {
+          "type": "item",
+          "settings": { "text": "Gyakorlati tréning speciális gyakorlófülön, oktatói felügyelettel" }
+        },
+        "p3": {
+          "type": "item",
+          "settings": { "text": "Közel 70 000 Ft értékű kezdőcsomag a képzés részeként" }
+        },
+        "p4": {
+          "type": "item",
+          "settings": { "text": "Hivatalos, FAR-regisztrált tanúsítvány" }
+        }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"],
+      "settings": {
+        "label": "Oktatás",
+        "heading": "Fül- és orrlyukasztó szakemberképzés",
+        "text": "Intenzív, gyakorlatorientált képzés 2–3 órában — előképzettség nélkül. Kozmetikusoknak és mindazoknak, akik professzionális szolgáltatással bővítenék a kínálatukat, és akár másnap dolgozni szeretnének.",
+        "cta_primary_label": "Képzés részletei",
+        "cta_primary_link": "/pages/kepzes",
+        "cta_secondary_label": "Időpontok, helyszínek",
+        "cta_secondary_link": "/pages/kepzes-idopontok",
+        "quote_label": "Lobelle",
+        "quote": "„Ha egyszer titániumot használsz, nem térsz vissza máshoz.”",
+        "quote_footer": "Ahol a profizmus kezdődik",
+        "deep": true
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "label": "Hírlevél",
+        "heading": "Maradjunk kapcsolatban",
+        "text": "Iratkozz fel, hogy elsőként értesülj az új kollekciókról, képzési időpontokról és szakmai újdonságokról.",
+        "deep": false
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "pillars",
+    "benefits",
+    "band",
+    "collections",
+    "training",
+    "newsletter"
+  ]
+}

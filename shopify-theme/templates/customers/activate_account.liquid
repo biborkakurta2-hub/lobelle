@@ -1,0 +1,30 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Fiók</span>
+    <h1>Fiók aktiválása</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 26rem;">
+    {%- form 'activate_customer_password', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}
+        <p class="form-error">{{ form.errors | default_errors }}</p>
+      {%- endif -%}
+
+      <div class="field">
+        <label for="activate-password">Jelszó</label>
+        <input id="activate-password" type="password" name="customer[password]" autocomplete="new-password" required>
+      </div>
+
+      <div class="field">
+        <label for="activate-password-confirm">Jelszó megerősítése</label>
+        <input id="activate-password-confirm" type="password" name="customer[password_confirmation]" autocomplete="new-password" required>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">Fiók aktiválása</button>
+      <button type="submit" name="decline" class="btn btn--outline btn--full mt-2">Elutasítás</button>
+    {%- endform -%}
+  </div>
+</section>

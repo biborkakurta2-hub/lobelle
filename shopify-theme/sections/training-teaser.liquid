@@ -1,0 +1,111 @@
+{%- comment -%}
+  Képzés ajánló: kétoszlopos elrendezés, listaelemek és idézetkártya.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.deep %}section--deep{% endif %}">
+  <div class="container">
+    <div class="grid grid--2 grid--wide" style="align-items: center;">
+      <div class="fade-in">
+        {%- if section.settings.label != blank -%}
+          <span class="section-label">{{ section.settings.label }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="mt-2" style="font-size: clamp(1.75rem, 3.5vw, 2.25rem);">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        <hr class="gold-hairline">
+        {%- if section.settings.text != blank -%}
+          <p class="muted mt-3">{{ section.settings.text }}</p>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <ul class="mt-4" style="display: grid; gap: 0.75rem; font-size: 0.9rem; color: var(--faded);">
+            {%- for block in section.blocks -%}
+              <li style="display: flex; gap: 0.75rem;" {{ block.shopify_attributes }}>
+                <span class="diamond" aria-hidden="true">&#9670;</span>
+                {{ block.settings.text }}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        <div class="hero__actions" style="justify-content: flex-start; margin-top: 2.5rem;">
+          {%- if section.settings.cta_primary_label != blank -%}
+            <a href="{{ section.settings.cta_primary_link }}" class="btn btn--primary">
+              {{ section.settings.cta_primary_label }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.cta_secondary_label != blank -%}
+            <a href="{{ section.settings.cta_secondary_link }}" class="btn btn--outline">
+              {{ section.settings.cta_secondary_label }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <div class="framed">
+          {% render 'corners' %}
+          <div class="framed__inner text-center" style="padding: 2.5rem 1.5rem;">
+            {%- if section.settings.quote_label != blank -%}
+              <span class="section-label">{{ section.settings.quote_label }}</span>
+            {%- endif -%}
+            <p class="quote mt-3">{{ section.settings.quote }}</p>
+            <hr class="gold-hairline gold-hairline--center mt-4">
+            {%- if section.settings.quote_footer != blank -%}
+              <p class="mt-3" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--faded);">
+                {{ section.settings.quote_footer }}
+              </p>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Képzés ajánló",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Feliratka", "default": "Oktatás" },
+    { "type": "text", "id": "heading", "label": "Cím", "default": "Fül- és orrlyukasztó szakemberképzés" },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Bevezető",
+      "default": "Intenzív, gyakorlatorientált képzés 2–3 órában — előképzettség nélkül. Kozmetikusoknak és mindazoknak, akik professzionális szolgáltatással bővítenék a kínálatukat, és akár másnap dolgozni szeretnének."
+    },
+    { "type": "text", "id": "cta_primary_label", "label": "Elsődleges gomb", "default": "Képzés részletei" },
+    { "type": "url", "id": "cta_primary_link", "label": "Elsődleges gomb hivatkozása" },
+    { "type": "text", "id": "cta_secondary_label", "label": "Másodlagos gomb", "default": "Időpontok, helyszínek" },
+    { "type": "url", "id": "cta_secondary_link", "label": "Másodlagos gomb hivatkozása" },
+    { "type": "text", "id": "quote_label", "label": "Idézetkártya feliratka", "default": "Lobelle" },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Idézet",
+      "default": "„Ha egyszer titániumot használsz, nem térsz vissza máshoz.”"
+    },
+    { "type": "text", "id": "quote_footer", "label": "Idézet lábszöveg", "default": "Ahol a profizmus kezdődik" },
+    { "type": "checkbox", "id": "deep", "label": "Másodlagos háttér", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Listaelem",
+      "settings": [{ "type": "text", "id": "text", "label": "Szöveg" }]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Képzés ajánló",
+      "blocks": [
+        { "type": "item", "settings": { "text": "Elméleti alapozás: anatómia, higiénia, anyagtudomány, jogi háttér" } },
+        { "type": "item", "settings": { "text": "Gyakorlati tréning speciális gyakorlófülön, oktatói felügyelettel" } },
+        { "type": "item", "settings": { "text": "Közel 70 000 Ft értékű kezdőcsomag a képzés részeként" } },
+        { "type": "item", "settings": { "text": "Hivatalos, FAR-regisztrált tanúsítvány" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

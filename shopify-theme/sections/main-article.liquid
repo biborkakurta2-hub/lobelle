@@ -1,0 +1,39 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">{{ article.published_at | date: '%Y. %m. %d.' }}</span>
+    <h1>{{ article.title }}</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 48rem;">
+    {%- if article.image -%}
+      <div class="framed fade-in">
+        {% render 'corners' %}
+        <div class="framed__inner" style="padding: 0.75rem;">
+          <img
+            src="{{ article.image | image_url: width: 1200 }}"
+            alt="{{ article.image.alt | default: article.title | escape }}"
+            width="1200"
+            height="800"
+          >
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="rte muted mt-6 fade-in">{{ article.content }}</div>
+
+    <hr class="divider">
+    <p class="text-center mt-4">
+      <a href="{{ blog.url }}" class="btn btn--outline">Vissza a blogra</a>
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cikk",
+  "settings": []
+}
+{% endschema %}

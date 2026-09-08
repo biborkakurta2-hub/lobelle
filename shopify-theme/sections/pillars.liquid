@@ -1,0 +1,85 @@
+{%- comment -%}
+  Három pillér (Biztonság, Innováció, Szakmaiság) — a brosúra 2. oldala nyomán.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.deep %}section--deep{% endif %}">
+  <div class="container">
+    <div class="section-heading text-center fade-in">
+      {%- if section.settings.label != blank -%}
+        <span class="section-label">{{ section.settings.label }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      <hr class="gold-hairline gold-hairline--center">
+      {%- if section.settings.text != blank -%}
+        <p class="lede">{{ section.settings.text }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="grid grid--3 grid--wide mt-6">
+      {%- for block in section.blocks -%}
+        <div class="pillar fade-in" {{ block.shopify_attributes }}>
+          <span class="diamond" aria-hidden="true">&#9670;</span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pillérek",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Feliratka", "default": "A márkáról" },
+    { "type": "text", "id": "heading", "label": "Cím", "default": "Nem csupán rendszer. Szemlélet." },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Bevezető",
+      "default": "A Lobelle ott kezdődik, ahol a kompromisszum véget ér. Magyarországon egyedülálló, implantátum minőségű titánium fülbelövő rendszereket adunk a szakemberek kezébe — és melléjük azt a tudást, amitől a szolgáltatásuk valóban prémium lesz."
+    },
+    { "type": "checkbox", "id": "deep", "label": "Másodlagos háttér", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pillér",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Cím" },
+        { "type": "textarea", "id": "text", "label": "Szöveg" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pillérek",
+      "blocks": [
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Biztonság",
+            "text": "ASTM F136 szabványú, Grade 23 titán — ugyanaz az anyag, amelyet orvosi implantátumokhoz használnak."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Innováció",
+            "text": "Rendkívül vékony kivitel és lekerekített hátsó kapocs: kíméletes lyukasztás, kényelmes viselet babáknak és felnőtteknek."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "title": "Szakmaiság",
+            "text": "Nem csak forgalmazunk — oktatunk is. Képzett szakemberek, valós gyakorlati tudás, folyamatos támogatás."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,220 @@
+{%- comment -%}
+  Termékoldal: galéria bélyegképekkel, ár, leírás, titánium előnyök,
+  változat- és mennyiségválasztó, kosárba tétel.
+{%- endcomment -%}
+
+<nav class="breadcrumb" aria-label="Morzsamenü">
+  <div class="container">
+    <ol>
+      <li><a href="{{ routes.root_url }}">Főoldal</a></li>
+      <li class="sep" aria-hidden="true">/</li>
+      {%- if collection -%}
+        <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+        <li class="sep" aria-hidden="true">/</li>
+      {%- endif -%}
+      <li>{{ product.title }}</li>
+    </ol>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="product">
+    {%- comment -%} Galéria {%- endcomment -%}
+    <div class="fade-in">
+      <div class="framed">
+        {% render 'corners' %}
+        <div class="framed__inner" style="padding: 0.75rem;">
+          <div class="gallery__main">
+            {%- if product.featured_media -%}
+              <img
+                data-gallery-main
+                src="{{ product.featured_media | image_url: width: 1000 }}"
+                alt="{{ product.featured_media.alt | default: product.title | escape }}"
+                width="1000"
+                height="1000"
+              >
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+
+      {%- if product.media.size > 1 -%}
+        <ul class="gallery__thumbs">
+          {%- for media in product.media -%}
+            <li>
+              <button
+                type="button"
+                class="gallery__thumb"
+                data-gallery-thumb
+                data-image="{{ media | image_url: width: 1000 }}"
+                data-alt="{{ media.alt | default: product.title | escape }}"
+                aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                aria-label="{{ forloop.index }}. kép megtekintése"
+              >
+                <img src="{{ media | image_url: width: 160 }}" alt="" width="160" height="160" loading="lazy">
+              </button>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Termékinformáció {%- endcomment -%}
+    <div class="fade-in">
+      {%- if collection -%}
+        <span class="section-label">{{ collection.title }}</span>
+      {%- elsif product.type != blank -%}
+        <span class="section-label">{{ product.type }}</span>
+      {%- endif -%}
+
+      <h1 class="product__title">{{ product.title }}</h1>
+      <hr class="gold-hairline">
+
+      <div class="product__price">
+        {% render 'price', product: product, class: '' %}
+      </div>
+
+      {%- if product.selected_or_first_available_variant.sku != blank -%}
+        <p class="product__meta">Cikkszám: {{ product.selected_or_first_available_variant.sku }}</p>
+      {%- endif -%}
+
+      {%- if product.description != blank -%}
+        <div class="product__description rte">{{ product.description }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.show_highlights -%}
+        <ul class="product__highlights">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'highlight' -%}
+              <li {{ block.shopify_attributes }}>
+                <span class="diamond" aria-hidden="true">&#9670;</span>
+                {{ block.settings.text }}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      <div class="product__form">
+        {%- form 'product', product, novalidate: 'novalidate' -%}
+          {%- if product.has_only_default_variant -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          {%- else -%}
+            <div class="product__variants field">
+              <label for="variant-select">{{ product.options | join: ' / ' }}</label>
+              <select id="variant-select" name="id">
+                {%- for variant in product.variants -%}
+                  <option
+                    value="{{ variant.id }}"
+                    {% if variant == product.selected_or_first_available_variant %}selected{% endif %}
+                    {% unless variant.available %}disabled{% endunless %}
+                  >
+                    {{ variant.title }} &middot; {{ variant.price | money }}
+                    {%- unless variant.available %} &middot; elfogyott{% endunless -%}
+                  </option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- endif -%}
+
+          <div class="product__buy">
+            <div class="quantity" data-quantity>
+              <button type="button" data-quantity-change="-1" aria-label="Mennyiség csökkentése">&minus;</button>
+              <label class="visually-hidden" for="quantity">Mennyiség</label>
+              <input id="quantity" name="quantity" type="number" value="1" min="1" inputmode="numeric">
+              <button type="button" data-quantity-change="1" aria-label="Mennyiség növelése">+</button>
+            </div>
+
+            <button
+              type="submit"
+              name="add"
+              class="btn btn--primary"
+              {% unless product.available %}disabled{% endunless %}
+            >
+              {%- if product.available -%}Kosárba teszem{%- else -%}Elfogyott{%- endif -%}
+            </button>
+          </div>
+        {%- endform -%}
+      </div>
+
+      {%- if section.settings.note != blank -%}
+        <p class="product__note">{{ section.settings.note }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.show_related and product.collections.size > 0 -%}
+  {%- assign related_collection = product.collections.first -%}
+  <section class="section section--deep">
+    <div class="container">
+      <div class="section-heading text-center fade-in">
+        <span class="section-label">Hasonló darabok</span>
+        <h2>Ezek is érdekelhetnek</h2>
+        <hr class="gold-hairline gold-hairline--center">
+      </div>
+      <div class="grid grid--3 mt-6">
+        {%- assign shown = 0 -%}
+        {%- for item in related_collection.products -%}
+          {%- if item.id != product.id and shown < 3 -%}
+            <div class="fade-in">{% render 'product-card', product: item %}</div>
+            {%- assign shown = shown | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+<script type="application/ld+json">
+  {{ product | structured_data }}
+</script>
+
+{% schema %}
+{
+  "name": "Termék adatlap",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_highlights",
+      "label": "Titánium előnyök megjelenítése",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_related",
+      "label": "Kapcsolódó termékek megjelenítése",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "Megjegyzés a vásárlás alatt",
+      "default": "Kérdésed van a termékről? Hívj minket a +36 30 483 3814 számon."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "highlight",
+      "name": "Termékelőny",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Szöveg"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "highlight", "settings": { "text": "ASTM F136 szabványú, Grade 23 implantátum minőségű titán" } },
+      { "type": "highlight", "settings": { "text": "Teljesen nikkelmentes, biokompatibilis alapanyag" } },
+      { "type": "highlight", "settings": { "text": "Lekerekített hátsó kapocs — alvás közben sem szúr" } },
+      { "type": "highlight", "settings": { "text": "Nem oxidálódik, nem korrodál, nem színeződik el" } }
+    ]
+  }
+}
+{% endschema %}

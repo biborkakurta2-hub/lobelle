@@ -1,0 +1,63 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Blog</span>
+    <h1>{{ blog.title }}</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {%- paginate blog.articles by 9 -%}
+      <div class="grid grid--3">
+        {%- for article in blog.articles -%}
+          <a href="{{ article.url }}" class="product-card fade-in">
+            <div class="framed">
+              {% render 'corners' %}
+              <div class="framed__inner">
+                {%- if article.image -%}
+                  <div class="product-card__media">
+                    <img
+                      src="{{ article.image | image_url: width: 700 }}"
+                      alt="{{ article.image.alt | default: article.title | escape }}"
+                      width="700"
+                      height="700"
+                      loading="lazy"
+                    >
+                  </div>
+                {%- endif -%}
+                <span class="section-label mt-2" style="font-size: 0.65rem;">
+                  {{ article.published_at | date: '%Y. %m. %d.' }}
+                </span>
+                <h2 class="product-card__title">{{ article.title }}</h2>
+                <p class="small muted mt-1">{{ article.excerpt_or_content | strip_html | truncate: 130 }}</p>
+                <div class="product-card__foot">
+                  <span class="product-card__more">Elolvasom</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        <nav class="pagination" aria-label="Lapozó">
+          {%- for part in paginate.parts -%}
+            {%- if part.is_link -%}
+              <a href="{{ part.url }}">{{ part.title }}</a>
+            {%- else -%}
+              <span class="{% if part.title == paginate.current_page %}current{% endif %}">{{ part.title }}</span>
+            {%- endif -%}
+          {%- endfor -%}
+        </nav>
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blog",
+  "settings": []
+}
+{% endschema %}

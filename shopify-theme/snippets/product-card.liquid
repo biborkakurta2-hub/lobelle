@@ -1,0 +1,48 @@
+{%- comment -%}
+  Termékkártya: dupla keret sarokjelöléssel, visszafogott hover.
+  Paraméterek: product (kötelező)
+{%- endcomment -%}
+
+<a href="{{ product.url }}" class="product-card">
+  <div class="framed">
+    {% render 'corners' %}
+    <div class="framed__inner">
+      <div class="product-card__media">
+        {%- if settings.show_sold_out_badge and product.available == false -%}
+          <span class="badge badge--muted">Elfogyott</span>
+        {%- elsif settings.show_sale_badge and product.compare_at_price > product.price -%}
+          <span class="badge">Akció</span>
+        {%- endif -%}
+
+        {%- if product.featured_media -%}
+          <img
+            src="{{ product.featured_media | image_url: width: 700 }}"
+            srcset="
+              {{ product.featured_media | image_url: width: 400 }} 400w,
+              {{ product.featured_media | image_url: width: 700 }} 700w,
+              {{ product.featured_media | image_url: width: 1000 }} 1000w
+            "
+            sizes="(min-width: 1024px) 22rem, (min-width: 640px) 45vw, 90vw"
+            alt="{{ product.featured_media.alt | default: product.title | escape }}"
+            width="700"
+            height="700"
+            loading="lazy"
+          >
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'product-card__media' }}
+        {%- endif -%}
+      </div>
+
+      {%- if settings.show_vendor and product.vendor != blank -%}
+        <span class="section-label mt-2" style="font-size: 0.65rem;">{{ product.vendor }}</span>
+      {%- endif -%}
+
+      <h3 class="product-card__title">{{ product.title }}</h3>
+
+      <div class="product-card__foot">
+        {% render 'price', product: product %}
+        <span class="product-card__more">Részletek</span>
+      </div>
+    </div>
+  </div>
+</a>

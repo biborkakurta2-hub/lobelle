@@ -1,0 +1,28 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Fiók</span>
+    <h1>Címeim</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 42rem;">
+    {%- paginate customer.addresses by 6 -%}
+      {%- for address in customer.addresses -%}
+        <div class="framed mt-3">
+          {% render 'corners' %}
+          <div class="framed__inner">
+            <p class="small">{{ address | format_address }}</p>
+          </div>
+        </div>
+      {%- else -%}
+        <p class="muted small">Még nincs mentett címed.</p>
+      {%- endfor -%}
+    {%- endpaginate -%}
+
+    <p class="text-center mt-6">
+      <a href="{{ routes.account_url }}" class="btn btn--outline">Vissza a fiókomhoz</a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,109 @@
+{%- comment -%}
+  Nyitóoldali hero: logó, üdvözlő feliratka, cím, három pillér, két CTA.
+{%- endcomment -%}
+
+<section class="hero">
+  <div class="container fade-in">
+    {%- if section.settings.show_logo -%}
+      {%- if settings.logo != blank -%}
+        <img
+          class="hero__logo"
+          src="{{ settings.logo | image_url: width: 900 }}"
+          alt="{{ shop.name | escape }}"
+          width="{{ settings.logo.width }}"
+          height="{{ settings.logo.height }}"
+        >
+      {%- else -%}
+        <img class="hero__logo" src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name | escape }}" width="1112" height="805">
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if section.settings.label != blank -%}
+      <p class="section-label mt-6">{{ section.settings.label }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h1>{{ section.settings.heading }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.pillars != blank -%}
+      <div class="hero__pillars">
+        {%- assign items = section.settings.pillars | split: ',' -%}
+        {%- for item in items -%}
+          <span>{{ item | strip }}</span>
+          {%- unless forloop.last -%}
+            <span class="diamond" aria-hidden="true">&#9670;</span>
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <div class="hero__actions">
+      {%- if section.settings.cta_primary_label != blank -%}
+        <a href="{{ section.settings.cta_primary_link }}" class="btn btn--primary">
+          {{ section.settings.cta_primary_label }}
+        </a>
+      {%- endif -%}
+      {%- if section.settings.cta_secondary_label != blank -%}
+        <a href="{{ section.settings.cta_secondary_link }}" class="btn btn--outline">
+          {{ section.settings.cta_secondary_label }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Nyitókép",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "label": "Logó megjelenítése",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Feliratka",
+      "default": "Üdvözlünk a Lobelle oldalán"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Főcím",
+      "default": "Az innovatív füllyukasztás új generációja"
+    },
+    {
+      "type": "text",
+      "id": "pillars",
+      "label": "Pillérek (vesszővel elválasztva)",
+      "default": "Biztonság, Innováció, Szakmaiság"
+    },
+    {
+      "type": "text",
+      "id": "cta_primary_label",
+      "label": "Elsődleges gomb felirata",
+      "default": "Fedezd fel a rendszert"
+    },
+    {
+      "type": "url",
+      "id": "cta_primary_link",
+      "label": "Elsődleges gomb hivatkozása"
+    },
+    {
+      "type": "text",
+      "id": "cta_secondary_label",
+      "label": "Másodlagos gomb felirata",
+      "default": "Jelentkezz képzésre"
+    },
+    {
+      "type": "url",
+      "id": "cta_secondary_link",
+      "label": "Másodlagos gomb hivatkozása"
+    }
+  ],
+  "presets": [{ "name": "Nyitókép" }]
+}
+{% endschema %}

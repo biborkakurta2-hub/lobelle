@@ -1,0 +1,48 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Fiók</span>
+    <h1>Fiókom</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cart-layout">
+      <div>
+        <h2>Rendeléseim</h2>
+        <hr class="gold-hairline">
+
+        {%- if customer.orders.size > 0 -%}
+          <div class="cart-items">
+            {%- for order in customer.orders -%}
+              <div class="cart-item">
+                <div class="cart-item__body">
+                  <a href="{{ order.customer_url }}" class="cart-item__title">{{ order.name }}</a>
+                  <p class="cart-item__variant">{{ order.created_at | date: '%Y. %m. %d.' }} · {{ order.financial_status_label }}</p>
+                </div>
+                <p class="cart-item__price">{{ order.total_price | money }}</p>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- else -%}
+          <p class="muted small mt-3">Még nincs leadott rendelésed.</p>
+        {%- endif -%}
+      </div>
+
+      <div>
+        <h2>Adatok</h2>
+        <hr class="gold-hairline">
+        <div class="cart-summary mt-4">
+          <p class="small">{{ customer.name }}</p>
+          <p class="small muted">{{ customer.email }}</p>
+          {%- if customer.default_address -%}
+            <p class="small muted mt-2">{{ customer.default_address | format_address }}</p>
+          {%- endif -%}
+          <a href="{{ routes.account_addresses_url }}" class="btn btn--outline btn--full mt-3">Címek kezelése</a>
+          <a href="{{ routes.account_logout_url }}" class="btn btn--outline btn--full mt-2">Kijelentkezés</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

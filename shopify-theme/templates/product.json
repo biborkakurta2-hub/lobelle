@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "h1": { "type": "highlight", "settings": { "text": "ASTM F136 szabványú, Grade 23 implantátum minőségű titán" } },
+        "h2": { "type": "highlight", "settings": { "text": "Teljesen nikkelmentes, biokompatibilis alapanyag" } },
+        "h3": { "type": "highlight", "settings": { "text": "Lekerekített hátsó kapocs — alvás közben sem szúr" } },
+        "h4": { "type": "highlight", "settings": { "text": "Nem oxidálódik, nem korrodál, nem színeződik el" } }
+      },
+      "block_order": ["h1", "h2", "h3", "h4"],
+      "settings": {
+        "show_highlights": true,
+        "show_related": true,
+        "note": "Kérdésed van a termékről? Hívj minket a +36 30 483 3814 számon."
+      }
+    }
+  },
+  "order": ["main"]
+}

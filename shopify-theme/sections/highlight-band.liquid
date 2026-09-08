@@ -1,0 +1,39 @@
+{%- comment -%}
+  Bronz kiemelt sáv (ASTM F136 / Grade 23, FAR tanúsítvány).
+{%- endcomment -%}
+
+<section class="section--bronze">
+  <div class="container fade-in">
+    {%- if section.settings.label != blank -%}
+      <span class="section-label">{{ section.settings.label }}</span>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="mt-2" style="font-size: clamp(1.35rem, 3vw, 1.875rem);">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p class="mt-2 small">{{ section.settings.text }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kiemelt sáv",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Feliratka", "default": "Prémium garancia" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Cím",
+      "default": "ASTM F136 szabvány · Grade 23 implantátum minőségű titán"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Alszöveg",
+      "default": "Szigorúan ellenőrzött, steril termékek — kompromisszumok nélkül."
+    }
+  ],
+  "presets": [{ "name": "Kiemelt sáv" }]
+}
+{% endschema %}

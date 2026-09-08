@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Fáj a füllyukasztás?",
+            "answer": "<p>A Lobelle rendszer rendkívül vékony titánium szárral dolgozik, ezért a lyukasztás alig érezhető — egy rövid, enyhe csípéshez hasonlítható. A professzionális készülék egyetlen gyors mozdulattal végzi el a lyukasztást, így a kellemetlenség a másodperc törtrészéig tart.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Mennyi a gyógyulási idő?",
+            "answer": "<p>Fülcimpa esetén a teljes gyógyulás általában 6–8 hét. A titánium biokompatibilis anyaga a tapasztalatok szerint gyorsabb gyógyulást, kevesebb gyulladást és minimális irritációt jelent más fémekhez képest. A gyógyulás ideje alatt az első ékszert javasolt bent hagyni.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Hány éves kortól lyukasztható a babák füle?",
+            "answer": "<p>A babafül-lyukasztás a kötelező védőoltások beadása után, jellemzően 3–4 hónapos kortól ajánlott — a pontos időzítésről érdemes a gyermekorvossal is egyeztetni. A Lobelle baba ékszerek lekerekített hátsó kapcsa alvás közben sem szúr.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Miben más a titán, mint az orvosi fém?",
+            "answer": "<p>Az orvosi fém néven forgalmazott ékszerek többsége sebészeti acél, amely tartalmazhat nikkelt — a leggyakoribb kontakt allergént. Az ASTM F136 szabványú, Grade 23 titán ezzel szemben teljesen nikkelmentes és biokompatibilis: a szervezet sajátjaként fogadja.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Hogyan ápoljam a friss fül-lyukat?",
+            "answer": "<p>Naponta kétszer tisztítsd a lyukasztás környékét az utóápoló oldattal, előtte moss kezet. Az ékszert a gyógyulás alatt ne vedd ki, és kerüld a felesleges érintését. Uszoda, szauna és állóvíz az első hetekben kerülendő.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "question": "Mi a helyzet, ha allergiás vagyok a fémekre?",
+            "answer": "<p>Pontosan ilyen esetekre való a titán. A fémallergiák túlnyomó többségét a nikkel okozza — a Lobelle ékszerek ezzel szemben teljesen nikkelmentes, implantátum minőségű titánból készülnek. Ismert, súlyos fémallergia esetén javasolt előzetesen bőrgyógyásszal egyeztetni.</p>"
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "question": "Van korhatára a füllyukasztásnak?",
+            "answer": "<p>Felfelé nincs korhatár. 18 év alatt szülői vagy törvényes képviselői beleegyezés szükséges, amelyet írásos hozzájárulási nyilatkozattal rögzítünk — ez a szakembereink munkájának kötelező része.</p>"
+          }
+        },
+        "q8": {
+          "type": "question",
+          "settings": {
+            "question": "Mit tegyek, ha begyullad a lyukasztás helye?",
+            "answer": "<p>Enyhe bőrpír az első napokban természetes. Ha a gyulladás erősödik vagy néhány nap után sem múlik, folytasd az utóápoló használatát, az ékszert ne vedd ki, és fordulj a lyukasztást végző szakemberhez vagy orvoshoz.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"],
+      "settings": {
+        "label": "Segítünk eligazodni",
+        "heading": "Gyakori kérdések",
+        "text": "Összegyűjtöttük a leggyakrabban felmerülő kérdéseket a füllyukasztásról, a titániumról és az utóápolásról. Ha nem találod a választ, keress minket bátran.",
+        "cta_text": "Nem találtad meg a választ a kérdésedre?",
+        "cta_label": "Tedd fel nekünk",
+        "cta_link": "/pages/kapcsolat"
+      }
+    }
+  },
+  "order": ["faq"]
+}

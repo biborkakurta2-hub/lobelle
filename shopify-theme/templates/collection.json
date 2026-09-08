@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": { "label": "Kollekció" }
+    },
+    "grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 12,
+        "footer_text": "Kérdésed van a kollekcióról, vagy nagyobb mennyiséget rendelnél?",
+        "footer_link_label": "Kapcsolatfelvétel",
+        "footer_link": "/pages/kapcsolat"
+      }
+    }
+  },
+  "order": ["banner", "grid"]
+}

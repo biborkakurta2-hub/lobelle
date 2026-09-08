@@ -1,0 +1,88 @@
+{%- comment -%}
+  Életképek galéria — keretes kártyák felirattal.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.deep %}section--deep{% endif %}">
+  <div class="container">
+    <div class="section-heading text-center fade-in">
+      {%- if section.settings.label != blank -%}
+        <span class="section-label">{{ section.settings.label }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      <hr class="gold-hairline gold-hairline--center">
+      {%- if section.settings.text != blank -%}
+        <p class="lede">{{ section.settings.text }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="grid grid--3 mt-6">
+      {%- for block in section.blocks -%}
+        <figure class="gallery-item fade-in" style="margin: 0;" {{ block.shopify_attributes }}>
+          <div class="framed">
+            {% render 'corners' %}
+            <div class="framed__inner" style="padding: 0.75rem;">
+              <div class="gallery-item__media">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 800 }}"
+                    alt="{{ block.settings.caption | escape }}"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'lifestyle-1' | placeholder_svg_tag }}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+          {%- if block.settings.caption != blank -%}
+            <figcaption>{{ block.settings.caption }}</figcaption>
+          {%- endif -%}
+        </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Galéria",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Feliratka", "default": "Galéria" },
+    { "type": "text", "id": "heading", "label": "Cím", "default": "Életképek" },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Bevezető",
+      "default": "Pillanatok a képzésekről, a műhelyünkből és a mindennapjainkból."
+    },
+    { "type": "checkbox", "id": "deep", "label": "Másodlagos háttér", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Kép",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Kép" },
+        { "type": "text", "id": "caption", "label": "Felirat" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Galéria",
+      "blocks": [
+        { "type": "image", "settings": { "caption": "Képzés közben" } },
+        { "type": "image", "settings": { "caption": "Gyakorlati tréning" } },
+        { "type": "image", "settings": { "caption": "A kezdőcsomag" } },
+        { "type": "image", "settings": { "caption": "Titánium kollekció" } },
+        { "type": "image", "settings": { "caption": "A készülék közelről" } },
+        { "type": "image", "settings": { "caption": "Tanúsítvány átadás" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

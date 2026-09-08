@@ -1,0 +1,19 @@
+<section class="section text-center">
+  <div class="container">
+    <span class="section-label">404</span>
+    <h1 class="mt-2" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Ez az oldal nem található</h1>
+    <hr class="gold-hairline gold-hairline--center">
+    <p class="muted small mt-3" style="max-width: 28rem; margin-inline: auto;">
+      A keresett oldal nem létezik vagy elköltözött. Kezdd a főoldalról, vagy nézd meg a
+      kollekciónkat.
+    </p>
+    <a href="{{ routes.root_url }}" class="btn btn--primary mt-6">Vissza a főoldalra</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "404 oldal",
+  "settings": []
+}
+{% endschema %}

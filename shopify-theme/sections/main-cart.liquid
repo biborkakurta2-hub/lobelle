@@ -1,0 +1,140 @@
+{%- comment -%}
+  Kosár: tételek mennyiségmódosítással és összegzés a Shopify fizetéshez.
+{%- endcomment -%}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Webshop</span>
+    <h1>Kosár</h1>
+    <hr class="gold-hairline gold-hairline--center">
+    {%- if cart.item_count > 0 -%}
+      <p class="lede">Nézd át a kiválasztott darabokat, majd lépj tovább a biztonságos fizetéshez.</p>
+    {%- endif -%}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {%- if cart.item_count == 0 -%}
+      <div class="framed empty-state">
+        {% render 'corners' %}
+        <div class="framed__inner" style="padding: 2.5rem 1.5rem;">
+          <span class="section-label">Üres kosár</span>
+          <h2>Még nincs termék a kosárban.</h2>
+          <p>Böngéssz a kollekcióban, és tedd kosárba a kiválasztott darabokat.</p>
+          <a href="{{ routes.all_products_collection_url }}" class="btn btn--primary mt-4">Irány a kollekció</a>
+        </div>
+      </div>
+    {%- else -%}
+      <form action="{{ routes.cart_url }}" method="post" novalidate>
+        <div class="cart-layout">
+          <div>
+            <h2>A kosár tartalma</h2>
+            <hr class="gold-hairline">
+
+            <div class="cart-items">
+              {%- for item in cart.items -%}
+                <div class="cart-item">
+                  <div class="cart-item__media">
+                    {%- if item.image -%}
+                      <a href="{{ item.url }}">
+                        <img
+                          src="{{ item.image | image_url: width: 200 }}"
+                          alt="{{ item.image.alt | default: item.product.title | escape }}"
+                          width="200"
+                          height="200"
+                          loading="lazy"
+                        >
+                      </a>
+                    {%- endif -%}
+                  </div>
+
+                  <div class="cart-item__body">
+                    <a href="{{ item.url }}" class="cart-item__title">{{ item.product.title }}</a>
+                    {%- unless item.product.has_only_default_variant -%}
+                      <p class="cart-item__variant">{{ item.variant.title }}</p>
+                    {%- endunless -%}
+                    <p class="cart-item__variant">{{ item.original_price | money }}</p>
+
+                    <div class="cart-item__controls">
+                      <div class="quantity" data-quantity>
+                        <button type="button" data-quantity-change="-1" aria-label="{{ item.product.title | escape }}: mennyiség csökkentése">&minus;</button>
+                        <label class="visually-hidden" for="quantity-{{ forloop.index }}">Mennyiség</label>
+                        <input
+                          id="quantity-{{ forloop.index }}"
+                          type="number"
+                          value="{{ item.quantity }}"
+                          min="0"
+                          inputmode="numeric"
+                          data-cart-quantity="{{ forloop.index }}"
+                        >
+                        <button type="button" data-quantity-change="1" aria-label="{{ item.product.title | escape }}: mennyiség növelése">+</button>
+                      </div>
+
+                      <button type="button" class="cart-item__remove" data-cart-remove="{{ forloop.index }}">
+                        Eltávolítom
+                      </button>
+                    </div>
+                  </div>
+
+                  <p class="cart-item__price">{{ item.final_line_price | money }}</p>
+                </div>
+              {%- endfor -%}
+            </div>
+
+            <div class="mt-3">
+              <label class="visually-hidden" for="cart-note">Megjegyzés a rendeléshez</label>
+              <textarea
+                id="cart-note"
+                name="note"
+                rows="3"
+                placeholder="Megjegyzés a rendeléshez (opcionális)"
+              >{{ cart.note }}</textarea>
+            </div>
+          </div>
+
+          <div>
+            <h2>Összegzés</h2>
+            <hr class="gold-hairline">
+
+            <div class="cart-summary mt-4">
+              <div class="cart-summary__row">
+                <span>Részösszeg</span>
+                <span class="cart-summary__total">{{ cart.total_price | money }}</span>
+              </div>
+
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
+                {%- for discount in cart.cart_level_discount_applications -%}
+                  <div class="cart-summary__row">
+                    <span class="small">{{ discount.title }}</span>
+                    <span class="small">-{{ discount.total_allocated_amount | money }}</span>
+                  </div>
+                {%- endfor -%}
+              {%- endif -%}
+
+              <small>
+                A szállítási költséget és az esetleges kedvezményeket a fizetési oldalon
+                számoljuk ki.
+              </small>
+
+              <button type="submit" name="checkout" class="btn btn--primary btn--full mt-3">
+                Tovább a fizetéshez
+              </button>
+
+              <button type="submit" name="update" class="btn btn--outline btn--full mt-2">
+                Kosár frissítése
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kosár",
+  "settings": []
+}
+{% endschema %}

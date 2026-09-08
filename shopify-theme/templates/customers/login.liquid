@@ -1,0 +1,33 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Fiók</span>
+    <h1>Bejelentkezés</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 26rem;">
+    {%- form 'customer_login', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}
+        <p class="form-error">{{ form.errors | default_errors }}</p>
+      {%- endif -%}
+
+      <div class="field">
+        <label for="customer-email">E-mail cím</label>
+        <input id="customer-email" type="email" name="customer[email]" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="customer-password">Jelszó</label>
+        <input id="customer-password" type="password" name="customer[password]" autocomplete="current-password" required>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">Bejelentkezés</button>
+
+      <p class="small muted mt-3 text-center">
+        <a href="{{ routes.account_register_url }}">Fiók létrehozása</a>
+      </p>
+    {%- endform -%}
+  </div>
+</section>

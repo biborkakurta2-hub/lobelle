@@ -1,0 +1,95 @@
+{%- comment -%}
+  Kategóriarács a nyitóoldalra.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.deep %}section--deep{% endif %}">
+  <div class="container">
+    <div class="section-heading text-center fade-in">
+      {%- if section.settings.label != blank -%}
+        <span class="section-label">{{ section.settings.label }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      <hr class="gold-hairline gold-hairline--center">
+      {%- if section.settings.text != blank -%}
+        <p class="lede">{{ section.settings.text }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="grid grid--3 mt-6">
+      {%- for block in section.blocks -%}
+        {%- assign coll = block.settings.collection -%}
+        {%- if coll != blank -%}
+          <div class="fade-in" {{ block.shopify_attributes }}>
+            <a href="{{ coll.url }}" class="product-card">
+              <div class="framed">
+                {% render 'corners' %}
+                <div class="framed__inner text-center">
+                  <span class="diamond" aria-hidden="true">&#9670;</span>
+                  <h3 class="product-card__title" style="margin-top: 0.75rem;">
+                    {{ block.settings.title | default: coll.title }}
+                  </h3>
+                  <p class="small muted mt-1">
+                    {{ block.settings.text | default: coll.description | strip_html | truncate: 110 }}
+                  </p>
+                  <div class="product-card__foot">
+                    <span class="product-card__more">Megnézem</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.quote != blank -%}
+      <p class="text-center mt-6 fade-in" style="font-family: var(--font-serif); font-style: italic; color: var(--faded); font-size: 1.125rem;">
+        {{ section.settings.quote }}
+      </p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kategóriarács",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Feliratka", "default": "Kollekció" },
+    { "type": "text", "id": "heading", "label": "Cím", "default": "Termékkínálat" },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Bevezető",
+      "default": "Minden darab ugyanabból az alapanyagból, ugyanazzal az igényességgel készül — a legkisebbeknek szánt első fülbevalótól a professzionális eszközökig."
+    },
+    { "type": "text", "id": "quote", "label": "Záró idézet", "default": "A prémium vendég prémium minőséget vár." },
+    { "type": "checkbox", "id": "deep", "label": "Másodlagos háttér", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Kategória",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Kategória" },
+        { "type": "text", "id": "title", "label": "Cím felülírása" },
+        { "type": "textarea", "id": "text", "label": "Leírás felülírása" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kategóriarács",
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}

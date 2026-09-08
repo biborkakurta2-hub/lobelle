@@ -1,0 +1,22 @@
+{%- comment -%}
+  Ár megjelenítése akciós ár kezelésével.
+  Paraméterek: product (kötelező), class (opcionális)
+{%- endcomment -%}
+
+{%- liquid
+  assign target = product
+  assign compare_at = target.compare_at_price
+  assign price = target.price
+-%}
+
+<span class="{{ class | default: 'product-card__price' }}">
+  {%- if target.price_varies -%}
+    {{ price | money }}-tól
+  {%- else -%}
+    {{ price | money }}
+  {%- endif -%}
+
+  {%- if compare_at > price -%}
+    <s>{{ compare_at | money }}</s>
+  {%- endif -%}
+</span>

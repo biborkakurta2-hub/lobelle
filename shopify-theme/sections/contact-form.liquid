@@ -1,0 +1,134 @@
+{%- comment -%}
+  Kapcsolatfelvételi űrlap (Shopify contact form) az elérhetőségek mellett.
+{%- endcomment -%}
+
+<section class="section">
+  <div class="container">
+    <div class="cart-layout">
+      <div class="fade-in">
+        <h2>{{ section.settings.form_heading | default: 'Írj nekünk üzenetet' }}</h2>
+        <hr class="gold-hairline">
+
+        <div class="mt-4">
+          {%- form 'contact', novalidate: 'novalidate' -%}
+            {%- if form.posted_successfully? -%}
+              <div class="framed">
+                {% render 'corners' %}
+                <div class="framed__inner text-center" style="padding: 2.5rem 1.5rem;">
+                  <span class="section-label">Köszönjük</span>
+                  <p class="quote mt-3">Üzenetét megkaptuk.</p>
+                  <p class="small muted mt-2">
+                    Munkatársunk hamarosan felveszi Önnel a kapcsolatot a megadott elérhetőségek
+                    egyikén.
+                  </p>
+                </div>
+              </div>
+            {%- else -%}
+              {%- if form.errors -%}
+                <p class="form-error">
+                  Az üzenet küldése nem sikerült. Kérjük, ellenőrizze a megadott adatokat.
+                </p>
+              {%- endif -%}
+
+              <div class="field">
+                <label for="contact-name">Név <span class="required" aria-hidden="true">*</span></label>
+                <input id="contact-name" type="text" name="contact[Név]" autocomplete="name" required>
+              </div>
+
+              <div class="field">
+                <label for="contact-email">E-mail cím <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  name="contact[email]"
+                  autocomplete="email"
+                  required
+                  value="{{ form.email }}"
+                >
+                {%- if form.errors contains 'email' -%}
+                  <p class="form-error">Kérjük, érvényes e-mail címet adjon meg.</p>
+                {%- endif -%}
+              </div>
+
+              <div class="field">
+                <label for="contact-phone">Telefonszám <span class="muted">(opcionális)</span></label>
+                <input id="contact-phone" type="tel" name="contact[Telefonszám]" autocomplete="tel">
+              </div>
+
+              <div class="field">
+                <label for="contact-body">Üzenet</label>
+                <textarea id="contact-body" name="contact[body]" rows="5"></textarea>
+              </div>
+
+              <div class="field">
+                <label class="checkbox-row">
+                  <input type="checkbox" name="contact[Adatkezelés elfogadva]" value="Igen" required>
+                  <span>
+                    Elolvastam és elfogadom az adatkezelési tájékoztatót, hozzájárulok adataim
+                    kapcsolatfelvétel céljából történő kezeléséhez.
+                    <span class="required" aria-hidden="true">*</span>
+                  </span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn--primary">Üzenet küldése</button>
+            {%- endif -%}
+          {%- endform -%}
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <h2>Elérhetőségeink</h2>
+        <hr class="gold-hairline">
+
+        <dl class="mt-4" style="display: grid; gap: 1.75rem;">
+          {%- if settings.address != blank -%}
+            <div>
+              <dt class="section-label" style="font-size: 0.65rem;">Cím</dt>
+              <dd style="margin: 0.5rem 0 0; font-size: 0.9rem;">{{ settings.address }}</dd>
+            </div>
+          {%- endif -%}
+          {%- if settings.phone != blank -%}
+            <div>
+              <dt class="section-label" style="font-size: 0.65rem;">Telefon</dt>
+              <dd style="margin: 0.5rem 0 0; font-size: 0.9rem;">
+                <a href="tel:{{ settings.phone | remove: ' ' }}">{{ settings.phone }}</a>
+              </dd>
+            </div>
+          {%- endif -%}
+          {%- if settings.email != blank -%}
+            <div>
+              <dt class="section-label" style="font-size: 0.65rem;">E-mail</dt>
+              <dd style="margin: 0.5rem 0 0; font-size: 0.9rem;">
+                <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
+              </dd>
+            </div>
+          {%- endif -%}
+          {%- if settings.social_facebook != blank or settings.social_instagram != blank -%}
+            <div>
+              <dt class="section-label" style="font-size: 0.65rem;">Közösség</dt>
+              <dd style="margin: 0.5rem 0 0; font-size: 0.9rem; display: grid; gap: 0.35rem;">
+                {%- if settings.social_facebook != blank -%}
+                  <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+                {%- endif -%}
+                {%- if settings.social_instagram != blank -%}
+                  <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
+                {%- endif -%}
+              </dd>
+            </div>
+          {%- endif -%}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kapcsolati űrlap",
+  "settings": [
+    { "type": "text", "id": "form_heading", "label": "Űrlap címe", "default": "Írj nekünk üzenetet" }
+  ],
+  "presets": [{ "name": "Kapcsolati űrlap" }]
+}
+{% endschema %}

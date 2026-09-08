@@ -1,0 +1,125 @@
+{%- comment -%}
+  Fejléc: logó balra, csoportosított lenyíló menük, kosár és telefonszám CTA.
+  A menüpontok a Shopify navigációból jönnek (Bolt adminisztráció > Navigáció).
+{%- endcomment -%}
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="{{ routes.root_url }}" class="header__logo" aria-label="{{ shop.name }} – főoldal">
+      {%- if settings.logo != blank -%}
+        <img
+          src="{{ settings.logo | image_url: width: 600 }}"
+          alt="{{ shop.name | escape }}"
+          width="{{ settings.logo.width }}"
+          height="{{ settings.logo.height }}"
+        >
+      {%- else -%}
+        <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name | escape }}" width="1112" height="805">
+      {%- endif -%}
+    </a>
+
+    <nav class="header__nav" aria-label="Fő navigáció">
+      {%- for link in section.settings.menu.links -%}
+        {%- if link.links.size > 0 -%}
+          <div class="nav__item" data-nav-item>
+            <button
+              type="button"
+              class="nav__toggle"
+              data-nav-toggle
+              aria-expanded="false"
+              aria-controls="nav-panel-{{ forloop.index }}"
+            >
+              {{ link.title }}
+              <svg class="nav__chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.2"></path>
+              </svg>
+            </button>
+            <div class="nav__dropdown" id="nav-panel-{{ forloop.index }}" hidden>
+              <ul>
+                {%- for child in link.links -%}
+                  <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        {%- else -%}
+          <a href="{{ link.url }}" class="nav__link">{{ link.title }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+
+    <div class="header__actions">
+      <a href="{{ routes.cart_url }}" class="cart-link" aria-label="Kosár, {{ cart.item_count }} tétel">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+          <path d="M6 8h12l-1 12H7L6 8z"></path>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+        </svg>
+        {%- if cart.item_count > 0 -%}
+          <span class="cart-link__count">{{ cart.item_count }}</span>
+        {%- endif -%}
+      </a>
+
+      {%- if settings.phone != blank -%}
+        <a
+          href="tel:{{ settings.phone | remove: ' ' }}"
+          class="btn btn--primary btn--small header__phone"
+        >
+          Hívjon: {{ settings.phone }}
+        </a>
+      {%- endif -%}
+    </div>
+
+    <button
+      type="button"
+      class="header__burger"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Menü megnyitása"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil navigáció" hidden>
+    <div class="container">
+      {%- for link in section.settings.menu.links -%}
+        <div class="mobile-menu__group">
+          {%- if link.links.size > 0 -%}
+            <span class="section-label" style="font-size: 0.65rem;">{{ link.title }}</span>
+            <ul class="mt-1">
+              {%- for child in link.links -%}
+                <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+              {%- endfor -%}
+            </ul>
+          {%- else -%}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+
+      {%- if settings.phone != blank -%}
+        <a href="tel:{{ settings.phone | remove: ' ' }}" class="btn btn--primary btn--full mt-3">
+          Hívjon: {{ settings.phone }}
+        </a>
+      {%- endif -%}
+    </div>
+  </nav>
+</header>
+
+{% schema %}
+{
+  "name": "Fejléc",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menü",
+      "default": "main-menu",
+      "info": "A lenyílók a menü almenüpontjaiból épülnek fel."
+    }
+  ]
+}
+{% endschema %}

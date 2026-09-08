@@ -1,0 +1,43 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Fiók</span>
+    <h1>Fiók létrehozása</h1>
+    <hr class="gold-hairline gold-hairline--center">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 26rem;">
+    {%- form 'create_customer', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}
+        <p class="form-error">{{ form.errors | default_errors }}</p>
+      {%- endif -%}
+
+      <div class="field">
+        <label for="register-first">Keresztnév</label>
+        <input id="register-first" type="text" name="customer[first_name]" autocomplete="given-name">
+      </div>
+
+      <div class="field">
+        <label for="register-last">Vezetéknév</label>
+        <input id="register-last" type="text" name="customer[last_name]" autocomplete="family-name">
+      </div>
+
+      <div class="field">
+        <label for="register-email">E-mail cím</label>
+        <input id="register-email" type="email" name="customer[email]" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="register-password">Jelszó</label>
+        <input id="register-password" type="password" name="customer[password]" autocomplete="new-password" required>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">Fiók létrehozása</button>
+
+      <p class="small muted mt-3 text-center">
+        <a href="{{ routes.account_login_url }}">Már van fiókom</a>
+      </p>
+    {%- endform -%}
+  </div>
+</section>

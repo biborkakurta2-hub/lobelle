@@ -1,0 +1,74 @@
+{
+  "general": {
+    "search": {
+      "title": "Keresés",
+      "placeholder": "Keresés a termékek között",
+      "submit": "Keresés",
+      "results_with_count": {
+        "one": "{{ count }} találat",
+        "other": "{{ count }} találat"
+      },
+      "no_results": "Nincs találat erre: {{ terms }}"
+    },
+    "pagination": {
+      "previous": "Előző",
+      "next": "Következő"
+    },
+    "404": {
+      "title": "Ez az oldal nem található",
+      "subtext": "A keresett oldal nem létezik vagy elköltözött."
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Kosárba teszem",
+      "sold_out": "Elfogyott",
+      "unavailable": "Nem elérhető",
+      "quantity": "Mennyiség",
+      "sale": "Akció",
+      "from_price": "Ártól"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Kosár",
+      "empty": "Még nincs termék a kosárban.",
+      "continue_shopping": "Vásárlás folytatása",
+      "subtotal": "Részösszeg",
+      "checkout": "Tovább a fizetéshez",
+      "remove": "Eltávolítom"
+    }
+  },
+  "customer": {
+    "login": {
+      "title": "Bejelentkezés",
+      "email": "E-mail cím",
+      "password": "Jelszó",
+      "submit": "Bejelentkezés",
+      "forgot_password": "Elfelejtettem a jelszavam",
+      "create_account": "Fiók létrehozása"
+    },
+    "register": {
+      "title": "Fiók létrehozása",
+      "first_name": "Keresztnév",
+      "last_name": "Vezetéknév",
+      "submit": "Fiók létrehozása"
+    },
+    "account": {
+      "title": "Fiókom",
+      "orders": "Rendelések",
+      "logout": "Kijelentkezés",
+      "addresses": "Címek"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Név",
+      "email": "E-mail cím",
+      "phone": "Telefonszám",
+      "message": "Üzenet",
+      "send": "Üzenet küldése",
+      "success": "Köszönjük, üzenetét megkaptuk."
+    }
+  }
+}
