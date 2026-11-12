@@ -47,7 +47,7 @@ export default function ProductCategoryPage({ params }: Props) {
         {category.longDescription}
       </PageHero>
 
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         {products.length > 0 ? (
           <FadeIn>
             <ProductGrid products={products} />
@@ -57,7 +57,7 @@ export default function ProductCategoryPage({ params }: Props) {
             <FramedCard className="mx-auto max-w-2xl">
               <div className="py-10 text-center">
                 <span className="section-label">Feltöltés alatt</span>
-                <p className="mt-5 font-serif text-2xl leading-snug text-ink">
+                <p className="mt-5 font-serif text-3xl font-light leading-snug text-ink">
                   A kategória termékei hamarosan elérhetők.
                 </p>
                 <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-faded">
@@ -73,7 +73,7 @@ export default function ProductCategoryPage({ params }: Props) {
         )}
 
         <FadeIn>
-          <div className="mt-16 border-t border-hairline/60 pt-10 text-center">
+          <div className="mt-16 border-t border-hairline pt-10 text-center">
             <p className="text-sm text-faded">
               Kérdésed van a kollekcióról, vagy nagyobb mennyiséget rendelnél?
             </p>

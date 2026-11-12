@@ -22,7 +22,7 @@ export default function AboutPage() {
         A Lobelle ott kezdődik, ahol a kompromisszum véget ér.
       </PageHero>
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-3xl px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <FadeIn>
           <div className="space-y-6 text-base leading-relaxed text-faded">
             <p>
@@ -55,7 +55,7 @@ export default function AboutPage() {
         <FadeIn delay={120}>
           <FramedCard className="mt-14">
             <div className="py-8 text-center">
-              <p className="mx-auto max-w-md font-serif text-2xl leading-snug text-ink">
+              <p className="mx-auto max-w-md font-serif text-3xl font-light leading-snug text-ink">
                 „Ha egyszer titániumot használsz, nem térsz vissza máshoz.”
               </p>
               <div className="gold-hairline mx-auto mt-6" aria-hidden="true" />
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </FadeIn>
       </section>
 
-      <section className="border-t border-hairline/50 bg-cream-deep/60">
+      <section className="border-t border-hairline bg-cream-deep/60">
         <div className="mx-auto max-w-content px-4 py-16 text-center sm:px-6 md:py-20 lg:px-8">
           <FadeIn>
             <SectionHeading label="Ismerj meg minket közelebbről" title="Így dolgozunk">

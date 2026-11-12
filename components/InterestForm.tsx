@@ -64,9 +64,9 @@ export default function InterestForm({
 
   if (sent) {
     return (
-      <div className="border border-hairline bg-white p-10 text-center" role="status">
+      <div className="soft-card p-10 text-center" role="status">
         <span className="section-label">Köszönjük</span>
-        <p className="mt-4 font-serif text-2xl text-ink">Érdeklődésedet megkaptuk.</p>
+        <p className="mt-4 font-serif text-3xl font-light text-ink">Érdeklődésedet megkaptuk.</p>
         <p className="mt-3 text-sm leading-relaxed text-faded">
           Hamarosan felvesszük veled a kapcsolatot a megadott elérhetőségeken.
         </p>
@@ -80,7 +80,7 @@ export default function InterestForm({
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor={`${id}-name`} className="mb-1.5 block text-sm text-ink">
+          <label htmlFor={`${id}-name`} className="field-label">
             Név <span className="text-bronze" aria-hidden="true">*</span>
           </label>
           <input
@@ -99,7 +99,7 @@ export default function InterestForm({
           ) : null}
         </div>
         <div>
-          <label htmlFor={`${id}-email`} className="mb-1.5 block text-sm text-ink">
+          <label htmlFor={`${id}-email`} className="field-label">
             Email cím <span className="text-bronze" aria-hidden="true">*</span>
           </label>
           <input
@@ -120,14 +120,14 @@ export default function InterestForm({
       </div>
 
       <div>
-        <label htmlFor={`${id}-phone`} className="mb-1.5 block text-sm text-ink">
+        <label htmlFor={`${id}-phone`} className="field-label">
           Telefonszám <span className="text-faded">(opcionális)</span>
         </label>
         <input id={`${id}-phone`} name="phone" type="tel" autoComplete="tel" className="form-field" />
       </div>
 
       <div>
-        <label htmlFor={`${id}-message`} className="mb-1.5 block text-sm text-ink">
+        <label htmlFor={`${id}-message`} className="field-label">
           {messageLabel}
         </label>
         <textarea id={`${id}-message`} name="message" rows={4} className="form-field resize-y" />
@@ -140,7 +140,7 @@ export default function InterestForm({
             name="gdpr"
             required
             aria-invalid={Boolean(errors.gdpr)}
-            className="mt-0.5 h-4 w-4 shrink-0 accent-[#C07F3F]"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#CC7D18]"
           />
           <span>
             Elolvastam és elfogadom az adatkezelési tájékoztatót, hozzájárulok adataim

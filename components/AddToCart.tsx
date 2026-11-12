@@ -19,7 +19,7 @@ export default function AddToCart({ product }: { product: ShopProduct }) {
   return (
     <div>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <div className="flex items-center border border-hairline bg-white">
+        <div className="flex items-center rounded-full border border-hairline bg-white">
           <button
             type="button"
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -47,7 +47,7 @@ export default function AddToCart({ product }: { product: ShopProduct }) {
       </div>
 
       {added ? (
-        <p className="mt-5 border border-hairline bg-white px-5 py-4 text-sm text-ink" role="status">
+        <p className="soft-card mt-5 px-6 py-4 text-sm text-ink" role="status">
           A termék a kosárba került.{" "}
           <Link href="/kosar" className="text-bronze underline underline-offset-4 hover:text-bronze-dark">
             Kosár megtekintése

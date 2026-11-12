@@ -64,19 +64,19 @@ export default function HomePage() {
   return (
     <>
       {/* Hero — a brosúra címlapjának hangulata */}
-      <section className="relative overflow-hidden border-b border-hairline/50">
-        <div className="mx-auto max-w-content px-4 py-24 text-center sm:px-6 md:py-32 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream-deep via-cream to-cream">
+        <div className="mx-auto max-w-content px-5 py-24 text-center sm:px-7 md:py-32 lg:px-8">
           <FadeIn>
             <Logo className="mx-auto h-44 w-auto md:h-52" />
             <p className="section-label mt-12">Üdvözlünk a Lobelle oldalán</p>
-            <h1 className="mx-auto mt-6 max-w-3xl font-serif text-4xl font-medium leading-tight text-ink md:text-6xl">
+            <h1 className="mx-auto mt-6 max-w-3xl font-serif text-5xl font-light leading-tight text-ink md:text-7xl">
               Az innovatív füllyukasztás új generációja
             </h1>
-            <div className="mt-8 flex items-center justify-center gap-4 text-xs uppercase tracking-label text-faded">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm uppercase tracking-label text-bronze-soft">
               <span>Biztonság</span>
-              <span className="text-bronze" aria-hidden="true">◆</span>
+              <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
               <span>Innováció</span>
-              <span className="text-bronze" aria-hidden="true">◆</span>
+              <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
               <span>Szakmaiság</span>
             </div>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -92,7 +92,7 @@ export default function HomePage() {
       </section>
 
       {/* A három pillér */}
-      <section className="mx-auto max-w-content px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-20 sm:px-7 md:py-28 lg:px-8">
         <FadeIn>
           <SectionHeading label="A márkáról" title="Nem csupán rendszer. Szemlélet.">
             A Lobelle ott kezdődik, ahol a kompromisszum véget ér. Magyarországon egyedülálló,
@@ -104,8 +104,8 @@ export default function HomePage() {
           {PILLARS.map((pillar, i) => (
             <FadeIn key={pillar.title} delay={i * 120}>
               <div className="h-full border-t border-hairline pt-8 text-center">
-                <span className="text-bronze" aria-hidden="true">◆</span>
-                <h3 className="mt-4 font-serif text-2xl text-ink">{pillar.title}</h3>
+                <span className="mx-auto block h-1.5 w-1.5 rounded-full bg-bronze" aria-hidden="true" />
+                <h3 className="mt-4 font-serif text-3xl font-light text-ink">{pillar.title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-faded">{pillar.text}</p>
               </div>
             </FadeIn>
@@ -114,8 +114,8 @@ export default function HomePage() {
       </section>
 
       {/* Titánium előnyök */}
-      <section className="border-y border-hairline/50 bg-cream-deep/60">
-        <div className="mx-auto max-w-content px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <section className="border-y border-hairline bg-cream-deep/60">
+        <div className="mx-auto max-w-content px-5 py-20 sm:px-7 md:py-28 lg:px-8">
           <FadeIn>
             <SectionHeading label="Anyag és technológia" title="A titánium ereje">
               A titánium jelenleg a világ egyik legbiztonságosabb fémje füllyukasztáshoz. Nem
@@ -127,9 +127,9 @@ export default function HomePage() {
             {TITANIUM_BENEFITS.map((benefit, i) => (
               <FadeIn key={benefit.title} delay={(i % 3) * 100}>
                 <div className="flex gap-4">
-                  <span className="mt-1.5 text-xs text-bronze" aria-hidden="true">◆</span>
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                   <div>
-                    <h3 className="font-serif text-lg text-ink">{benefit.title}</h3>
+                    <h3 className="font-serif text-xl font-light text-ink">{benefit.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-faded">{benefit.text}</p>
                   </div>
                 </div>
@@ -143,12 +143,12 @@ export default function HomePage() {
       <section className="bg-bronze">
         <div className="mx-auto max-w-content px-4 py-14 text-center sm:px-6 lg:px-8">
           <FadeIn>
-            <p className="text-xs uppercase tracking-label text-cream/80">Prémium garancia</p>
-            <p className="mt-4 font-serif text-2xl leading-snug text-cream md:text-3xl">
+            <p className="text-xs uppercase tracking-label text-white/80">Prémium garancia</p>
+            <p className="mt-4 font-serif text-3xl font-light leading-snug text-cream md:text-3xl">
               ASTM F136 szabvány <span aria-hidden="true">·</span> Grade 23 implantátum minőségű
               titán
             </p>
-            <p className="mt-4 text-sm text-cream/90">
+            <p className="mt-4 text-sm text-white/90">
               Szigorúan ellenőrzött, steril termékek — kompromisszumok nélkül.
             </p>
           </FadeIn>
@@ -156,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* Termékkategória-rács */}
-      <section className="mx-auto max-w-content px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-20 sm:px-7 md:py-28 lg:px-8">
         <FadeIn>
           <SectionHeading label="Kollekció" title="Termékkínálat">
             Minden darab ugyanabból az alapanyagból, ugyanazzal az igényességgel készül — a
@@ -169,8 +169,8 @@ export default function HomePage() {
               <Link href={`/termekek/${category.slug}`} className="group block h-full">
                 <FramedCard className="h-full transition-colors duration-300 group-hover:border-bronze/50">
                   <div className="flex h-full flex-col text-center">
-                    <span className="text-bronze" aria-hidden="true">◆</span>
-                    <h3 className="mt-3 font-serif text-xl text-ink transition-colors duration-300 group-hover:text-bronze">
+                    <span className="mx-auto block h-1.5 w-1.5 rounded-full bg-bronze" aria-hidden="true" />
+                    <h3 className="mt-3 font-serif text-2xl font-light text-ink transition-colors duration-300 group-hover:text-bronze">
                       {category.shortName}
                     </h3>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-faded">
@@ -186,15 +186,15 @@ export default function HomePage() {
           ))}
         </div>
         <FadeIn>
-          <p className="mt-12 text-center font-serif text-lg italic text-faded">
+          <p className="mt-12 text-center font-serif text-2xl italic text-faded">
             A prémium vendég prémium minőséget vár.
           </p>
         </FadeIn>
       </section>
 
       {/* Képzés teaser */}
-      <section className="border-y border-hairline/50 bg-cream-deep/60">
-        <div className="mx-auto grid max-w-content items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-2 lg:px-8">
+      <section className="border-y border-hairline bg-cream-deep/60">
+        <div className="mx-auto grid max-w-content items-center gap-12 px-5 py-20 sm:px-7 md:py-28 lg:grid-cols-2 lg:px-8">
           <FadeIn>
             <SectionHeading
               align="left"
@@ -207,19 +207,19 @@ export default function HomePage() {
             </SectionHeading>
             <ul className="mt-8 space-y-3 text-sm text-faded">
               <li className="flex gap-3">
-                <span className="text-xs text-bronze" aria-hidden="true">◆</span>
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                 Elméleti alapozás: anatómia, higiénia, anyagtudomány, jogi háttér
               </li>
               <li className="flex gap-3">
-                <span className="text-xs text-bronze" aria-hidden="true">◆</span>
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                 Gyakorlati tréning speciális gyakorlófülön, oktatói felügyelettel
               </li>
               <li className="flex gap-3">
-                <span className="text-xs text-bronze" aria-hidden="true">◆</span>
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                 Közel 70 000 Ft értékű kezdőcsomag a képzés részeként
               </li>
               <li className="flex gap-3">
-                <span className="text-xs text-bronze" aria-hidden="true">◆</span>
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                 Hivatalos, FAR-regisztrált tanúsítvány
               </li>
             </ul>
@@ -236,7 +236,7 @@ export default function HomePage() {
             <FramedCard>
               <div className="py-10 text-center">
                 <span className="section-label">Lobelle</span>
-                <p className="mx-auto mt-6 max-w-sm font-serif text-2xl leading-snug text-ink">
+                <p className="mx-auto mt-6 max-w-sm font-serif text-3xl font-light leading-snug text-ink">
                   „Ha egyszer titániumot használsz, nem térsz vissza máshoz.”
                 </p>
                 <div className="gold-hairline mx-auto mt-8" aria-hidden="true" />

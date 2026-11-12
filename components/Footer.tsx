@@ -4,8 +4,8 @@ import { NAV, PHONE, PHONE_HREF, EMAIL, ADDRESS } from "@/lib/navigation";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-hairline/60 bg-cream-deep">
-      <div className="mx-auto max-w-content px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="border-t border-hairline/70 bg-cream-deep">
+      <div className="mx-auto max-w-content px-5 py-16 sm:px-7 lg:px-8">
         {/* Logó középen */}
         <div className="flex justify-center">
           <Logo className="h-28 w-auto" />
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Elérhetőségek */}
           <div>
-            <span className="section-label !text-[0.65rem]">Elérhetőségek</span>
+            <span className="section-label !text-xs">Elérhetőségek</span>
             <ul className="mt-4 space-y-3 text-sm text-faded">
               <li>{ADDRESS}</li>
               <li>
@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Menücsoportok */}
           {NAV.filter((g) => g.items).map((group) => (
             <div key={group.label}>
-              <span className="section-label !text-[0.65rem]">{group.label}</span>
+              <span className="section-label !text-xs">{group.label}</span>
               <ul className="mt-4 space-y-2.5 text-sm">
                 {group.items!.map((item) => (
                   <li key={item.href}>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Jogi linkek + közösségi média */}
-        <div className="mt-14 border-t border-hairline/50 pt-8">
+        <div className="mt-14 border-t border-hairline pt-8">
           <div className="flex flex-col items-center justify-between gap-6 text-sm text-faded md:flex-row">
             <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {/* PLACEHOLDER jogi oldalak — a végleges dokumentumok linkjeire cserélendők */}

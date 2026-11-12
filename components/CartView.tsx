@@ -82,7 +82,7 @@ export default function CartView() {
 
   if (sent) {
     return (
-      <div className="mx-auto max-w-2xl border border-hairline bg-white p-12 text-center" role="status">
+      <div className="soft-card mx-auto max-w-2xl p-12 text-center" role="status">
         <span className="section-label">Köszönjük</span>
         <p className="mt-5 font-serif text-3xl text-ink">Megrendelését megkaptuk.</p>
         <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-faded">
@@ -98,9 +98,9 @@ export default function CartView() {
 
   if (count === 0) {
     return (
-      <div className="mx-auto max-w-2xl border border-hairline bg-white p-12 text-center">
+      <div className="soft-card mx-auto max-w-2xl p-12 text-center">
         <span className="section-label">Üres kosár</span>
-        <p className="mt-5 font-serif text-2xl text-ink">Még nincs termék a kosárban.</p>
+        <p className="mt-5 font-serif text-3xl font-light text-ink">Még nincs termék a kosárban.</p>
         <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-faded">
           Böngéssz a kollekcióban, és tedd kosárba a kiválasztott darabokat.
         </p>
@@ -115,13 +115,13 @@ export default function CartView() {
     <div className="grid gap-12 lg:grid-cols-[1fr_22rem] lg:gap-16">
       {/* Tételek */}
       <div>
-        <h2 className="font-serif text-2xl text-ink">A kosár tartalma</h2>
+        <h2 className="font-serif text-3xl font-light text-ink">A kosár tartalma</h2>
         <div className="gold-hairline mt-5" aria-hidden="true" />
 
-        <ul className="mt-8 divide-y divide-hairline/60 border-y border-hairline/60">
+        <ul className="mt-8 divide-y divide-hairline border-y border-hairline">
           {lines.map((line) => (
             <li key={line.product.id} className="flex gap-5 py-6">
-              <div className="relative h-24 w-24 shrink-0 border border-hairline bg-cream-deep">
+              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-card border border-hairline bg-cream-deep">
                 {line.product.images[0] ? (
                   <Image
                     src={line.product.images[0]}
@@ -136,14 +136,14 @@ export default function CartView() {
               <div className="flex flex-1 flex-col">
                 <Link
                   href={`/termekek/${line.product.category}/${line.product.slug}`}
-                  className="font-serif text-lg text-ink transition-colors hover:text-bronze"
+                  className="font-serif text-2xl font-light text-ink transition-colors hover:text-bronze"
                 >
                   {line.product.name}
                 </Link>
                 <p className="mt-1 text-sm text-faded">{formatPrice(line.product.price)}</p>
 
                 <div className="mt-auto flex flex-wrap items-center gap-4 pt-3">
-                  <div className="flex items-center border border-hairline bg-white">
+                  <div className="flex items-center rounded-full border border-hairline bg-white">
                     <button
                       type="button"
                       onClick={() => setQuantity(line.product.id, line.quantity - 1)}
@@ -187,7 +187,7 @@ export default function CartView() {
           >
             Kosár ürítése
           </button>
-          <p className="font-serif text-2xl text-ink">
+          <p className="font-serif text-3xl font-light text-ink">
             Végösszeg: <span className="text-bronze">{formatPrice(total)}</span>
           </p>
         </div>
@@ -195,7 +195,7 @@ export default function CartView() {
 
       {/* Megrendelő űrlap */}
       <div>
-        <h2 className="font-serif text-2xl text-ink">Megrendelés</h2>
+        <h2 className="font-serif text-3xl font-light text-ink">Megrendelés</h2>
         <div className="gold-hairline mt-5" aria-hidden="true" />
         <p className="mt-6 text-sm leading-relaxed text-faded">
           Add meg az adataidat, és elküldjük a visszaigazolást a szállítás részleteivel.
@@ -203,7 +203,7 @@ export default function CartView() {
 
         <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5">
           <div>
-            <label htmlFor="order-name" className="mb-1.5 block text-sm text-ink">
+            <label htmlFor="order-name" className="field-label">
               Név <span className="text-bronze" aria-hidden="true">*</span>
             </label>
             <input id="order-name" name="name" type="text" autoComplete="name" required className="form-field" />
@@ -215,7 +215,7 @@ export default function CartView() {
           </div>
 
           <div>
-            <label htmlFor="order-email" className="mb-1.5 block text-sm text-ink">
+            <label htmlFor="order-email" className="field-label">
               Email cím <span className="text-bronze" aria-hidden="true">*</span>
             </label>
             <input id="order-email" name="email" type="email" autoComplete="email" required className="form-field" />
@@ -227,14 +227,14 @@ export default function CartView() {
           </div>
 
           <div>
-            <label htmlFor="order-phone" className="mb-1.5 block text-sm text-ink">
+            <label htmlFor="order-phone" className="field-label">
               Telefonszám <span className="text-faded">(opcionális)</span>
             </label>
             <input id="order-phone" name="phone" type="tel" autoComplete="tel" className="form-field" />
           </div>
 
           <div>
-            <label htmlFor="order-address" className="mb-1.5 block text-sm text-ink">
+            <label htmlFor="order-address" className="field-label">
               Szállítási cím <span className="text-bronze" aria-hidden="true">*</span>
             </label>
             <textarea
@@ -254,7 +254,7 @@ export default function CartView() {
           </div>
 
           <div>
-            <label htmlFor="order-note" className="mb-1.5 block text-sm text-ink">
+            <label htmlFor="order-note" className="field-label">
               Megjegyzés
             </label>
             <textarea id="order-note" name="note" rows={3} className="form-field resize-y" />
@@ -262,7 +262,7 @@ export default function CartView() {
 
           <div>
             <label className="flex items-start gap-3 text-sm text-faded">
-              <input type="checkbox" name="gdpr" required className="mt-0.5 h-4 w-4 shrink-0 accent-[#C07F3F]" />
+              <input type="checkbox" name="gdpr" required className="mt-0.5 h-4 w-4 shrink-0 accent-[#CC7D18]" />
               <span>
                 Elolvastam és elfogadom az adatkezelési tájékoztatót és az ÁSZF-et.{" "}
                 <span className="text-bronze" aria-hidden="true">*</span>

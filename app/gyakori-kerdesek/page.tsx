@@ -75,7 +75,7 @@ export default function FaqPage() {
         és az utóápolásról. Ha nem találod a választ, keress minket bátran.
       </PageHero>
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-3xl px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <FadeIn>
           <Accordion items={FAQ_ITEMS} />
         </FadeIn>

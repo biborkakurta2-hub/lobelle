@@ -8,7 +8,14 @@
   }
 
   body {
-    @apply bg-cream text-ink font-sans font-light antialiased;
+    @apply bg-cream font-sans text-base font-light text-warm antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-light text-ink;
   }
 
   ::selection {
@@ -21,36 +28,46 @@
 }
 
 @layer components {
-  /* Kiskapitális, széles betűközű bronz feliratka a szekciócímek felett */
+  /* Kiskapitális, széles betűközű feliratka a szekciócímek felett */
   .section-label {
-    @apply block text-xs font-normal uppercase tracking-label text-bronze;
+    @apply block text-sm font-light uppercase tracking-label text-bronze-soft;
   }
 
-  /* Vékony arany elválasztó vonal */
+  /* Finom homokszínű elválasztó vonal */
   .gold-hairline {
-    @apply h-px w-16 bg-hairline;
+    @apply h-px w-20 bg-sand;
   }
 
-  /* Elsődleges (bronz) gomb */
+  /* Elsődleges gomb: pill forma, borostyán kitöltés, nagy belső tér */
   .btn-primary {
-    @apply inline-block border border-bronze bg-bronze px-8 py-3.5 text-sm font-normal uppercase tracking-[0.15em] text-cream transition-colors duration-300 hover:bg-bronze-dark hover:border-bronze-dark;
+    @apply inline-block rounded-full border border-bronze bg-bronze px-10 py-4 text-base font-normal text-white transition-colors duration-300 hover:border-bronze-dark hover:bg-bronze-dark;
   }
 
-  /* Másodlagos (körvonalas) gomb */
+  /* Másodlagos gomb: körvonalas pill */
   .btn-outline {
-    @apply inline-block border border-bronze bg-transparent px-8 py-3.5 text-sm font-normal uppercase tracking-[0.15em] text-bronze transition-colors duration-300 hover:bg-bronze hover:text-cream;
+    @apply inline-block rounded-full border border-sand bg-transparent px-10 py-4 text-base font-normal text-bronze transition-colors duration-300 hover:border-bronze hover:bg-bronze hover:text-white;
   }
 
-  /* Űrlapmező alapstílus */
+  /* Űrlapmező: fehér, lágyan lekerekített, levegős */
   .form-field {
-    @apply w-full border border-hairline bg-white px-4 py-3 text-sm text-ink placeholder:text-faded/60 transition-colors duration-300 focus:border-bronze focus:outline-none focus:ring-1 focus:ring-bronze;
+    @apply w-full rounded-field border border-hairline bg-white px-6 py-4 text-base font-light text-ink transition-colors duration-300 placeholder:text-faded/60 focus:border-bronze focus:outline-none;
+  }
+
+  /* Mezőfelirat a referenciaoldal mintájára */
+  .field-label {
+    @apply mb-2 block text-sm font-light uppercase tracking-label text-bronze-soft;
+  }
+
+  /* Lágy fehér kártya — a korábbi dupla keret helyett */
+  .soft-card {
+    @apply rounded-card border border-hairline bg-white;
   }
 }
 
 /* Finom scroll fade-in animáció — a FadeIn komponens kapcsolja be */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(1.25rem);
+  transform: translateY(1rem);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 

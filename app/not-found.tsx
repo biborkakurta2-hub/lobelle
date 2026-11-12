@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <section className="mx-auto max-w-content px-4 py-32 text-center sm:px-6 lg:px-8">
       <span className="section-label">404</span>
-      <h1 className="mt-4 font-serif text-4xl font-medium text-ink">
+      <h1 className="mt-4 font-serif text-5xl font-light text-ink">
         Ez az oldal nem található
       </h1>
       <div className="gold-hairline mx-auto mt-6" aria-hidden="true" />

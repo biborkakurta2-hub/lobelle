@@ -40,10 +40,10 @@ export default function ContactPage() {
         munkanapokon rövid időn belül válaszolunk.
       </PageHero>
 
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-[1fr_20rem] lg:gap-20">
           <FadeIn>
-            <h2 className="font-serif text-2xl text-ink">Írj nekünk üzenetet</h2>
+            <h2 className="font-serif text-3xl font-light text-ink">Írj nekünk üzenetet</h2>
             <div className="gold-hairline mt-5" aria-hidden="true" />
             <div className="mt-8">
               <ContactForm />
@@ -51,7 +51,7 @@ export default function ContactPage() {
           </FadeIn>
 
           <FadeIn delay={120}>
-            <h2 className="font-serif text-2xl text-ink">Elérhetőségeink</h2>
+            <h2 className="font-serif text-3xl font-light text-ink">Elérhetőségeink</h2>
             <div className="gold-hairline mt-5" aria-hidden="true" />
             <dl className="mt-8 space-y-7">
               {CONTACT_DETAILS.map((item) => (

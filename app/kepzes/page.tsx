@@ -95,16 +95,16 @@ export default function TrainingPage() {
       </PageHero>
 
       {/* Elmélet + gyakorlat */}
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-2">
           <FadeIn>
             <SectionHeading align="left" label="Első rész" title="Elméleti alapozás" />
             <div className="mt-8 space-y-7">
               {THEORY.map((item) => (
                 <div key={item.title} className="flex gap-4">
-                  <span className="mt-1.5 text-xs text-bronze" aria-hidden="true">◆</span>
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                   <div>
-                    <h3 className="font-serif text-lg text-ink">{item.title}</h3>
+                    <h3 className="font-serif text-xl font-light text-ink">{item.title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-faded">{item.text}</p>
                   </div>
                 </div>
@@ -116,9 +116,9 @@ export default function TrainingPage() {
             <div className="mt-8 space-y-7">
               {PRACTICE.map((item) => (
                 <div key={item.title} className="flex gap-4">
-                  <span className="mt-1.5 text-xs text-bronze" aria-hidden="true">◆</span>
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                   <div>
-                    <h3 className="font-serif text-lg text-ink">{item.title}</h3>
+                    <h3 className="font-serif text-xl font-light text-ink">{item.title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-faded">{item.text}</p>
                   </div>
                 </div>
@@ -129,8 +129,8 @@ export default function TrainingPage() {
       </section>
 
       {/* Kezdőcsomag */}
-      <section className="border-y border-hairline/50 bg-cream-deep/60">
-        <div className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="border-y border-hairline bg-cream-deep/60">
+        <div className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
           <FadeIn>
             <SectionHeading
               label="A képzés része"
@@ -145,7 +145,7 @@ export default function TrainingPage() {
               <ul className="grid gap-x-10 gap-y-4 py-4 text-sm text-ink sm:grid-cols-2">
                 {STARTER_KIT.map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span className="mt-1 text-xs text-bronze" aria-hidden="true">◆</span>
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                     {item}
                   </li>
                 ))}
@@ -159,11 +159,11 @@ export default function TrainingPage() {
       <section className="bg-bronze">
         <div className="mx-auto max-w-content px-4 py-14 text-center sm:px-6 lg:px-8">
           <FadeIn>
-            <p className="text-xs uppercase tracking-label text-cream/80">Hivatalos tanúsítvány</p>
-            <p className="mt-4 font-serif text-2xl leading-snug text-cream md:text-3xl">
+            <p className="text-xs uppercase tracking-label text-white/80">Hivatalos tanúsítvány</p>
+            <p className="mt-4 font-serif text-3xl font-light leading-snug text-cream md:text-3xl">
               A képzés hivatalos, FAR-regisztrált tanúsítvánnyal zárul.
             </p>
-            <p className="mt-4 text-sm uppercase tracking-[0.15em] text-cream/90">
+            <p className="mt-4 text-sm uppercase tracking-[0.15em] text-white/90">
               Felnőttképzési nyilvántartási szám: B/2021/000190
             </p>
           </FadeIn>
@@ -171,7 +171,7 @@ export default function TrainingPage() {
       </section>
 
       {/* Kinek ajánljuk */}
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <FadeIn>
           <SectionHeading label="Célközönség" title="Kinek ajánljuk?" />
         </FadeIn>
@@ -179,7 +179,7 @@ export default function TrainingPage() {
           {AUDIENCE.map((item, i) => (
             <FadeIn key={item.title} delay={(i % 2) * 120}>
               <div className="h-full border-t border-hairline pt-6">
-                <h3 className="font-serif text-xl text-ink">{item.title}</h3>
+                <h3 className="font-serif text-2xl font-light text-ink">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-faded">{item.text}</p>
               </div>
             </FadeIn>
@@ -187,8 +187,8 @@ export default function TrainingPage() {
         </div>
 
         <FadeIn>
-          <div className="mt-16 border-t border-hairline/60 pt-12 text-center">
-            <p className="font-serif text-2xl text-ink">Kezdd el még ebben a hónapban.</p>
+          <div className="mt-16 border-t border-hairline pt-12 text-center">
+            <p className="font-serif text-3xl font-light text-ink">Kezdd el még ebben a hónapban.</p>
             <p className="mx-auto mt-3 max-w-xl text-sm text-faded">
               Nézd meg az aktuális időpontokat és helyszíneket, vagy kérdezz tőlünk bátran — a
               képzésekkel kapcsolatban is szívesen segítünk.

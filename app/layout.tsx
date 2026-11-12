@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Lora, Poppins } from "next/font/google";
+import { Cormorant, Jost } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartProvider";
 import "./globals.css";
 
-const lora = Lora({
+const cormorant = Cormorant({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600"],
-  variable: "--font-lora",
+  weight: ["300", "400", "500"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const poppins = Poppins({
+const jost = Jost({
   subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500"],
-  variable: "--font-poppins",
+  variable: "--font-jost",
   display: "swap",
 });
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hu" className={`${lora.variable} ${poppins.variable}`}>
+    <html lang="hu" className={`${cormorant.variable} ${jost.variable}`}>
       <body>
         <CartProvider>
           <Header />

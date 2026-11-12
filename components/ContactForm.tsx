@@ -56,9 +56,9 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <div className="border border-hairline bg-white p-10 text-center" role="status">
+      <div className="soft-card p-10 text-center" role="status">
         <span className="section-label">Köszönjük</span>
-        <p className="mt-4 font-serif text-2xl text-ink">Üzenetét megkaptuk.</p>
+        <p className="mt-4 font-serif text-3xl font-light text-ink">Üzenetét megkaptuk.</p>
         <p className="mt-3 text-sm leading-relaxed text-faded">
           Munkatársunk hamarosan felveszi Önnel a kapcsolatot a megadott elérhetőségek egyikén.
         </p>
@@ -69,7 +69,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <div>
-        <label htmlFor="contact-name" className="mb-1.5 block text-sm text-ink">
+        <label htmlFor="contact-name" className="field-label">
           Név <span className="text-bronze" aria-hidden="true">*</span>
         </label>
         <input
@@ -90,7 +90,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="contact-email" className="mb-1.5 block text-sm text-ink">
+        <label htmlFor="contact-email" className="field-label">
           Email cím <span className="text-bronze" aria-hidden="true">*</span>
         </label>
         <input
@@ -111,14 +111,14 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="contact-phone" className="mb-1.5 block text-sm text-ink">
+        <label htmlFor="contact-phone" className="field-label">
           Telefonszám <span className="text-faded">(opcionális)</span>
         </label>
         <input id="contact-phone" name="phone" type="tel" autoComplete="tel" className="form-field" />
       </div>
 
       <div>
-        <label htmlFor="contact-message" className="mb-1.5 block text-sm text-ink">
+        <label htmlFor="contact-message" className="field-label">
           Üzenet
         </label>
         <textarea id="contact-message" name="message" rows={5} className="form-field resize-y" />
@@ -132,7 +132,7 @@ export default function ContactForm() {
             required
             aria-invalid={Boolean(errors.gdpr)}
             aria-describedby={errors.gdpr ? "contact-gdpr-error" : undefined}
-            className="mt-0.5 h-4 w-4 shrink-0 accent-[#C07F3F]"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#CC7D18]"
           />
           <span>
             Elolvastam és elfogadom az adatkezelési tájékoztatót, hozzájárulok adataim

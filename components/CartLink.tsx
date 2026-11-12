@@ -18,7 +18,7 @@ export default function CartLink({ className = "" }: { className?: string }) {
         <path d="M9 8V6a3 3 0 0 1 6 0v2" />
       </svg>
       {count > 0 ? (
-        <span className="flex h-4 min-w-4 items-center justify-center bg-bronze px-1 text-[0.65rem] leading-none text-cream">
+        <span className="flex h-4 min-w-4 items-center justify-center bg-bronze px-1 text-[0.65rem] leading-none text-white">
           {count}
         </span>
       ) : null}

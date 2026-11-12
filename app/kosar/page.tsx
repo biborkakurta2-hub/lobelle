@@ -19,7 +19,7 @@ export default function CartPage() {
         Nézd át a kiválasztott darabokat, majd add meg a szállítási adatokat a megrendeléshez.
       </PageHero>
 
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <CartView />
       </section>
     </>

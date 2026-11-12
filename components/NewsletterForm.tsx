@@ -45,7 +45,7 @@ export default function NewsletterForm() {
 
   if (sent) {
     return (
-      <p className="border border-hairline bg-white/60 px-6 py-5 text-center text-sm text-ink" role="status">
+      <p className="soft-card px-6 py-5 text-center text-sm text-ink" role="status">
         Köszönjük a feliratkozást. Hamarosan jelentkezünk az első hírlevéllel.
       </p>
     );
@@ -102,7 +102,7 @@ export default function NewsletterForm() {
           name="gdpr"
           required
           aria-invalid={Boolean(errors.gdpr)}
-          className="mt-0.5 h-4 w-4 shrink-0 accent-[#C07F3F]"
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[#CC7D18]"
         />
         <span>
           Hozzájárulok, hogy a Lobelle hírlevelet küldjön a megadott email címemre. A

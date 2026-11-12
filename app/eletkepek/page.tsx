@@ -38,7 +38,7 @@ export default function GalleryPage() {
         képeken is látszik.
       </PageHero>
 
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {GALLERY.map((caption, i) => (
             <FadeIn key={caption} delay={(i % 3) * 100}>

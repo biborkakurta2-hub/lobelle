@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 
 /**
- * Szekciófejléc a brosúra mintájára: kiskapitális bronz feliratka,
- * szerifes cím, vékony arany elválasztó vonal.
+ * Szekciófejléc: kiskapitális feliratka, Cormorant könnyű címbetű,
+ * finom homokszínű elválasztó vonal.
  */
 export default function SectionHeading({
   label,
@@ -21,7 +21,7 @@ export default function SectionHeading({
   return (
     <div className={centered ? "text-center" : "text-left"}>
       <span className="section-label">{label}</span>
-      <Tag className="mt-4 font-serif text-3xl font-medium leading-tight text-ink md:text-4xl">
+      <Tag className="mt-4 font-serif text-4xl font-light leading-tight text-ink md:text-5xl">
         {title}
       </Tag>
       <div className={`gold-hairline mt-6 ${centered ? "mx-auto" : ""}`} aria-hidden="true" />

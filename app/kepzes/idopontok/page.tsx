@@ -57,14 +57,14 @@ export default function SchedulePage() {
         2–3 órás, és a kezdőcsomagot a helyszínen kapod meg.
       </PageHero>
 
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2">
           {SESSIONS.map((session, i) => (
             <FadeIn key={session.city} delay={(i % 2) * 120}>
               <FramedCard className="h-full">
                 <div className="flex h-full flex-col">
                   <span className="section-label !text-[0.65rem]">Helyszín</span>
-                  <h2 className="mt-2 font-serif text-2xl text-ink">{session.city}</h2>
+                  <h2 className="mt-2 font-serif text-3xl font-light text-ink">{session.city}</h2>
                   <dl className="mt-5 space-y-3 text-sm">
                     <div className="flex gap-3">
                       <dt className="w-24 shrink-0 text-faded">Cím</dt>
@@ -98,7 +98,7 @@ export default function SchedulePage() {
         </div>
 
         <FadeIn>
-          <div className="mt-16 border-t border-hairline/60 pt-10 text-center">
+          <div className="mt-16 border-t border-hairline pt-10 text-center">
             <p className="text-sm text-faded">
               Nem találsz megfelelő időpontot, vagy a saját városodba szerveznél képzést?
             </p>

@@ -32,19 +32,19 @@ export default function ProductGrid({ products }: { products: ShopProduct[] }) {
 
   return (
     <div>
-      <div className="flex flex-col gap-4 border-b border-hairline/60 pb-5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 border-b border-hairline pb-5 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-faded">
           {products.length} termék a kategóriában
         </p>
         <div className="flex items-center gap-3">
-          <label htmlFor="sort" className="text-xs uppercase tracking-label text-faded">
+          <label htmlFor="sort" className="text-xs uppercase tracking-label text-bronze-soft">
             Rendezés
           </label>
           <select
             id="sort"
             value={sort}
             onChange={(e) => setSort(e.target.value as SortKey)}
-            className="border border-hairline bg-white px-3 py-2 text-sm text-ink transition-colors focus:border-bronze focus:outline-none"
+            className="rounded-full border border-hairline bg-white px-5 py-2.5 text-sm font-light text-ink transition-colors focus:border-bronze focus:outline-none"
           >
             {SORT_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-/** Belső oldalak fejléce: feliratka, szerifes cím, hairline, bevezető. */
+/** Belső oldalak fejléce: feliratka, Cormorant cím, hairline, bevezető. */
 export default function PageHero({
   label,
   title,
@@ -11,10 +11,10 @@ export default function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="border-b border-hairline/50 bg-cream-deep/60">
-      <div className="mx-auto max-w-content px-4 py-16 text-center sm:px-6 md:py-20 lg:px-8">
+    <section className="bg-cream-deep">
+      <div className="mx-auto max-w-content px-5 py-20 text-center sm:px-7 md:py-24 lg:px-8">
         <span className="section-label">{label}</span>
-        <h1 className="mt-4 font-serif text-4xl font-medium leading-tight text-ink md:text-5xl">
+        <h1 className="mt-4 font-serif text-5xl font-light leading-tight text-ink md:text-6xl">
           {title}
         </h1>
         <div className="gold-hairline mx-auto mt-6" aria-hidden="true" />

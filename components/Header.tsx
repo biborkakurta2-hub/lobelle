@@ -42,8 +42,8 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline/60 bg-cream/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-20 max-w-content items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-hairline/70 bg-cream/95 backdrop-blur-sm">
+      <div className="mx-auto flex h-20 max-w-content items-center justify-between gap-6 px-5 sm:px-7 lg:px-8">
         <Link href="/" aria-label="Lobelle – főoldal" onClick={closeAll} className="shrink-0">
           <Logo className="h-16 w-auto" />
         </Link>
@@ -76,7 +76,7 @@ export default function Header() {
                   </svg>
                 </button>
                 {openGroup === group.label ? (
-                  <div className="absolute left-0 top-full min-w-[19rem] border border-hairline bg-cream shadow-[0_12px_32px_-16px_rgba(43,43,43,0.25)]">
+                  <div className="absolute left-0 top-full min-w-[19rem] overflow-hidden rounded-card border border-hairline bg-white shadow-soft">
                     <ul className="py-2">
                       {group.items.map((item) => (
                         <li key={item.href}>
@@ -109,7 +109,7 @@ export default function Header() {
         {/* Kosár + telefonszám CTA */}
         <div className="ml-auto flex items-center gap-5 lg:ml-0">
           <CartLink />
-          <a href={PHONE_HREF} className="btn-primary hidden whitespace-nowrap !px-5 !py-2.5 text-xs xl:inline-block">
+          <a href={PHONE_HREF} className="btn-primary hidden whitespace-nowrap !px-6 !py-3 !text-sm xl:inline-block">
             Hívjon: {PHONE}
           </a>
         </div>
@@ -142,13 +142,13 @@ export default function Header() {
         <nav
           id="mobile-menu"
           aria-label="Mobil navigáció"
-          className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-hairline/60 bg-cream lg:hidden"
+          className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-hairline bg-cream lg:hidden"
         >
           <div className="mx-auto max-w-content px-4 py-4 sm:px-6">
             {NAV.map((group) =>
               group.items ? (
                 <div key={group.label} className="border-b border-hairline/40 py-3">
-                  <span className="section-label !text-[0.65rem]">{group.label}</span>
+                  <span className="section-label !text-xs">{group.label}</span>
                   <ul className="mt-2">
                     {group.items.map((item) => (
                       <li key={item.href}>
@@ -175,7 +175,7 @@ export default function Header() {
                 </div>
               )
             )}
-            <a href={PHONE_HREF} className="btn-primary mt-5 block text-center text-xs">
+            <a href={PHONE_HREF} className="btn-primary mt-5 block text-center !text-sm">
               Hívjon: {PHONE}
             </a>
           </div>

@@ -41,7 +41,7 @@ export default function PrivateTrainingPage() {
         oktatói figyelem mellett sajátítanák el a professzionális fül- és orrlyukasztást.
       </PageHero>
 
-      <section className="mx-auto max-w-content px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-24 lg:px-8">
         <FadeIn>
           <SectionHeading label="Előnyök" title="Miért érdemes privát képzést választanod?" />
         </FadeIn>
@@ -49,7 +49,7 @@ export default function PrivateTrainingPage() {
           {BENEFITS.map((benefit, i) => (
             <FadeIn key={benefit.title} delay={(i % 2) * 120}>
               <div className="h-full border-t border-hairline pt-6">
-                <h3 className="font-serif text-xl text-ink">{benefit.title}</h3>
+                <h3 className="font-serif text-2xl font-light text-ink">{benefit.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-faded">{benefit.text}</p>
               </div>
             </FadeIn>
@@ -57,8 +57,8 @@ export default function PrivateTrainingPage() {
         </div>
       </section>
 
-      <section className="border-t border-hairline/50 bg-cream-deep/60">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <section className="border-t border-hairline bg-cream-deep/60">
+        <div className="mx-auto max-w-3xl px-5 py-16 sm:px-7 md:py-24 lg:px-8">
           <FadeIn>
             <SectionHeading label="Érdeklődés" title="Kérj egyéni időpontot">
               Írd meg, mikor érnél rá, és milyen előzetes tapasztalattal rendelkezel — minden
