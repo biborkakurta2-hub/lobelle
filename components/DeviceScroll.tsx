@@ -131,7 +131,7 @@ export default function DeviceScroll({
       ref={canvasRef}
       width={FRAME_WIDTH}
       height={FRAME_HEIGHT}
-      className={`aspect-[16/9] w-full object-cover transition-opacity duration-700 landscape:aspect-auto landscape:h-full ${
+      className={`aspect-[16/9] w-full object-contain transition-opacity duration-700 landscape:aspect-auto landscape:h-full ${
         ready ? "opacity-100" : "opacity-0"
       }`}
       role="img"
