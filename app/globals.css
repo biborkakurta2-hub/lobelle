@@ -100,15 +100,13 @@
   }
 }
 
-/* A nyitókép alja hosszan, fokozatosan olvad bele az oldalba, a teteje
-   pedig egy rövid átmenettel csatlakozik a fejléchez. Maszkot használunk,
-   nem ráfestett réteget, így a háttér saját gradiense üt át. */
+/* A nyitókép alja hosszan, fokozatosan olvad bele az oldalba. Felül éles
+   marad, hogy a kép közvetlenül a fejléchez csatlakozzon. Maszkot
+   használunk, nem ráfestett réteget, így a háttér gradiense üt át. */
 .device-fade {
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.85) 5%,
-    #000 12%,
+    #000 0%,
     #000 50%,
     rgba(0, 0, 0, 0.9) 68%,
     rgba(0, 0, 0, 0.62) 80%,
@@ -117,9 +115,7 @@
   );
   mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.85) 5%,
-    #000 12%,
+    #000 0%,
     #000 50%,
     rgba(0, 0, 0, 0.9) 68%,
     rgba(0, 0, 0, 0.62) 80%,

@@ -136,8 +136,14 @@ export default function HomePage() {
       </section>
 
       {/* ASTM F136 kiemelt sáv */}
-      <section className="bg-bronze">
-        <div className="mx-auto max-w-content px-4 py-14 text-center sm:px-6 lg:px-8">
+      <section
+        style={{
+          // A sáv széle nem vágódik élesen, hanem beleolvad a krém oldalba
+          background:
+            "linear-gradient(to bottom, rgba(204,125,24,0) 0%, rgba(204,125,24,0.6) 7%, #CC7D18 18%, #CC7D18 82%, rgba(204,125,24,0.6) 93%, rgba(204,125,24,0) 100%)",
+        }}
+      >
+        <div className="mx-auto max-w-content px-5 py-24 text-center sm:px-7 lg:px-8">
           <FadeIn>
             <p className="text-xs uppercase tracking-label text-white/80">Prémium garancia</p>
             <p className="mt-4 font-serif text-3xl font-medium leading-snug text-cream md:text-3xl">
