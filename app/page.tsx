@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
-import Logo from "@/components/Logo";
+import DeviceHero from "@/components/DeviceHero";
 import SectionHeading from "@/components/SectionHeading";
 import FramedCard from "@/components/FramedCard";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -63,33 +63,7 @@ const TITANIUM_BENEFITS = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero — a brosúra címlapjának hangulata */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-content px-5 py-24 text-center sm:px-7 md:py-32 lg:px-8">
-          <FadeIn>
-            <Logo className="mx-auto h-44 w-auto md:h-52" />
-            <p className="section-label mt-12">Üdvözlünk a Lobelle oldalán</p>
-            <h1 className="mx-auto mt-6 max-w-3xl font-serif text-5xl font-medium leading-[1.1] text-ink md:text-6xl">
-              Az innovatív füllyukasztás új generációja
-            </h1>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm uppercase tracking-label text-bronze-soft">
-              <span>Biztonság</span>
-              <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
-              <span>Innováció</span>
-              <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
-              <span>Szakmaiság</span>
-            </div>
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link href="/termekek/ful-es-orrlyukaszto-keszulek" className="btn-primary">
-                Fedezd fel a rendszert
-              </Link>
-              <Link href="/kepzes" className="btn-outline">
-                Jelentkezz képzésre
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <DeviceHero />
 
       {/* A három pillér */}
       <section className="mx-auto max-w-content px-5 py-20 sm:px-7 md:py-28 lg:px-8">
