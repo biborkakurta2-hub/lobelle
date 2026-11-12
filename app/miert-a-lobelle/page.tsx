@@ -49,11 +49,11 @@ export default function WhyLobellePage() {
           {PILLARS.map((pillar, i) => (
             <FadeIn key={pillar.number} delay={i * 80}>
               <div className="grid gap-6 border-t border-hairline py-12 last:border-b sm:grid-cols-[8rem_1fr] sm:gap-10">
-                <span className="font-serif text-6xl font-light text-hairline sm:text-6xl" aria-hidden="true">
+                <span className="font-serif text-6xl font-medium text-hairline sm:text-6xl" aria-hidden="true">
                   {pillar.number}
                 </span>
                 <div>
-                  <h2 className="font-serif text-3xl font-light text-ink md:text-3xl">{pillar.title}</h2>
+                  <h2 className="font-serif text-3xl font-medium text-ink md:text-3xl">{pillar.title}</h2>
                   <p className="mt-4 max-w-xl text-base leading-relaxed text-faded">{pillar.text}</p>
                 </div>
               </div>
@@ -63,11 +63,11 @@ export default function WhyLobellePage() {
       </section>
 
       {/* Záró idézet */}
-      <section className="border-t border-hairline bg-cream-deep/60">
+      <section className="border-t border-hairline bg-white/50">
         <div className="mx-auto max-w-content px-4 py-20 text-center sm:px-6 md:py-28 lg:px-8">
           <FadeIn>
             <span className="mx-auto block h-1.5 w-1.5 rounded-full bg-bronze" aria-hidden="true" />
-            <blockquote className="mx-auto mt-8 max-w-2xl font-serif text-3xl font-light leading-snug text-ink md:text-4xl">
+            <blockquote className="mx-auto mt-8 max-w-2xl font-serif text-3xl font-medium leading-snug text-ink md:text-4xl">
               „A minőség nem luxus. A biztonság nem opció.
               <br className="hidden md:block" /> A szakmaiság nem kompromisszum kérdése.”
             </blockquote>

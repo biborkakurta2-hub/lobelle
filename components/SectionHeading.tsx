@@ -21,7 +21,7 @@ export default function SectionHeading({
   return (
     <div className={centered ? "text-center" : "text-left"}>
       <span className="section-label">{label}</span>
-      <Tag className="mt-4 font-serif text-4xl font-light leading-tight text-ink md:text-5xl">
+      <Tag className="mt-4 font-serif text-4xl font-medium leading-tight text-ink md:text-5xl">
         {title}
       </Tag>
       <div className={`gold-hairline mt-6 ${centered ? "mx-auto" : ""}`} aria-hidden="true" />

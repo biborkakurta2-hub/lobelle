@@ -52,7 +52,7 @@ export default function ProductPage({ params }: Props) {
   return (
     <>
       {/* Morzsamenü */}
-      <nav aria-label="Morzsamenü" className="border-b border-hairline bg-cream-deep/60">
+      <nav aria-label="Morzsamenü" className="border-b border-hairline bg-white/50">
         <ol className="mx-auto flex max-w-content flex-wrap items-center gap-2 px-4 py-4 text-xs text-faded sm:px-6 lg:px-8">
           <li>
             <Link href="/" className="transition-colors hover:text-bronze">
@@ -83,7 +83,7 @@ export default function ProductPage({ params }: Props) {
           <FadeIn delay={120}>
             <div>
               <span className="section-label">{category.shortName}</span>
-              <h1 className="mt-4 font-serif text-4xl font-light leading-tight text-ink md:text-4xl">
+              <h1 className="mt-4 font-serif text-4xl font-medium leading-tight text-ink md:text-4xl">
                 {product.name}
               </h1>
               <div className="gold-hairline mt-6" aria-hidden="true" />
@@ -123,12 +123,12 @@ export default function ProductPage({ params }: Props) {
       </section>
 
       {related.length > 0 ? (
-        <section className="border-t border-hairline bg-cream-deep/60">
+        <section className="border-t border-hairline bg-white/50">
           <div className="mx-auto max-w-content px-5 py-16 sm:px-7 md:py-20 lg:px-8">
             <FadeIn>
               <div className="text-center">
                 <span className="section-label">Hasonló darabok</span>
-                <h2 className="mt-4 font-serif text-3xl font-light text-ink md:text-3xl">Ezek is érdekelhetnek</h2>
+                <h2 className="mt-4 font-serif text-3xl font-medium text-ink md:text-3xl">Ezek is érdekelhetnek</h2>
                 <div className="gold-hairline mx-auto mt-6" aria-hidden="true" />
               </div>
             </FadeIn>

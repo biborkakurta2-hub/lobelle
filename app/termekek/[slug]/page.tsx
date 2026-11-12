@@ -57,7 +57,7 @@ export default function ProductCategoryPage({ params }: Props) {
             <FramedCard className="mx-auto max-w-2xl">
               <div className="py-10 text-center">
                 <span className="section-label">Feltöltés alatt</span>
-                <p className="mt-5 font-serif text-3xl font-light leading-snug text-ink">
+                <p className="mt-5 font-serif text-3xl font-medium leading-snug text-ink">
                   A kategória termékei hamarosan elérhetők.
                 </p>
                 <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-faded">

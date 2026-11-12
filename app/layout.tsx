@@ -7,7 +7,7 @@ import "./globals.css";
 
 const cormorant = Cormorant({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500", "600"],
   variable: "--font-cormorant",
   display: "swap",
 });

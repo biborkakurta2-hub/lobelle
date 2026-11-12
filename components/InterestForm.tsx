@@ -66,7 +66,7 @@ export default function InterestForm({
     return (
       <div className="soft-card p-10 text-center" role="status">
         <span className="section-label">Köszönjük</span>
-        <p className="mt-4 font-serif text-3xl font-light text-ink">Érdeklődésedet megkaptuk.</p>
+        <p className="mt-4 font-serif text-3xl font-medium text-ink">Érdeklődésedet megkaptuk.</p>
         <p className="mt-3 text-sm leading-relaxed text-faded">
           Hamarosan felvesszük veled a kapcsolatot a megadott elérhetőségeken.
         </p>

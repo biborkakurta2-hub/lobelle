@@ -49,7 +49,7 @@ export default function ProfessionalsPage() {
           {BENEFITS.map((benefit, i) => (
             <FadeIn key={benefit.title} delay={(i % 2) * 120}>
               <div className="h-full border-t border-hairline pt-6">
-                <h3 className="font-serif text-2xl font-light text-ink">{benefit.title}</h3>
+                <h3 className="font-serif text-2xl font-medium text-ink">{benefit.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-faded">{benefit.text}</p>
               </div>
             </FadeIn>
@@ -57,7 +57,7 @@ export default function ProfessionalsPage() {
         </div>
       </section>
 
-      <section className="border-t border-hairline bg-cream-deep/60">
+      <section className="border-t border-hairline bg-white/50">
         <div className="mx-auto max-w-3xl px-5 py-16 sm:px-7 md:py-24 lg:px-8">
           <FadeIn>
             <SectionHeading label="Regisztráció" title="Regisztrálj szakemberként">

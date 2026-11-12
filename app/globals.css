@@ -8,14 +8,27 @@
   }
 
   body {
-    @apply bg-cream font-sans text-base font-light text-warm antialiased;
+    @apply font-sans text-base font-light text-warm antialiased;
+    /*
+     * Meleg derengés a sarkokban — a Beauty Forum oldal hátteréből mintázva:
+     * #FBF4E6 alap, rajta a homokszín (#DFC296) 50%-os rétege adja a #EDDBBF
+     * tónust a jobb felső és az alsó sarkokban. Rögzített, így görgetés közben
+     * nem mozdul el.
+     */
+    background-color: #fbf4e6;
+    background-image:
+      radial-gradient(70% 55% at 100% 0%, rgba(223, 194, 150, 0.5), rgba(223, 194, 150, 0) 70%),
+      radial-gradient(62% 48% at 0% 100%, rgba(223, 194, 150, 0.5), rgba(223, 194, 150, 0) 70%),
+      radial-gradient(55% 42% at 100% 100%, rgba(223, 194, 150, 0.45), rgba(223, 194, 150, 0) 70%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-serif font-light text-ink;
+    @apply font-serif font-medium text-ink;
   }
 
   ::selection {

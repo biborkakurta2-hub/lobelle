@@ -64,7 +64,7 @@ export default function SchedulePage() {
               <FramedCard className="h-full">
                 <div className="flex h-full flex-col">
                   <span className="section-label !text-[0.65rem]">Helyszín</span>
-                  <h2 className="mt-2 font-serif text-3xl font-light text-ink">{session.city}</h2>
+                  <h2 className="mt-2 font-serif text-3xl font-medium text-ink">{session.city}</h2>
                   <dl className="mt-5 space-y-3 text-sm">
                     <div className="flex gap-3">
                       <dt className="w-24 shrink-0 text-faded">Cím</dt>

@@ -11,10 +11,10 @@ export default function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="bg-cream-deep">
+    <section className="border-b border-hairline/60 bg-white/40">
       <div className="mx-auto max-w-content px-5 py-20 text-center sm:px-7 md:py-24 lg:px-8">
         <span className="section-label">{label}</span>
-        <h1 className="mt-4 font-serif text-5xl font-light leading-tight text-ink md:text-6xl">
+        <h1 className="mt-4 font-serif text-5xl font-medium leading-tight text-ink md:text-6xl">
           {title}
         </h1>
         <div className="gold-hairline mx-auto mt-6" aria-hidden="true" />

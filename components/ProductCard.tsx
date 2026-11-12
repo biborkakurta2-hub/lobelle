@@ -25,7 +25,7 @@ export default function ProductCard({ product }: { product: ShopProduct }) {
           )}
         </div>
 
-        <h3 className="mt-5 font-serif text-2xl font-light leading-snug text-ink transition-colors duration-300 group-hover:text-bronze">
+        <h3 className="mt-5 font-serif text-2xl font-medium leading-snug text-ink transition-colors duration-300 group-hover:text-bronze">
           {product.name}
         </h3>
 

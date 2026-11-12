@@ -100,7 +100,7 @@ export default function CartView() {
     return (
       <div className="soft-card mx-auto max-w-2xl p-12 text-center">
         <span className="section-label">Üres kosár</span>
-        <p className="mt-5 font-serif text-3xl font-light text-ink">Még nincs termék a kosárban.</p>
+        <p className="mt-5 font-serif text-3xl font-medium text-ink">Még nincs termék a kosárban.</p>
         <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-faded">
           Böngéssz a kollekcióban, és tedd kosárba a kiválasztott darabokat.
         </p>
@@ -115,7 +115,7 @@ export default function CartView() {
     <div className="grid gap-12 lg:grid-cols-[1fr_22rem] lg:gap-16">
       {/* Tételek */}
       <div>
-        <h2 className="font-serif text-3xl font-light text-ink">A kosár tartalma</h2>
+        <h2 className="font-serif text-3xl font-medium text-ink">A kosár tartalma</h2>
         <div className="gold-hairline mt-5" aria-hidden="true" />
 
         <ul className="mt-8 divide-y divide-hairline border-y border-hairline">
@@ -136,7 +136,7 @@ export default function CartView() {
               <div className="flex flex-1 flex-col">
                 <Link
                   href={`/termekek/${line.product.category}/${line.product.slug}`}
-                  className="font-serif text-2xl font-light text-ink transition-colors hover:text-bronze"
+                  className="font-serif text-2xl font-medium text-ink transition-colors hover:text-bronze"
                 >
                   {line.product.name}
                 </Link>
@@ -187,7 +187,7 @@ export default function CartView() {
           >
             Kosár ürítése
           </button>
-          <p className="font-serif text-3xl font-light text-ink">
+          <p className="font-serif text-3xl font-medium text-ink">
             Végösszeg: <span className="text-bronze">{formatPrice(total)}</span>
           </p>
         </div>
@@ -195,7 +195,7 @@ export default function CartView() {
 
       {/* Megrendelő űrlap */}
       <div>
-        <h2 className="font-serif text-3xl font-light text-ink">Megrendelés</h2>
+        <h2 className="font-serif text-3xl font-medium text-ink">Megrendelés</h2>
         <div className="gold-hairline mt-5" aria-hidden="true" />
         <p className="mt-6 text-sm leading-relaxed text-faded">
           Add meg az adataidat, és elküldjük a visszaigazolást a szállítás részleteivel.

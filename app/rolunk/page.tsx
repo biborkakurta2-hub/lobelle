@@ -55,7 +55,7 @@ export default function AboutPage() {
         <FadeIn delay={120}>
           <FramedCard className="mt-14">
             <div className="py-8 text-center">
-              <p className="mx-auto max-w-md font-serif text-3xl font-light leading-snug text-ink">
+              <p className="mx-auto max-w-md font-serif text-3xl font-medium leading-snug text-ink">
                 „Ha egyszer titániumot használsz, nem térsz vissza máshoz.”
               </p>
               <div className="gold-hairline mx-auto mt-6" aria-hidden="true" />
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </FadeIn>
       </section>
 
-      <section className="border-t border-hairline bg-cream-deep/60">
+      <section className="border-t border-hairline bg-white/50">
         <div className="mx-auto max-w-content px-4 py-16 text-center sm:px-6 md:py-20 lg:px-8">
           <FadeIn>
             <SectionHeading label="Ismerj meg minket közelebbről" title="Így dolgozunk">

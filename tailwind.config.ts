@@ -20,10 +20,10 @@ const config: Config = {
           dark: "#B06A12",
           soft: "#A37D52",
         },
-        // Felületek
+        // Felületek — a krém alap a hátteret adó gradienssel egyezik
         cream: {
-          DEFAULT: "#F9F2ED",
-          deep: "#FBF4E6",
+          DEFAULT: "#FBF4E6",
+          deep: "#F6EBD8",
         },
         sand: "#DFC296",
         // Szöveg

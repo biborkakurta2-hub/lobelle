@@ -4,7 +4,7 @@ import { NAV, PHONE, PHONE_HREF, EMAIL, ADDRESS } from "@/lib/navigation";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-hairline/70 bg-cream-deep">
+    <footer className="border-t border-hairline/70 bg-white/50">
       <div className="mx-auto max-w-content px-5 py-16 sm:px-7 lg:px-8">
         {/* Logó középen */}
         <div className="flex justify-center">
