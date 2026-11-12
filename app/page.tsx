@@ -65,6 +65,31 @@ export default function HomePage() {
     <>
       <DeviceHero />
 
+      {/* A nyitókép alatt: a cím és a két fő útvonal */}
+      <section className="mx-auto max-w-content px-5 pb-4 pt-16 text-center sm:px-7 md:pt-20 lg:px-8">
+        <FadeIn>
+          <p className="section-label">Üdvözlünk a Lobelle oldalán</p>
+          <h1 className="mx-auto mt-4 max-w-3xl font-serif text-4xl font-medium leading-[1.1] text-ink md:text-6xl">
+            Az innovatív füllyukasztás új generációja
+          </h1>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-4 text-sm uppercase tracking-label text-bronze-soft">
+            <span>Biztonság</span>
+            <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
+            <span>Innováció</span>
+            <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
+            <span>Szakmaiság</span>
+          </div>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link href="/termekek/ful-es-orrlyukaszto-keszulek" className="btn-primary">
+              Fedezd fel a rendszert
+            </Link>
+            <Link href="/kepzes" className="btn-outline">
+              Jelentkezz képzésre
+            </Link>
+          </div>
+        </FadeIn>
+      </section>
+
       {/* A három pillér */}
       <section className="mx-auto max-w-content px-5 py-20 sm:px-7 md:py-28 lg:px-8">
         <FadeIn>
