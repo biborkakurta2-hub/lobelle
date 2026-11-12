@@ -66,7 +66,7 @@ export default function HomePage() {
       <DeviceHero />
 
       {/* A nyitókép alatt: a cím és a két fő útvonal */}
-      <section className="mx-auto max-w-content px-5 pb-4 pt-16 text-center sm:px-7 md:pt-20 lg:px-8">
+      <section className="mx-auto hidden max-w-content px-5 pb-4 pt-16 text-center sm:px-7 lg:px-8 landscape:block landscape:pt-20">
         <FadeIn>
           <p className="section-label">Üdvözlünk a Lobelle oldalán</p>
           <h1 className="mx-auto mt-4 max-w-3xl font-serif text-4xl font-medium leading-[1.1] text-ink md:text-6xl">
