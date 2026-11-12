@@ -8,30 +8,37 @@ import DeviceScroll from "./DeviceScroll";
  * Nyitóképernyő a készülékkel, amely a görgetés ütemére fordul körbe.
  * A logó a fejlécben van, ezért itt nem ismétlődik.
  *
+ * Fekvőben a képernyő felső háromnegyedét a kép tölti ki, az alsó
+ * negyedét a krém sáv a címmel — a szöveg nem lóg bele a képbe.
+ * A kép széle maszkkal olvad bele az oldalba, így nincs éles határ.
+ *
  * A szekció magassága adja a forgás útját: a készülék pontosan akkor ér
  * körbe, amikor a nyitóképernyő véget ér — addig a kép a helyén marad,
  * és csak utána gördül tovább az oldal.
  *
  * A magasságok svh egységben vannak, így a mobil böngésző címsávjának
  * össze-kinyílása nem mozdítja el a nyitóképernyőt görgetés közben.
- *
- * A kép mindkét tájolásban teljes egészében látszik, vágás nélkül:
- * állóban a saját képarányában tölti ki a szélességet, fekvőben a
- * rendelkezésre álló felületbe illeszkedik.
  */
 export default function DeviceHero() {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
     <section ref={sectionRef} className="relative h-[260svh] landscape:h-[300svh]">
-      <div className="sticky top-20 flex h-[calc(100svh-5rem)] w-full flex-col overflow-hidden landscape:block">
-        {/* A kép legfelül, közvetlenül a fejléc alatt, teljes egészében.
-            Az alsó széle maszkkal olvad bele az oldalba. */}
-        <div className="relative landscape:h-full">
+      <div className="sticky top-20 flex h-[calc(100svh-5rem)] w-full flex-col overflow-hidden">
+        {/* A kép: fekvőben a magasság háromnegyede */}
+        <div className="device-fade relative overflow-hidden landscape:h-3/4">
           <DeviceScroll sectionRef={sectionRef} />
         </div>
 
-        {/* Álló nézet: a szöveg a kép alatt, egyenletesen kitöltve a teret */}
+        {/* Fekvő nézet: alsó negyed krém sáv a címmel, átfedés nélkül */}
+        <div className="hidden landscape:flex landscape:h-1/4 landscape:flex-col landscape:items-center landscape:justify-center landscape:px-6 landscape:text-center">
+          <p className="section-label">Üdvözlünk a Lobelle oldalán</p>
+          <h1 className="mx-auto mt-2 max-w-4xl font-serif text-4xl font-medium leading-[1.1] text-ink xl:text-5xl">
+            Az innovatív füllyukasztás új generációja
+          </h1>
+        </div>
+
+        {/* Álló nézet: a kép alatt a cím, a pillérek és a két gomb */}
         <div className="flex flex-1 flex-col items-center justify-evenly px-6 pb-8 text-center landscape:hidden">
           <div>
             <p className="section-label !text-xs">Üdvözlünk a Lobelle oldalán</p>

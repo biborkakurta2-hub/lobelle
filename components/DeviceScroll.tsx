@@ -17,6 +17,11 @@ import { useEffect, useRef, useState } from "react";
 const FRAME_COUNT = 52;
 const FRAME_WIDTH = 1800;
 const FRAME_HEIGHT = 1012;
+/* A vászon szélesebb a képkockánál: a két szélső sávot a kép saját
+   szélső képpontjaiból nyújtjuk ki, így a toldás soronként pontosan
+   egyezik a képpel, és nem látszik függőleges él. */
+const SIDE_BAND = 460;
+const CANVAS_WIDTH = FRAME_WIDTH + SIDE_BAND * 2;
 const EASING = 0.16; // mennyit közelít a megjelenített állapot a célhoz képkockánként
 
 const framePath = (index: number) =>
@@ -43,23 +48,47 @@ export default function DeviceScroll({
     let shown = 0;
     let raf = 0;
 
+    /** Egy képkocka kirajzolása a kinyújtott oldalsó sávokkal együtt */
+    function paint(image: HTMLImageElement, alpha: number) {
+      ctx!.globalAlpha = alpha;
+      // bal sáv a kép bal szélső oszlopából
+      ctx!.drawImage(image, 0, 0, 2, FRAME_HEIGHT, 0, 0, SIDE_BAND, FRAME_HEIGHT);
+      // jobb sáv a kép jobb szélső oszlopából
+      ctx!.drawImage(
+        image,
+        FRAME_WIDTH - 2, 0, 2, FRAME_HEIGHT,
+        SIDE_BAND + FRAME_WIDTH, 0, SIDE_BAND, FRAME_HEIGHT
+      );
+      // maga a képkocka, középen
+      ctx!.drawImage(image, SIDE_BAND, 0, FRAME_WIDTH, FRAME_HEIGHT);
+      ctx!.globalAlpha = 1;
+    }
+
     function render(progress: number) {
       // Fordított sorrend: nyitáskor az utolsó kocka látszik, amelyen a
       // készülék teljes egészében benne van a képben
       const position = (1 - progress) * (FRAME_COUNT - 1);
       const index = Math.min(FRAME_COUNT - 1, Math.floor(position));
       const blend = position - index;
-      const base = frames[index];
+      // Ha a pontos kocka még nem töltött be, a legközelebbi készet rajzoljuk,
+      // így a felület soha nem marad üres
+      let base = frames[index];
+      if (!base?.complete) {
+        for (let step = 1; step < FRAME_COUNT; step++) {
+          const before = frames[index - step];
+          if (before?.complete) { base = before; break; }
+          const after = frames[index + step];
+          if (after?.complete) { base = after; break; }
+        }
+      }
       if (!base?.complete) return;
 
-      ctx!.drawImage(base, 0, 0, FRAME_WIDTH, FRAME_HEIGHT);
+      paint(base, 1);
 
       // Áttűnés a következő kockára, hogy ne lépcsőzzön a mozgás
       const next = frames[index + 1];
       if (blend > 0.01 && next?.complete) {
-        ctx!.globalAlpha = blend;
-        ctx!.drawImage(next, 0, 0, FRAME_WIDTH, FRAME_HEIGHT);
-        ctx!.globalAlpha = 1;
+        paint(next, blend);
       }
     }
 
@@ -94,14 +123,16 @@ export default function DeviceScroll({
     }
 
     async function start() {
-      // Az első kocka azonnal, hogy ne legyen üres a nyitóképernyő
-      frames[0] = await loadFrame(0);
+      // A nyitókocka tölt be elsőként — fordított sorrend miatt ez az utolsó
+      // fájl —, hogy a kép azonnal látszódjon, ne csak a teljes letöltés után
+      const opening = FRAME_COUNT - 1;
+      frames[opening] = await loadFrame(opening);
       if (disposed) return;
       render(0);
       setReady(true);
 
-      // A többi kocka dekódolva, sorban
-      for (let i = 1; i < FRAME_COUNT; i++) {
+      // A többi kocka a görgetés irányában, visszafelé haladva
+      for (let i = opening - 1; i >= 0; i--) {
         if (disposed) return;
         frames[i] = await loadFrame(i);
       }
@@ -131,9 +162,9 @@ export default function DeviceScroll({
   return (
     <canvas
       ref={canvasRef}
-      width={FRAME_WIDTH}
+      width={CANVAS_WIDTH}
       height={FRAME_HEIGHT}
-      className={`device-fade aspect-[16/9] w-full object-contain transition-opacity duration-700 landscape:aspect-auto landscape:h-full ${
+      className={`aspect-[16/9] w-full object-cover transition-opacity duration-700 landscape:aspect-auto landscape:h-full landscape:w-full ${
         ready ? "opacity-100" : "opacity-0"
       }`}
       role="img"

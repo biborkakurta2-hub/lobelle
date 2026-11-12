@@ -100,22 +100,30 @@
   }
 }
 
-/* A nyitókép alsó széle lágyan beleolvad az oldalba.
-   Maszkot használunk, nem ráfestett krém réteget, így a háttér saját
-   gradiense üt át, és sehol nem keletkezik éles határ. */
+/* A nyitókép alja hosszan, fokozatosan olvad bele az oldalba, a teteje
+   pedig egy rövid átmenettel csatlakozik a fejléchez. Maszkot használunk,
+   nem ráfestett réteget, így a háttér saját gradiense üt át. */
 .device-fade {
   -webkit-mask-image: linear-gradient(
     to bottom,
-    #000 78%,
-    rgba(0, 0, 0, 0.75) 88%,
-    rgba(0, 0, 0, 0.35) 95%,
-    transparent 100%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.85) 5%,
+    #000 12%,
+    #000 50%,
+    rgba(0, 0, 0, 0.9) 68%,
+    rgba(0, 0, 0, 0.62) 80%,
+    rgba(0, 0, 0, 0.3) 91%,
+    rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
     to bottom,
-    #000 78%,
-    rgba(0, 0, 0, 0.75) 88%,
-    rgba(0, 0, 0, 0.35) 95%,
-    transparent 100%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.85) 5%,
+    #000 12%,
+    #000 50%,
+    rgba(0, 0, 0, 0.9) 68%,
+    rgba(0, 0, 0, 0.62) 80%,
+    rgba(0, 0, 0, 0.3) 91%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
