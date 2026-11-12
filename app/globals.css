@@ -99,3 +99,23 @@
     transition: none;
   }
 }
+
+/* A nyitókép alsó széle lágyan beleolvad az oldalba.
+   Maszkot használunk, nem ráfestett krém réteget, így a háttér saját
+   gradiense üt át, és sehol nem keletkezik éles határ. */
+.device-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 78%,
+    rgba(0, 0, 0, 0.75) 88%,
+    rgba(0, 0, 0, 0.35) 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 78%,
+    rgba(0, 0, 0, 0.75) 88%,
+    rgba(0, 0, 0, 0.35) 95%,
+    transparent 100%
+  );
+}

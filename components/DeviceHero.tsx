@@ -25,8 +25,11 @@ export default function DeviceHero() {
   return (
     <section ref={sectionRef} className="relative h-[260svh] landscape:h-[300svh]">
       <div className="sticky top-20 flex h-[calc(100svh-5rem)] w-full flex-col overflow-hidden landscape:block">
-        {/* A kép legfelül, közvetlenül a fejléc alatt, teljes egészében */}
-        <DeviceScroll sectionRef={sectionRef} />
+        {/* A kép legfelül, közvetlenül a fejléc alatt, teljes egészében.
+            Az alsó széle maszkkal olvad bele az oldalba. */}
+        <div className="relative landscape:h-full">
+          <DeviceScroll sectionRef={sectionRef} />
+        </div>
 
         {/* Álló nézet: a szöveg a kép alatt, egyenletesen kitöltve a teret */}
         <div className="flex flex-1 flex-col items-center justify-evenly px-6 pb-8 text-center landscape:hidden">

@@ -44,7 +44,9 @@ export default function DeviceScroll({
     let raf = 0;
 
     function render(progress: number) {
-      const position = progress * (FRAME_COUNT - 1);
+      // Fordított sorrend: nyitáskor az utolsó kocka látszik, amelyen a
+      // készülék teljes egészében benne van a képben
+      const position = (1 - progress) * (FRAME_COUNT - 1);
       const index = Math.min(FRAME_COUNT - 1, Math.floor(position));
       const blend = position - index;
       const base = frames[index];
@@ -131,7 +133,7 @@ export default function DeviceScroll({
       ref={canvasRef}
       width={FRAME_WIDTH}
       height={FRAME_HEIGHT}
-      className={`aspect-[16/9] w-full object-contain transition-opacity duration-700 landscape:aspect-auto landscape:h-full ${
+      className={`device-fade aspect-[16/9] w-full object-contain transition-opacity duration-700 landscape:aspect-auto landscape:h-full ${
         ready ? "opacity-100" : "opacity-0"
       }`}
       role="img"
