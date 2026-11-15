@@ -1,6 +1,1175 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-11-15T14:57:13.517Z",
   "source": "https://lobelle.hu",
-  "note": "Ezt a fájlt az 'npm run scrape' parancs tölti fel valós termékadatokkal a lobelle.hu oldalról. Amíg üres, a kategóriaoldalak a 'feltöltés alatt' állapotot mutatják — kitalált termék vagy ár sehol nem jelenik meg.",
-  "products": []
+  "products": [
+    {
+      "id": "standard-ekszerek/titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer",
+      "slug": "titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer",
+      "name": "Titánium, 3 mm-es, ultravékony, aranyozott, gömb alakú ékszer",
+      "price": 10160,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-2.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-3.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-4.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, gömb alakú ékszer, 3 mm-es, ezüst színű. \r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nNépszerű, igazi jolly joker a fülbelövéshez. Titánium, gömb alakú ékszer, 3 mm-es változatban. Van belőle 4 mm-es változat is,sorminta kialakításához. (pl nagyobb, kisebb)",
+      "sku": "AB02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-3-mm-es-ultravekony-gomb-alaku-ekszer"
+    },
+    {
+      "id": "standard-ekszerek/titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben",
+      "slug": "titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben",
+      "name": "Titánium, 3 mm-es, ultravékony, gömb alakú ékszer, ezüst színben",
+      "price": 10160,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben-2.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben-3.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben-4.jpg",
+        "/termekek/standard-ekszerek/titanium-3-mm-es-ultravekony-gomb-alaku-ekszer-ezust-szinben-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium gömb fejű ékszer, ezüst színben. Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nNépszerű, jolly joker a fülbelövéshez. Titánium, gömb alakú ékszer, 3 mm-es változatban. Van belőle 4 mm-es változat is,sorminta kialakításához. (pl nagyobb, kisebb)",
+      "sku": "AB01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-3-mm-es-gomb"
+    },
+    {
+      "id": "standard-ekszerek/titanium-4-mm-es-ultravekony-gomb-alaku-ekszer",
+      "slug": "titanium-4-mm-es-ultravekony-gomb-alaku-ekszer",
+      "name": "Titánium, 4 mm-es, ultravékony gömb alakú ékszer",
+      "price": 10795,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-gomb-alaku-ekszer.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-gomb-alaku-ekszer-2.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-gomb-alaku-ekszer-3.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-gomb-alaku-ekszer-4.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-gomb-alaku-ekszer-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, gömb alakú ékszer, 4 mm. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, gömb alakú ékszer, 4 mm-es változat.  Van belőle 3 mm-es is, a fülben sorozatminta kialakításához. (Pl nagyobb, kisebb) Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el.",
+      "sku": "AB03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-4-mm-es-ultravekony-gomb-alaku-ekszer"
+    },
+    {
+      "id": "standard-ekszerek/titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer",
+      "slug": "titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer",
+      "name": "Titánium, 4 mm-es, ultravékony, aranyozott, gömb alakú ékszer",
+      "price": 10795,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-2.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-3.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-4.jpg",
+        "/termekek/standard-ekszerek/titanium-4-mm-es-ultravekony-aranyozott-gomb-alaku-ekszer-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, gömb alakú ékszer, 4 mm-es, arany színben.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, gömb alakú ékszer, 4 mm-es változat,arany színben.  Van belőle 3 mm-es is, a fülben sorozatminta kialakításához. (Pl nagyobb, kisebb)",
+      "sku": "AB04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium4-mm-es-ultravekony-aranyozott-gomb-alaku"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony , 3 mm-es aranyozott karmos ékszer, ezüst színű kővel",
+      "price": 12065,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-aranyozott-karmos-ekszer-ezust-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, , ultravékony, aranyozott, 3 mm-es karmos ékszer Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, , ultravékony, aranyozott, 3 mm-es karmos ékszer. Vannak belőle nagyobbak is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "AT05",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-3-mm-es-aranyozott-karmos-eks"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel",
+      "slug": "titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel",
+      "name": "Titánium, ultravékony , 3 mm-es, foglalatos ékszer, kék színű kővel",
+      "price": 11938,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony , 3 mm-es, foglalatos ékszer, kék színű kővel Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el.\r\n/A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony , 3 mm-es, foglalatos ékszer, kék színű kővel. Van belőle nagyobb is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "TN02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-3-mm-es-foglalatos-ekszer-kek"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal",
+      "slug": "titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal",
+      "name": "Titánium, ultravékony 4 mm-es csillag alakú ékszer, ezüst színű kristállyal",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-csillag-alaku-ekszer-ezust-szinu-kristallyal-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, csillag alakú ékszer. Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, belőhető, ultravékony csillag formájú ékszer, kis kristállyal a közepén.",
+      "sku": "AS01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-4-mm-es-csillag-alaku-ekszer"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony 4 mm-es szív alakú ékszer, ezüst színű kővel",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezust-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, belőhető szív alakú ékszer, 4 mm-es, ezüst színű kővel a közepén\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, belőhető szív alakú ékszer, 4 mm-es, ezüst színű kővel a közepén",
+      "sku": "AS03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-4-mm-es-sziv-alaku-ekszer-ezu"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-eszinjatszo-szinu-kovel",
+      "slug": "titanium-ultravekony-karmos-ekszer-3-mm-es-eszinjatszo-szinu-kovel",
+      "name": "Titánium, ultravékony karmos ékszer, 3 mm-es, eszínjátszó színű kővel",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-eszinjatszo-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-eszinjatszo-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-eszinjatszo-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-eszinjatszo-szinu-kovel-4.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 3 mm-es, színjátszó színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "AT02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-karmos-ekszer-3-mm-es-eszinja"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony karmos ékszer, 3 mm-es, ezüst színű kővel",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 3 mm-es, ezüst színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony karmos ékszer, 3 mm-es, ezüst színű kővel. Van belőle nagyobb is, sorozat készítéséhez a fülcimpába.",
+      "sku": "AT01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-karmos-ekszer-3-mm-es-ezust-s"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz",
+      "slug": "titanium-ultravekony-karmos-ekszer-3-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz",
+      "name": "Titánium, ultravékony karmos ékszer, 3 mm-es, színjátszó színű kővel, arany színű szárral",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-3-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz-4.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 3 mm-es, színjátszó színű kővel, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "AT06",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-karmos-ekszer-3-mm-es-szinjat"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel",
+      "slug": "titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel",
+      "name": "Titánium, ultravékony karmos ékszer, 4 mm-es, színjátszó színű kővel",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-4.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 4mm-es, színjátszó színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "AT04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-karmos-ekszer-4-mm-es-szinjat"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz",
+      "slug": "titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz",
+      "name": "Titánium, ultravékony karmos ékszer, 4 mm-es, színjátszó színű kővel, arany színű szárral",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-szinjatszo-szinu-kovel-arany-szinu-sz-4.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 4 mm-es, színjátszó színű kővel, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "AT08",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/AT08/Titanium-ultravekony-karmos-ekszer-4-mm-es-szinjat"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony karmos ékszer, 5 mm-es, ezüst színű kővel",
+      "price": 12573,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-4.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 5 mm-es, ezüst színű kővel Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "AT09",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-s"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral",
+      "slug": "titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral",
+      "name": "Titánium, ultravékony karmos ékszer, 5 mm-es, ezüst színű kővel, arany színű szárral",
+      "price": 12573,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-szinu-kovel-arany-szinu-szarral-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony karmos ékszer, 5 mm-es, ezüst színű kővel, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "AT10",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/AT10/Titanium-ultravekony-karmos-ekszer-5-mm-es-ezust-s"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel",
+      "slug": "titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel",
+      "name": "Titánium, ultravékony, 3 mm-es foglalatos ékszer, rózsaszínű kővel.",
+      "price": 11938,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-3-mm-es-foglalatos-ekszer-rozsaszinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, 3 mm-es foglalatos ékszer, rózsaszínű kővel.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, 3 mm-es foglalatos ékszer, rózsaszínű kővel. Van belőle nagyobb is, sorozatminta készítéséhez, fülcimpába.",
+      "sku": "TN03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-3-mm-es-foglalatos-ekszer-roz"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a",
+      "slug": "titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a",
+      "name": "Titánium, ultravékony, 4 mm-es aranyozott csillag alakú ékszer, ezüst kristállyal a közepén.",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-csillag-alaku-ekszer-ezust-kristallyal-a-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, aranyozott csillag alakú ékszer, kis kővel a közepén\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, aranyozott csillag alakú ékszer, kis kővel a közepén.",
+      "sku": "AS02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-4-mm-es-aranyozott-csillag-alaku-ekszer-e"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen",
+      "slug": "titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen",
+      "name": "Titánium, ultravékony, 4 mm-es aranyozott szív alakú ékszer, ezüst kővel a közepén.",
+      "price": 12319,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku-ekszer-ezust-kovel-a-kozepen-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, 4 mm-es aranyozott szív alakú ékszer, ezüst kővel a közepén.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, 4 mm-es aranyozott szív alakú ékszer, ezüst kővell a közepén.",
+      "sku": "AS04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-4-mm-es-aranyozott-sziv-alaku"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel",
+      "slug": "titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel",
+      "name": "Titánium, ultravékony, 4 mm-es foglalatos ékszer, rózsaszín színű kővel",
+      "price": 12065,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-ekszer-rozsaszin-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, 4 mm-es foglalatos ékszer,rózsaszín színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, 4 mm-es foglalatos ékszer, rózsaszín színű kővel Van belőle kisebb is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "TN06",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-4-mm-es-foglalatos-ekszer-kek"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben",
+      "slug": "titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben",
+      "name": "Titánium, ultravékony, 4 mm-es foglalatos fekete színű kővel Bővebben",
+      "price": 11938,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4-mm-es-foglalatos-fekete-szinu-kovel-bovebben-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, 4 mm-es foglalatos ékszer,fekete színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "TN07",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-4-mm-es-foglalatos-fekete-szi"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel",
+      "slug": "titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel",
+      "name": "Titánium, ultravékony, 4mm-es, foglalatos ékszer, kék színű kővel.",
+      "price": 12065,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-4mm-es-foglalatos-ekszer-kek-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, 4mm-es, foglalatos ékszer, kék színű kővel.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, 4mm-es, foglalatos ékszer, kék színű kővel. Van belőle kisebb is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "TN05",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-4mm-es-foglalatos-ekszer-kek"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel",
+      "slug": "titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel",
+      "name": "Titánium, ultravékony, aranyozott karmos ékszer 4 mm-es kővel",
+      "price": 12192,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-aranyozott-karmos-ekszer-4-mm-es-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, aranyozott karmos ékszer, 4 mm-es kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, aranyozott karmos ékszer, 4 mm-es kővel. Van belőle kisebb és nagyobb is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "AT07",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-aranyozott-karmos-ekszer-4-mm"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony, foglalatos ékszer, 3 mm-es, ezüst színű kővel",
+      "price": 11938,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezust-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, foglalatos ékszer, 3 mm-es, ezüst színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, foglalatos ékszer, 3 mm-es, ezüst színű kővel. Van belőle nagyobb is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "TN01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-foglalatos-ekszer-3-mm-es-ezu"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony, foglalatos, 4 mm-es ékszer, ezüst színű kővel",
+      "price": 12065,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezust-szinu-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium, ultravékony, foglalatos, 4 mm-es ékszer, ezüst színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium, ultravékony, foglalatos, 4 mm-es ékszer, ezüst színű kővel. Van belőle kisebb is, sorozatminta készítéséhez fülcimpába.",
+      "sku": "TN04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-foglalatos-4-mm-es-ekszer-ezu"
+    },
+    {
+      "id": "standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-kovel",
+      "slug": "titanium-ultravekony-karmos-ekszer-4-mm-es-kovel",
+      "name": "Titánium, ultravékony, karmos ékszer, 4 mm-es kővel",
+      "price": 12192,
+      "images": [
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-kovel.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-kovel-2.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-kovel-3.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-kovel-4.jpg",
+        "/termekek/standard-ekszerek/titanium-ultravekony-karmos-ekszer-4-mm-es-kovel-5.jpg"
+      ],
+      "category": "standard-ekszerek",
+      "description": "Titánium karmos ékszer, 4 mm-es , ezüst színű kővel.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTitánium karmos ékszer, 4 mm-es , ezüst színű kővel. Van belőle kisebb és nagyobb is, sorozat készítéséhez fülcimpába.",
+      "sku": "AT03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-karmos-ekszer-4-mm-es-kovel"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral",
+      "slug": "titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral",
+      "name": "Titánium, 6 mm-es kék színű virág, arany színű szárral",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarral-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium, 6 mm-es kék színű virág, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF11",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-kek-szinu-virag-arany-szinu-szarr"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-rozsaszin-szinu-virag-arany-szinu-szarral",
+      "slug": "titanium-6-mm-es-rozsaszin-szinu-virag-arany-szinu-szarral",
+      "name": "Titánium, 6 mm-es rózsaszín színű virág, arany színű szárral",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-rozsaszin-szinu-virag-arany-szinu-szarral.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-rozsaszin-szinu-virag-arany-szinu-szarral-2.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium, 6 mm-es rózsaszín színű virág, arany színű szárral Az oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF10",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-rozsaszin-szinu-virag-arany-szinu"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag",
+      "slug": "titanium-6-mm-es-szivarvany-szinu-virag",
+      "name": "Titánium, 6 mm-es szivárvány színű virág",
+      "price": 12319,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titániumból készült, virág alakú ultravékony ékszer, steril csomagolásban.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-szivarvany-szinu-virag"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral",
+      "slug": "titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral",
+      "name": "Titánium, 6 mm-es szivárvány színű virág, arany színű szárral",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-szivarvany-szinu-virag-arany-szinu-szarral-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium, 6 mm-es szivárvány színű virág, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF08",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-szivarvany-szinu-virag-arany-szin"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szinu-kristallyal-sterilen-csomago",
+      "slug": "titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szinu-kristallyal-sterilen-csomago",
+      "name": "Titánium, 6 mm-es, ultravékony ékszer, rózsaszín színű kristállyal, sterilen csomagolva",
+      "price": 12319,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szinu-kristallyal-sterilen-csomago.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szinu-kristallyal-sterilen-csomago-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szinu-kristallyal-sterilen-csomago-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szinu-kristallyal-sterilen-csomago-4.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium , belőhető ékszer, steril kapszulában\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF06",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-ekszer-rozsaszin-szin"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva",
+      "slug": "titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva",
+      "name": "Titánium, 6 mm-es, ultravékony ékszer, yin yang motívummal, sterilen csomagolva",
+      "price": 12319,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-ekszer-yin-yang-motivummal-sterilen-csomagolva-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium ékszer, sterilen csomagolva\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF12",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-ekszer-yin-yang-motiv"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva",
+      "slug": "titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva",
+      "name": "Titánium, 6 mm-es, ultravékony, katica motívummal,sterilen csomagolva",
+      "price": 12319,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-katica-motivummal-sterilen-csomagolva-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium ékszer, sterilen csomagolva\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF13",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-katica-motivummalster"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri",
+      "slug": "titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri",
+      "name": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, ezüst színű kristállyal, sterilen csomagolva",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-steri-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium ékszer, sterilen csomagolva.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KB01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-pillango-alaku-ekszer"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile",
+      "slug": "titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile",
+      "name": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, kék színű kristállyal, sterilen csomagolva",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-sterile-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, kék színű kristállyal, sterilen csomagolva\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KB02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/KB02/Titanium-6-mm-es-ultravekony-pillango-alaku-ekszer"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s",
+      "slug": "titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s",
+      "name": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, rózsaszín színű kristállyal, sterilen csomagolva",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-rozsaszin-szinu-kristallyal-s-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium ékszer, sterilen csomagolva.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KB03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/KB03/Titanium-6-mm-es-ultravekony-pillango-alaku-ekszer"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo",
+      "slug": "titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo",
+      "name": "Titánium, 6 mm-es, ultravékony, virág alakú ékszer, ezüst színű kristállyal, aranyozott szárral, sterilen csomagolva",
+      "price": 12446,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-aranyozo-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium ékszer, aranyozott szárral, sterilen csomagolva. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF09",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ez"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen",
+      "slug": "titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen",
+      "name": "Titánium, 6 mm-es, ultravékony, virág alakú ékszer, ezüst színű kristállyal, sterilen csomagolva",
+      "price": 12319,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen-4.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ezust-szinu-kristallyal-sterilen-5.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium, belőhető fülbevaló sterilen csomagolva.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF05",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-ekszer-ezust-szinu-kr"
+    },
+    {
+      "id": "gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-kek-szinu-kristallyal",
+      "slug": "titanium-6-mm-es-ultravekony-virag-alaku-ekszer-kek-szinu-kristallyal",
+      "name": "Titánium, 6 mm-es, ultravékony, virág alakú ékszer, kék színű kristállyal",
+      "price": 12319,
+      "images": [
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-kek-szinu-kristallyal.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-kek-szinu-kristallyal-2.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-kek-szinu-kristallyal-3.jpg",
+        "/termekek/gyerek-ekszerek/titanium-6-mm-es-ultravekony-virag-alaku-ekszer-kek-szinu-kristallyal-4.jpg"
+      ],
+      "category": "gyerek-ekszerek",
+      "description": "Titánium, 6 mm-es, ultravékony, virág alakú ékszer, kék színű kristállyal\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "KF07",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-virag-alaku-ekszer-ke"
+    },
+    {
+      "id": "baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal",
+      "slug": "titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal",
+      "name": "Titánium, 3 mm-es, ultravékony ékszer, ezüst színű foglalatos kristállyal",
+      "price": 15215,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-foglalatos-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium fülbevaló babáknak, baba dobozzal együtt.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BT01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-3-mm-es-ultravekony-ekszer-ezust-szinu-fo"
+    },
+    {
+      "id": "baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal",
+      "slug": "titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal",
+      "name": "Titánium, 3 mm-es, ultravékony ékszer, kék színű kristállyal",
+      "price": 15215,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-kek-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium baba fülbevaló baba dobozzal\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót sterilen csomagolva -fertőtlenítő lapok -pót hátlapok -utóápoló -ajándék zsákocska",
+      "sku": "BT02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-ultravekony-ekszer-kek-szinu-kris"
+    },
+    {
+      "id": "baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal",
+      "slug": "titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal",
+      "name": "Titánium, 3 mm-es, ultravékony ékszer, rózsaszín színű foglalatos kristállyal",
+      "price": 15215,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szinu-foglalatos-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium fülbevaló babáknak, baba dobozzal együtt.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BT03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-3-mm-es-ultravekony-ekszer-rozsaszin-szin"
+    },
+    {
+      "id": "baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal",
+      "slug": "titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal",
+      "name": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, rózsaszín színű kristállyal",
+      "price": 15253,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-rozsaszin-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium ékszer kisbabáknak , baba dobozzal.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BF09",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-4-mm-es-ultravekony-virag-alaku-ekszer-ro"
+    },
+    {
+      "id": "baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall",
+      "slug": "titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall",
+      "name": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, világos rózsaszín színű kristállyal, arany színű szárral",
+      "price": 15431,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall-2.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall-3.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall-4.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vilagos-rozsaszin-szinu-kristall-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, rózsaszín színű kristállyal, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "BF12",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-4-mm-es-ultravekony-virag-alaku-ekszer-vi"
+    },
+    {
+      "id": "baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k",
+      "slug": "titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k",
+      "name": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, aranyozott szárral, ezüst színű kristállyal",
+      "price": 15431,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k-2.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k-3.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k-4.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-aranyozott-szarral-ezust-szinu-k-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium ékszer kisbabáknak , baba dobozzal együtt.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BF10",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-4-mm-es-ultravekony-virag-alaku-ekszer-ar"
+    },
+    {
+      "id": "baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar",
+      "slug": "titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar",
+      "name": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, szíínjátszó színű kristállyal, arany színű szárral",
+      "price": 15431,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar-2.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar-3.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar-4.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-sziinjatszo-szinu-kristallyal-ar-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, rózsaszín színű kristállyal, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "BF11",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Baba-szinjatszos-virag-arany-szinu-szarral"
+    },
+    {
+      "id": "baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal",
+      "slug": "titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal",
+      "name": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, színjátszó színű kristállyal",
+      "price": 15253,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-ultravekony-virag-alaku-ekszer-szinjatszo-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium, 4 mm-es, ultravékony, virág alakú ékszer, színjátszó színű kristállyal\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "BF08",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Baba-szinjatszos-virag"
+    },
+    {
+      "id": "baba-ekszerek/titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal",
+      "slug": "titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal",
+      "name": "Titánium, 4 mm-es, virág alakú ultravékony ékszer, ezüst színű kristállyal",
+      "price": 15253,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ezust-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium baba ékszer, baba dobozzal.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BF07",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-4-mm-es-virag-alaku-ultravekony-ekszer-ez"
+    },
+    {
+      "id": "baba-ekszerek/titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal",
+      "slug": "titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal",
+      "name": "Titánium, 6 mm-es, pillangó alakú ultravékony ékszer, rózsaszín színű kristállyal",
+      "price": 15431,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-pillango-alaku-ultravekony-ekszer-rozsaszin-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium ékszer babáknak, baba dobozzal együtt.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BB04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-6-mm-es-pillango-alaku-ultravekony-ekszer"
+    },
+    {
+      "id": "baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal",
+      "slug": "titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal",
+      "name": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, ezüst színű kristállyal",
+      "price": 15431,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-ezust-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium ékszer kisbabáknak, baba dobozzal együtt.\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/\r\n\r\nTartalmaz: -1 pár fülbevalót, sterilen csomagolva -utóápolót -ferőtlenítő lapokat -pót hátlapot -ajándék zsákocskát",
+      "sku": "BB06",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/BB06/Titanium-6-mm-es-ultravekony-pillango-alaku-ekszer"
+    },
+    {
+      "id": "baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal",
+      "slug": "titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal",
+      "name": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, kék színű kristállyal",
+      "price": 15431,
+      "images": [
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-2.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-3.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-4.jpg",
+        "/termekek/baba-ekszerek/titanium-6-mm-es-ultravekony-pillango-alaku-ekszer-kek-szinu-kristallyal-5.jpg"
+      ],
+      "category": "baba-ekszerek",
+      "description": "Titánium, 6 mm-es, ultravékony, pillangó alakú ékszer, kék színű kristállyal\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "BB05",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/BB05/Titanium-6-mm-es-ultravekony-pillango-alaku-ekszer"
+    },
+    {
+      "id": "orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel",
+      "slug": "titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel",
+      "name": "Titánium, ultravékony orr ékszerr, 2 mm-es, ezüst színű kővel",
+      "price": 8255,
+      "images": [
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-2.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-3.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-4.jpg"
+      ],
+      "category": "orr-piercingek",
+      "description": "Titánium, ultravékony orr ékszerr, 2 mm-es, ezüst színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "NT01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szi"
+    },
+    {
+      "id": "orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-arany-szinu-szarral",
+      "slug": "titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-arany-szinu-szarral",
+      "name": "Titánium, ultravékony orr ékszerr, 2 mm-es, ezüst színű kővel, arany színű szárral",
+      "price": 8509,
+      "images": [
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-arany-szinu-szarral.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-arany-szinu-szarral-2.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szinu-kovel-arany-szinu-szarral-3.jpg"
+      ],
+      "category": "orr-piercingek",
+      "description": "Titánium, ultravékony orr ékszerr, 2 mm-es, ezüst színű kővel, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "NT02",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/NT02/Titanium-ultravekony-orr-ekszerr-2-mm-es-ezust-szi"
+    },
+    {
+      "id": "orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-felgomb-alaku-fejjel-arany-szinben",
+      "slug": "titanium-ultravekony-orr-ekszerr-2-mm-es-felgomb-alaku-fejjel-arany-szinben",
+      "name": "Titánium, ultravékony orr ékszerr, 2 mm-es, félgömb alakú fejjel, arany színben",
+      "price": 7620,
+      "images": [
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-felgomb-alaku-fejjel-arany-szinben.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-felgomb-alaku-fejjel-arany-szinben-2.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-felgomb-alaku-fejjel-arany-szinben-3.jpg"
+      ],
+      "category": "orr-piercingek",
+      "description": "Titánium, ultravékony orr ékszerr, 2 mm-es, félgömgömb alakú fejjel, arany színben\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "NT06",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-orr-ekszerr-2-mm-es-felgomb-a"
+    },
+    {
+      "id": "orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alaku-fejjel",
+      "slug": "titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alaku-fejjel",
+      "name": "Titánium, ultravékony orr ékszerr, 2 mm-es, gömb alakú fejjel",
+      "price": 7493,
+      "images": [
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alaku-fejjel.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alaku-fejjel-2.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alaku-fejjel-3.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alaku-fejjel-4.jpg"
+      ],
+      "category": "orr-piercingek",
+      "description": "Titánium, ultravékony orr ékszerr, 2 mm-es, gömb alakú fejjel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "NT05",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-orr-ekszerr-2-mm-es-gomb-alak"
+    },
+    {
+      "id": "orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel",
+      "slug": "titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel",
+      "name": "Titánium, ultravékony orr ékszerr, 2 mm-es, rózsaszín színű kővel",
+      "price": 8382,
+      "images": [
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-2.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-3.jpg"
+      ],
+      "category": "orr-piercingek",
+      "description": "Titánium, ultravékony orr ékszerr, 2 mm-es, rózsaszín színű kővel\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "NT03",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin"
+    },
+    {
+      "id": "orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-arany-szinu-szarr",
+      "slug": "titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-arany-szinu-szarr",
+      "name": "Titánium, ultravékony orr ékszerr, 2 mm-es, rózsaszín színű kővel, arany színű szárral",
+      "price": 8509,
+      "images": [
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-arany-szinu-szarr.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-arany-szinu-szarr-2.jpg",
+        "/termekek/orr-piercingek/titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin-szinu-kovel-arany-szinu-szarr-3.jpg"
+      ],
+      "category": "orr-piercingek",
+      "description": "Titánium, ultravékony orr ékszerr, 2 mm-es, rózsaszín színű kővel, arany színű szárral\r\nAz oldalon feltüntetett árak lakossági (bruttó) árak. Szakmai kedvezmény tanfolyamunk elvégzése után, külön jogosultsággal érhető el. /A termékek lakossági kiszolgálása nem steril kapszulában történik!Az csak a szakemberek számára érhető el!/",
+      "sku": "NT04",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/spd/NT04/Titanium-ultravekony-orr-ekszerr-2-mm-es-rozsaszin"
+    },
+    {
+      "id": "kellekek-eszkozok/alkoholos-fertotlenito-kendo-100-db-os",
+      "slug": "alkoholos-fertotlenito-kendo-100-db-os",
+      "name": "Alkoholos fertőtlenítő kendő 100 db-os",
+      "price": 1016,
+      "images": [
+        "/termekek/kellekek-eszkozok/alkoholos-fertotlenito-kendo-100-db-os.jpg",
+        "/termekek/kellekek-eszkozok/alkoholos-fertotlenito-kendo-100-db-os-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Alkoholos fertőtlenítő lapok",
+      "sku": "AKLO",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Alkoholos-fertotlenito-kendo-100-db-os"
+    },
+    {
+      "id": "kellekek-eszkozok/bemutatotabla-a-gyerekeknek-keszult-ekszerek-mintajaval",
+      "slug": "bemutatotabla-a-gyerekeknek-keszult-ekszerek-mintajaval",
+      "name": "Bemutatótábla a gyerekeknek készült ékszerek mintájával",
+      "price": 22860,
+      "images": [
+        "/termekek/kellekek-eszkozok/bemutatotabla-a-gyerekeknek-keszult-ekszerek-mintajaval.jpg",
+        "/termekek/kellekek-eszkozok/bemutatotabla-a-gyerekeknek-keszult-ekszerek-mintajaval-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Bemutatótábla a gyerekek számára készült ékszerek mintáival együtt.",
+      "sku": "KDB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Bemutatotabla-a-gyerekeknek-keszult-ekszerek-minta"
+    },
+    {
+      "id": "kellekek-eszkozok/bemutatotabla-ekszerek-nelkul",
+      "slug": "bemutatotabla-ekszerek-nelkul",
+      "name": "Bemutatótábla ékszerek nélkül",
+      "price": 12700,
+      "images": [
+        "/termekek/kellekek-eszkozok/bemutatotabla-ekszerek-nelkul.jpg",
+        "/termekek/kellekek-eszkozok/bemutatotabla-ekszerek-nelkul-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Bemutatótábla ékszerek nélkül, hogy saját magadnak válogathasd össze az ékszereket.",
+      "sku": "GDB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Bemutatotabla-ekszerek-nelkul"
+    },
+    {
+      "id": "kellekek-eszkozok/bemutatotabla-minden-korosztaly-szamara-mintaekszerekkel-egyutt",
+      "slug": "bemutatotabla-minden-korosztaly-szamara-mintaekszerekkel-egyutt",
+      "name": "Bemutatótábla minden korosztály számára mintaékszerekkel együtt.",
+      "price": 25400,
+      "images": [
+        "/termekek/kellekek-eszkozok/bemutatotabla-minden-korosztaly-szamara-mintaekszerekkel-egyutt.jpg",
+        "/termekek/kellekek-eszkozok/bemutatotabla-minden-korosztaly-szamara-mintaekszerekkel-egyutt-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Bemutatótábla , standard mintaékszer kollekcióval együtt.",
+      "sku": "ADB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Bemutatotabla-minden-korosztaly-szamara-mintaeksze"
+    },
+    {
+      "id": "kellekek-eszkozok/bemutatotabla-orr-ekszerek-mintaival-egyutt",
+      "slug": "bemutatotabla-orr-ekszerek-mintaival-egyutt",
+      "name": "Bemutatótábla, orr ékszerek mintáival együtt.",
+      "price": 19050,
+      "images": [
+        "/termekek/kellekek-eszkozok/bemutatotabla-orr-ekszerek-mintaival-egyutt.jpg",
+        "/termekek/kellekek-eszkozok/bemutatotabla-orr-ekszerek-mintaival-egyutt-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Bemutatótábla, az orrlyukasztáshoz készült ékszerek mintáival együtt.",
+      "sku": "NDB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Bemutatotabla-orr-ekszerek-mintaival-egyutt"
+    },
+    {
+      "id": "kellekek-eszkozok/easy-care-xpress-utoapolo",
+      "slug": "easy-care-xpress-utoapolo",
+      "name": "Easy Care Xpress utóápoló",
+      "price": 889,
+      "images": [
+        "/termekek/kellekek-eszkozok/easy-care-xpress-utoapolo.jpg",
+        "/termekek/kellekek-eszkozok/easy-care-xpress-utoapolo-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Easy Care Xpress utóápoló 10 ml \r\n(Szakemberek vásárolhatják, friss füllyukasztás utáni utóápolásra lett kifejlesztve)\r\n\r\nA Lobelle utóápoló oldat kifejezetten füllyukasztás és piercing behelyezése utáni használatra lett kifejlesztve. Segít támogatni a bőr természetes gyógyulási folyamatát, miközben jelentősen csökkenti a fertőzések kialakulásának kockázatát.\r\nRendszeres használata segít tisztán tartani az érintett területet, támogatja a gyorsabb regenerálódást, és biztosítja a megfelelő, higiénikus környezetet a problémamentes gyógyuláshoz.\r\nHasználatával az érintett terület tiszta, ápolt és védett marad, így a gyógyulás biztonságosabb és gyorsabb lehet.\r\nA megfelelő utókezelés kulcsfontosságú a gyors és problémamentes gyógyuláshoz. A Lobelle oldat rendszeres használata segít tisztán tartani az érintett területet, elősegíti a bőr regenerálódását, és hozzájárul az egészséges, higiénikus környezet fenntartásához.\r\nElőnyei:\r\n\r\nSegíti a bőr természetes gyógyulását\r\nCsökkenti a fertőzések kialakulásának esélyét\r\nTisztán és higiénikusan tartja a frissen kezelt területet\r\nIdeális füllyukasztás és piercing utáni ápoláshoz\r\nEgyszerűen és biztonságosan használható\r\n\r\nAktív összetevők: Sodium Hypochlorite 0,179%, Phosporic acid 0,038% Inaktív összetevő: Tisztított víz Termék célja: Fülbelövés utáni oldat",
+      "sku": "ECX",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Easy-Care-Xpress-utoapolo"
+    },
+    {
+      "id": "ful-es-orrlyukaszto-keszulek/ful-es-orrlyukaszto-keszlet",
+      "slug": "ful-es-orrlyukaszto-keszlet",
+      "name": "Fül és orrlyukasztó készlet",
+      "price": 88900,
+      "images": [
+        "/termekek/kellekek-eszkozok/ful-es-orrlyukaszto-keszlet.jpg",
+        "/termekek/kellekek-eszkozok/ful-es-orrlyukaszto-keszlet-2.jpg"
+      ],
+      "category": "ful-es-orrlyukaszto-keszulek",
+      "sku": "EPG01",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Ful-es-orrlyukaszto-keszlet"
+    },
+    {
+      "id": "kellekek-eszkozok/hatso-kapocs-titanium",
+      "slug": "hatso-kapocs-titanium",
+      "name": "Hátsó kapocs titánium",
+      "price": 381,
+      "images": [
+        "/termekek/kellekek-eszkozok/hatso-kapocs-titanium.jpg",
+        "/termekek/kellekek-eszkozok/hatso-kapocs-titanium-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Titánium hátsó kapocs fülbevalóhoz",
+      "sku": "EHB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Hatso-kapocs-titanium"
+    },
+    {
+      "id": "kellekek-eszkozok/hatso-kapocs-titanium-arany-szinu",
+      "slug": "hatso-kapocs-titanium-arany-szinu",
+      "name": "Hátsó kapocs titánium, arany színű",
+      "price": 406,
+      "images": [
+        "/termekek/kellekek-eszkozok/hatso-kapocs-titanium-arany-szinu.jpg",
+        "/termekek/kellekek-eszkozok/hatso-kapocs-titanium-arany-szinu-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Hátsó kapocs fülbevalóhoz, arany színű titánium",
+      "sku": "AHB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Hatso-kapocs-titanium-arany-szinu"
+    },
+    {
+      "id": "kellekek-eszkozok/kisbaba-bemutatotabla-mintaekszerekkel",
+      "slug": "kisbaba-bemutatotabla-mintaekszerekkel",
+      "name": "Kisbaba bemutatótábla mintaékszerekkel",
+      "price": 25400,
+      "images": [
+        "/termekek/kellekek-eszkozok/kisbaba-bemutatotabla-mintaekszerekkel.jpg",
+        "/termekek/kellekek-eszkozok/kisbaba-bemutatotabla-mintaekszerekkel-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Bemutatótábla, kisbabáknak készült ékszerek mintáival együtt.",
+      "sku": "BDB",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Kisbaba-bemutatotabla-mintaekszerekkel"
+    },
+    {
+      "id": "kellekek-eszkozok/sebeszeti-jelolo-toll",
+      "slug": "sebeszeti-jelolo-toll",
+      "name": "Sebészeti jelölő toll",
+      "price": 889,
+      "images": [
+        "/termekek/kellekek-eszkozok/sebeszeti-jelolo-toll.jpg",
+        "/termekek/kellekek-eszkozok/sebeszeti-jelolo-toll-2.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Sebészeti jelölő toll",
+      "sku": "JTLO",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Sebeszeti-jelolo-toll"
+    },
+    {
+      "id": "kellekek-eszkozok/sminktukor-lobelle",
+      "slug": "sminktukor-lobelle",
+      "name": "Sminktükör Lobelle",
+      "price": 1905,
+      "images": [
+        "/termekek/kellekek-eszkozok/sminktukor-lobelle.jpg",
+        "/termekek/kellekek-eszkozok/sminktukor-lobelle-2.jpg",
+        "/termekek/kellekek-eszkozok/sminktukor-lobelle-3.jpg",
+        "/termekek/kellekek-eszkozok/sminktukor-lobelle-4.jpg"
+      ],
+      "category": "kellekek-eszkozok",
+      "description": "Sminktükör Lobelle logóval",
+      "sku": "MLO",
+      "inStock": true,
+      "sourceUrl": "https://lobelle.hu/Sminktukor-Lobelle"
+    }
+  ]
 }

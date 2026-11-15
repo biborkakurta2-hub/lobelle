@@ -71,7 +71,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Utóápolók, csipeszek és minden, ami a munkához kell.",
     longDescription:
       "Minden, ami a professzionális munkához kell: utóápoló oldatok, speciális eltávolító csipeszek, sebészeti jelölőtollak, fertőtlenítők és gyakorló kellékek. Ugyanazzal az igényességgel válogatva, mint az ékszereink — mert a prémium szolgáltatás a részleteken múlik.",
-    sourcePath: "/Kellekek-eszkozok",
+    sourcePath: "/Kellekek",
   },
   {
     slug: "ful-es-orrlyukaszto-keszulek",
@@ -81,7 +81,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "A Lobelle-rendszer szíve: professzionális készülék.",
     longDescription:
       "A Lobelle-rendszer szíve: professzionális fül- és orrlyukasztó készülék, amelyet kifejezetten a rendkívül vékony titánium ékszereinkhez terveztek. A precíz mechanika kíméletes, alig érezhető lyukasztást tesz lehetővé — babáknál és felnőtteknél egyaránt.",
-    sourcePath: "/Ful-es-orrlyukaszto-keszulek",
+    sourcePath: "/spg/610176/Ful-es-orrlyukaszto-keszulek",
   },
 ];
 
