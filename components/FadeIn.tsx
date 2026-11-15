@@ -22,6 +22,16 @@ export default function FadeIn({
     const node = ref.current;
     if (!node) return;
 
+    // Ha a böngésző nem ismeri a figyelőt, a tartalom azonnal látszódjon —
+    // sosem maradhat láthatatlanul.
+    if (typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+
+    // Küszöb helyett rootMargin: egy magas elem (mobilon az egyoszlopos
+    // termékrács több ezer pixel) arányos küszöböt sosem érne el, és
+    // láthatatlan maradna. Így elég, ha a teteje beér a képernyőre.
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -31,7 +41,7 @@ export default function FadeIn({
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" }
     );
 
     observer.observe(node);
