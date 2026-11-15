@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { useCart } from "./CartProvider";
 import { formatPrice } from "@/lib/shop";
+import { createShopifyCheckout, isShopifyConfigured } from "@/lib/shopify";
 import { submitForm, EMAIL_PATTERN } from "@/lib/forms";
 
 type Errors = Partial<Record<"name" | "email" | "address" | "gdpr" | "submit", string>>;
@@ -12,17 +13,41 @@ type Errors = Partial<Record<"name" | "email" | "address" | "gdpr" | "submit", s
 /**
  * Kosár és megrendelés.
  *
- * A megrendelés a Formspree űrlapon keresztül emailben érkezik meg — így
- * fizetési szolgáltató nélkül is működő rendelési folyamat.
+ * Kétféleképpen tud működni, attól függően, be van-e állítva a Shopify:
  *
- * SHOPIFY-INTEGRÁCIÓ: a "Megrendelés elküldése" gomb helyére a Shopify
- * checkout átirányítása kerül (cart.checkoutUrl), az űrlap pedig elhagyható.
+ *  - Shopify esetén a "Tovább a fizetéshez" gomb létrehozza a Shopify
+ *    kosarat, és átirányít a Shopify biztonságos fizetési oldalára
+ *    (bankkártya, számlázás, szállítás).
+ *  - Shopify nélkül a megrendelés a Formspree űrlapon keresztül e-mailben
+ *    érkezik meg, így fizetési szolgáltató nélkül is működik a rendelés.
  */
 export default function CartView() {
   const { lines, total, count, setQuantity, remove, clear } = useCart();
   const [errors, setErrors] = useState<Errors>({});
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
+  const shopifyActive = isShopifyConfigured();
+
+  /** Shopify fizetés: kosár létrehozása, majd átirányítás a fizetési oldalra */
+  async function handleCheckout() {
+    const purchasable = lines.filter((line) => line.product.variantId);
+    if (purchasable.length === 0) {
+      setCheckoutError("A kosárban lévő termékek még nincsenek összekötve a Shopify bolttal.");
+      return;
+    }
+    setSending(true);
+    setCheckoutError(null);
+    try {
+      const url = await createShopifyCheckout(
+        purchasable.map((line) => ({ variantId: line.product.variantId!, quantity: line.quantity }))
+      );
+      window.location.href = url;
+    } catch {
+      setSending(false);
+      setCheckoutError("A fizetési oldal megnyitása nem sikerült. Kérjük, próbálja újra.");
+    }
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -193,10 +218,43 @@ export default function CartView() {
         </div>
       </div>
 
-      {/* Megrendelő űrlap */}
+      {/* Megrendelés: Shopify fizetés, vagy e-mailes rendelés */}
       <div>
         <h2 className="font-serif text-3xl font-medium text-ink">Megrendelés</h2>
         <div className="gold-hairline mt-5" aria-hidden="true" />
+
+        {shopifyActive ? (
+          <div className="mt-6">
+            <div className="soft-card p-6">
+              <div className="flex items-baseline justify-between gap-4">
+                <span className="text-sm text-faded">Fizetendő</span>
+                <span className="font-serif text-2xl text-bronze">{formatPrice(total)}</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-faded">
+                A fizetés a Shopify biztonságos oldalán történik. Ott adhatod meg a szállítási
+                adatokat, és választhatsz fizetési módot.
+              </p>
+              <button
+                type="button"
+                onClick={handleCheckout}
+                disabled={sending}
+                className="btn-primary mt-6 w-full text-center disabled:opacity-60"
+              >
+                {sending ? "Átirányítás" : "Tovább a fizetéshez"}
+              </button>
+              {checkoutError ? (
+                <p className="mt-3 text-sm text-bronze-dark" role="alert">
+                  {checkoutError}
+                </p>
+              ) : null}
+            </div>
+            <p className="mt-4 text-xs leading-relaxed text-faded">
+              A szállítási költséget és az esetleges kedvezményeket a fizetési oldalon
+              számoljuk ki.
+            </p>
+          </div>
+        ) : (
+          <>
         <p className="mt-6 text-sm leading-relaxed text-faded">
           Add meg az adataidat, és elküldjük a visszaigazolást a szállítás részleteivel.
         </p>
@@ -290,6 +348,8 @@ export default function CartView() {
             fizetés és a szállítás részleteit.
           </p>
         </form>
+          </>
+        )}
       </div>
     </div>
   );

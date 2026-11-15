@@ -12,8 +12,8 @@ import { getProductsByCategory } from "@/lib/shop";
  * Termékkategória oldal — statikusan generálva (SSG).
  *
  * A termékek a data/products.json fájlból jönnek, amelyet az `npm run scrape`
- * tölt fel a lobelle.hu adataival. Shopify esetén elég a lib/shop.ts
- * adatforrását kicserélni, ez az oldal változatlanul működik tovább.
+ * tölt fel a lobelle.hu adataival. Ha a Shopify be van állítva, a lib/shop.ts
+ * onnan veszi a termékeket, árakat és a készletet — ez az oldal változatlan.
  */
 
 type Props = { params: { slug: string } };
@@ -35,11 +35,11 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ProductCategoryPage({ params }: Props) {
+export default async function ProductCategoryPage({ params }: Props) {
   const category = getCategory(params.slug);
   if (!category) notFound();
 
-  const products = getProductsByCategory(category.slug);
+  const products = await getProductsByCategory(category.slug);
 
   return (
     <>

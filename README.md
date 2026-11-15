@@ -41,37 +41,60 @@ npm run build    # produkciós build (minden oldal statikus)
 | `/termekek/<kategória>/<termék>` | Termékoldal (galéria, ár, kosárba tétel) |
 | `/kosar` | Kosár és megrendelés |
 
-## Webshop — termékek betöltése
+## Webshop — termékek és Shopify
 
-A webshop (kategória-rács, termékoldal, kosár, megrendelés) készen áll; a termékadatok a
-`data/products.json` fájlból jönnek. Ez a fájl induláskor üres, ezért a kategóriaoldalak
-„feltöltés alatt" állapotot mutatnak — kitalált termék vagy ár sehol nem jelenik meg.
+A webshop (kategória-rács, termékoldal, kosár, megrendelés) két forrásból tud
+dolgozni, és magától a megfelelőt választja.
 
-### Termékek letöltése a lobelle.hu oldalról
+### 1. Jelenlegi állapot: helyi termékadatok
+
+A `data/products.json` fájlban **68 valós termék** van a lobelle.hu-ról letöltve
+(nevek, árak, leírások, cikkszámok, 286 fotó a `public/termekek/` mappában).
+A rendelés a kosároldali űrlapon, e-mailben érkezik.
+
+Frissítés a lobelle.hu-ról:
 
 ```bash
-npm run scrape                             # minden kategória, képekkel együtt
-npm run scrape -- --category gyerek-ekszerek   # csak egy kategória
-npm run scrape -- --no-images              # csak nevek, árak, leírások
-npm run scrape -- --no-details             # gyorsabb: csak a listaoldalak
+npm run scrape                                  # minden kategória, képekkel
+npm run scrape -- --category gyerek-ekszerek    # csak egy kategória
+npm run scrape -- --no-images                   # csak nevek, árak, leírások
 ```
 
-A szkript végigjárja a `lib/products.ts`-ben megadott kategóriák (`sourcePath`) oldalait,
-lapoz az `?infinite_page=N` paraméterrel, kiolvassa a terméknevet, árat, leírást és
-cikkszámot (elsődlegesen a JSON-LD adatokból, ennek hiányában a HTML szerkezetéből),
-letölti a fotókat a `public/termekek/<kategória>/` mappába, és feltölti a
-`data/products.json` fájlt. Futtatás után `npm run build`, majd commit és push.
+### 2. Shopify a háttérben (bekapcsolható)
 
-Ha a szkript nem talál terméket, a lobelle.hu HTML-szerkezete eltér a vártól — ilyenkor a
-`scripts/scrape-lobelle.mjs` `CARD_SELECTORS` listája igazítandó a tényleges osztálynevekhez.
+Ha megadod a Shopify adatait, a termékek, árak és a készlet onnan jönnek, a
+fizetés pedig a Shopify biztonságos oldalán történik (bankkártya, számlázás,
+szállítás). **Az oldal megjelenése és felépítése nem változik.**
 
-### Shopify-integráció
+Lépések:
 
-Az adatréteg egy helyen van: `lib/shop.ts`. Shopify esetén a `getProductsByCategory` és a
-`getProduct` függvényt kell a Shopify Storefront API hívásaira cserélni (build időben
-lekérve, így az oldal statikus maradhat). A kosár (`components/CartProvider.tsx`) a Shopify
-cart API-jára, a megrendelő űrlap (`components/CartView.tsx`) pedig a Shopify checkout
-átirányítására cserélhető. A `next.config.mjs` már engedélyezi a `cdn.shopify.com` képeket.
+1. **Shopify bolt** létrehozása és előfizetés.
+2. **Termékek feltöltése**: Shopify admin → Termékek → Importálás, és töltsd fel
+   a 68 termék CSV-jét (a projekt gyökeréből újra előállítható a scrape adataiból).
+   A CSV a kategórianeveket címkeként is tartalmazza — ezek alapján kerülnek a
+   termékek a megfelelő kategóriába az oldalon.
+3. **Gyűjtemények**: hozz létre hat gyűjteményt a kategóriákhoz. A gyűjtemény
+   URL-neve (handle) legyen azonos a `lib/products.ts`-ben lévő slug-gal, vagy a
+   címe a kategória nevével — az adatréteg mindkettőt felismeri.
+4. **Storefront API token**: Shopify admin → Beállítások → Alkalmazások és
+   értékesítési csatornák → Alkalmazásfejlesztés → új alkalmazás → Storefront API.
+   Engedélyek: termékek olvasása, készlet olvasása, fizetés létrehozása.
+5. **Beállítás**: másold a `.env.example` fájlt `.env.local` néven, és töltsd ki a
+   bolt címét és a tokent. Vercelen ugyanezeket a környezeti változókat add meg.
+6. `npm run build` — a termékek a build során töltődnek be, így az oldal statikus marad.
+
+Ha a Shopify átmenetileg nem elérhető, vagy a bolt még üres, az oldal
+automatikusan a helyi termékadatokra vált vissza, és nem dől el a build.
+
+### Mi hol van a kódban
+
+| Fájl | Szerep |
+| --- | --- |
+| `lib/shopify.ts` | Shopify Storefront API: termékek lekérése, kosár és fizetés |
+| `lib/shop.ts` | Adatréteg: Shopify vagy helyi adat, árformázás |
+| `lib/products.ts` | A hat kategória és a lobelle.hu forrás-útvonalaik |
+| `scripts/scrape-lobelle.mjs` | Termékletöltő a lobelle.hu-ról |
+| `components/CartView.tsx` | Kosár; Shopify fizetés vagy e-mailes rendelés |
 
 ## Élesítés előtt cserélendő placeholderek
 
@@ -81,8 +104,8 @@ cart API-jára, a megrendelő űrlap (`components/CartView.tsx`) pedig a Shopify
 2. **Formspree végpont** — `lib/forms.ts`: a `FORMSPREE_ENDPOINT` placeholder helyére a valós
    Formspree űrlap URL-je kerül (amíg placeholder, az űrlapok — a megrendelés is — nem
    küldenek hálózati kérést, csak visszaigazolnak).
-3. **Termékek, árak, fotók** — az `npm run scrape` tölti be őket (lásd feljebb). Az Életképek
-   galéria fotói külön cserélendők.
+3. **Életképek galéria** — a `app/eletkepek/page.tsx` fotói placeholderek, valós képekre
+   cserélendők. (A termékfotók már valósak.)
 4. **Képzési időpontok** — `app/kepzes/idopontok/page.tsx`: a `SESSIONS` tömb placeholder
    városokat és „egyeztetés alatt" időpontokat tartalmaz.
 5. **Jogi oldalak** — a lábléc ÁSZF / Adatkezelési tájékoztató / Elállási tájékoztató linkjei

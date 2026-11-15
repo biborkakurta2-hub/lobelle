@@ -6,18 +6,19 @@ import ProductGallery from "@/components/ProductGallery";
 import ProductCard from "@/components/ProductCard";
 import AddToCart from "@/components/AddToCart";
 import { getCategory } from "@/lib/products";
-import { ALL_PRODUCTS, formatPrice, getProduct, getProductsByCategory } from "@/lib/shop";
+import { formatPrice, getAllProducts, getProduct, getProductsByCategory } from "@/lib/shop";
 
 type Props = { params: { slug: string; product: string } };
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return ALL_PRODUCTS.map((product) => ({ slug: product.category, product: product.slug }));
+export async function generateStaticParams() {
+  const products = await getAllProducts();
+  return products.map((product) => ({ slug: product.category, product: product.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const product = getProduct(params.slug, params.product);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const product = await getProduct(params.slug, params.product);
   if (!product) return {};
   const description =
     product.description?.slice(0, 155) ??
@@ -40,12 +41,12 @@ const HIGHLIGHTS = [
   "Nem oxidálódik, nem korrodál, nem színeződik el",
 ];
 
-export default function ProductPage({ params }: Props) {
+export default async function ProductPage({ params }: Props) {
   const category = getCategory(params.slug);
-  const product = getProduct(params.slug, params.product);
+  const product = await getProduct(params.slug, params.product);
   if (!category || !product) notFound();
 
-  const related = getProductsByCategory(category.slug)
+  const related = (await getProductsByCategory(category.slug))
     .filter((p) => p.id !== product.id)
     .slice(0, 3);
 
