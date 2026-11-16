@@ -65,7 +65,7 @@ const PRODUCTS_QUERY = `
         description
         tags
         availableForSale
-        images(first: 10) { nodes { url altText } }
+        images(first: 10) { nodes { url altText width height } }
         collections(first: 10) { nodes { handle title } }
         variants(first: 1) {
           nodes {
@@ -88,7 +88,9 @@ type ShopifyProductNode = {
   description: string;
   tags: string[];
   availableForSale: boolean;
-  images: { nodes: { url: string; altText: string | null }[] };
+  images: {
+    nodes: { url: string; altText: string | null; width: number | null; height: number | null }[];
+  };
   collections: { nodes: { handle: string; title: string }[] };
   variants: {
     nodes: {

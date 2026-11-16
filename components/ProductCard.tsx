@@ -11,7 +11,8 @@ export default function ProductCard({ product }: { product: ShopProduct }) {
   return (
     <Link href={href} className="group block h-full">
       <article className="soft-card flex h-full flex-col p-5 transition-shadow duration-300 group-hover:shadow-soft">
-        <div className="relative aspect-square w-full overflow-hidden rounded-card bg-cream-deep">
+        {/* 3:2 — a termékfotók saját aránya, így nincs levágás és nincs üres sáv */}
+        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-card bg-cream-deep">
           {image ? (
             <Image
               src={image}

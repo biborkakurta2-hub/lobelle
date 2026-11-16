@@ -4,8 +4,26 @@ import Image from "next/image";
 import { useState } from "react";
 import ImagePlaceholder from "./ImagePlaceholder";
 
-/** Termékgaléria: nagy kép + bélyegképek, lágyan lekerekítve. */
-export default function ProductGallery({ images, alt }: { images: string[]; alt: string }) {
+export type ImageSize = { width: number; height: number };
+
+/** Ha nem ismerjük a méretet, a kínálatban leggyakoribb 3:2 arányt vesszük. */
+const DEFAULT_SIZE: ImageSize = { width: 1024, height: 678 };
+
+/**
+ * Termékgaléria: nagy kép + bélyegképek.
+ *
+ * A nagy kép a saját képarányában jelenik meg — nincs négyzetes keretbe
+ * kényszerítve, így nem marad körülötte üres sáv, és semmi nem vágódik le.
+ */
+export default function ProductGallery({
+  images,
+  alt,
+  imageSizes,
+}: {
+  images: string[];
+  alt: string;
+  imageSizes?: ImageSize[];
+}) {
   const [active, setActive] = useState(0);
 
   if (images.length === 0) {
@@ -18,17 +36,16 @@ export default function ProductGallery({ images, alt }: { images: string[]; alt:
 
   return (
     <div>
-      <div className="soft-card p-4">
-        <div className="relative aspect-square w-full overflow-hidden rounded-card bg-cream-deep">
-          <Image
-            src={images[active]}
-            alt={alt}
-            fill
-            sizes="(min-width: 1024px) 32rem, 90vw"
-            className="object-contain p-6"
-            priority
-          />
-        </div>
+      <div className="soft-card p-3">
+        <Image
+          src={images[active]}
+          alt={alt}
+          width={(imageSizes?.[active] ?? DEFAULT_SIZE).width}
+          height={(imageSizes?.[active] ?? DEFAULT_SIZE).height}
+          sizes="(min-width: 1024px) 32rem, 92vw"
+          className="h-auto w-full rounded-card"
+          priority
+        />
       </div>
 
       {images.length > 1 ? (

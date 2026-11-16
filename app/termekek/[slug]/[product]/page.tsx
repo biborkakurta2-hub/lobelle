@@ -78,7 +78,11 @@ export default async function ProductPage({ params }: Props) {
       <section className="mx-auto max-w-content px-5 py-14 sm:px-7 md:py-20 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn>
-            <ProductGallery images={product.images} alt={product.name} />
+            <ProductGallery
+              images={product.images}
+              alt={product.name}
+              imageSizes={product.imageSizes}
+            />
           </FadeIn>
 
           <FadeIn delay={120}>

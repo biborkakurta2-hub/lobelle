@@ -114,10 +114,17 @@ function absolute(url) {
 /** Nagyobb változat kérése a webshop thumbnail URL-jéből, ha felismerhető minta */
 function preferLargeImage(url) {
   if (!url) return url;
-  return url
-    .replace(/\/(\d{2,3})x(\d{2,3})\//, "/1000x1000/")
-    .replace(/_(\d{2,3})x(\d{2,3})\./, ".")
-    .replace(/[?&](width|w)=\d+/gi, "");
+  return (
+    url
+      // A lobelle.hu a méretet az útvonalban hordozza, és a méret után még
+      // paraméterek állnak: /img/75653/AB01/140x140,r,1765117048/AB01.jpg
+      // A 0x0 az EREDETI, teljes felbontású képet adja vissza. A korábbi
+      // minta a vessző miatt nem illeszkedett, ezért maradtak a 140 képpontos
+      // bélyegképek — emiatt voltak homályosak a termékfotók.
+      .replace(/\/(\d{1,4})x(\d{1,4})(,[^/]*)?\//, "/0x0$3/")
+      .replace(/_(\d{2,3})x(\d{2,3})\./, ".")
+      .replace(/[?&](width|w)=\d+/gi, "")
+  );
 }
 
 /* ------------------------------------------------------------------ */

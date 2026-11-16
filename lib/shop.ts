@@ -29,6 +29,8 @@ export type ShopProduct = {
   oldPrice?: number | null;
   /** Képek: helyi útvonalak (/termekek/...) vagy abszolút URL-ek */
   images: string[];
+  /** A képek eredeti mérete — ebből jön a galéria képaránya, az `images` sorrendjében */
+  imageSizes?: { width: number; height: number }[];
   /** Kategória slug — a PRODUCT_CATEGORIES egyik eleme */
   category: string;
   description?: string;
@@ -107,6 +109,10 @@ export function getAllProducts(): Promise<ShopProduct[]> {
           price: toInteger(variant?.price.amount),
           oldPrice: toInteger(variant?.compareAtPrice?.amount),
           images: node.images.nodes.map((image) => image.url),
+          imageSizes: node.images.nodes.map((image) => ({
+            width: image.width ?? 1024,
+            height: image.height ?? 678,
+          })),
           category,
           description: node.description || undefined,
           sku: variant?.sku || undefined,
