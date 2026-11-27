@@ -32,8 +32,10 @@ export async function shopifyFetch<T>(
       "X-Shopify-Storefront-Access-Token": SHOPIFY_TOKEN,
     },
     body: JSON.stringify({ query, variables }),
-    // A terméklista a build során kérdeződik le, így az oldal statikus marad
-    cache: "no-store",
+    // Öt percig gyorsítótárazva. A "no-store" itt nem jó: a Next.js dinamikus
+    // kérésnek veszi, ami nem fér össze a statikus generálással, és emiatt a
+    // build csendben a helyi adatokra esett vissza a Shopify helyett.
+    next: { revalidate: 300 },
   });
 
   if (!response.ok) {
