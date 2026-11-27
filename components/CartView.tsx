@@ -22,7 +22,7 @@ type Errors = Partial<Record<"name" | "email" | "address" | "gdpr" | "submit", s
  *    érkezik meg, így fizetési szolgáltató nélkül is működik a rendelés.
  */
 export default function CartView() {
-  const { lines, total, count, setQuantity, remove, clear } = useCart();
+  const { lines, total, count, restored, setQuantity, remove, clear } = useCart();
   const [errors, setErrors] = useState<Errors>({});
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -119,6 +119,12 @@ export default function CartView() {
         </Link>
       </div>
     );
+  }
+
+  // Amíg a kosár vissza nem olvasódott a sütiből, ne villanjon fel az
+  // "üres kosár" üzenet annak, akinek valójában van benne termék
+  if (!restored) {
+    return <div className="mx-auto h-64 max-w-2xl" aria-hidden="true" />;
   }
 
   if (count === 0) {

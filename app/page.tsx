@@ -65,28 +65,6 @@ export default function HomePage() {
     <>
       <DeviceHero />
 
-      {/* A nyitókép alatt: a három pillér és a két fő útvonal.
-          A cím már a nyitóképbe lóg bele, ezért itt nem ismétlődik. */}
-      <section className="mx-auto hidden max-w-content px-5 pb-4 pt-14 text-center sm:px-7 lg:px-8 landscape:block">
-        <FadeIn>
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm uppercase tracking-label text-bronze-soft">
-            <span>Biztonság</span>
-            <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
-            <span>Innováció</span>
-            <span className="h-1 w-1 rounded-full bg-sand" aria-hidden="true" />
-            <span>Szakmaiság</span>
-          </div>
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/termekek/ful-es-orrlyukaszto-keszulek" className="btn-primary">
-              Fedezd fel a rendszert
-            </Link>
-            <Link href="/kepzes" className="btn-outline">
-              Jelentkezz képzésre
-            </Link>
-          </div>
-        </FadeIn>
-      </section>
-
       {/* A három pillér */}
       <section className="mx-auto max-w-content px-5 py-20 sm:px-7 md:py-28 lg:px-8">
         <FadeIn>
