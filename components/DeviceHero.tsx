@@ -24,7 +24,8 @@ export default function DeviceHero() {
   return (
     <section ref={sectionRef} className="relative h-[260svh]">
       <div className="sticky top-20 flex h-[calc(100svh-5rem)] w-full items-center overflow-hidden">
-        <div className="mx-auto grid w-full max-w-content items-center gap-7 px-5 sm:px-7 lg:grid-cols-[1fr_1.12fr] lg:gap-12 lg:px-8">
+        {/* Nagy képernyőn szélesebb sáv és nagyobb hely a képnek */}
+        <div className="mx-auto grid w-full max-w-content items-center gap-7 px-5 sm:px-7 lg:max-w-[80rem] lg:grid-cols-[1.28fr_1fr] lg:gap-12 lg:px-8 xl:max-w-[88rem]">
           {/* A kép buborékban, az oldal háttere előtt */}
           <div className="overflow-hidden rounded-[1.75rem] bg-cream-deep shadow-soft md:rounded-[2.25rem]">
             <div className="aspect-[16/9] w-full">
@@ -35,7 +36,7 @@ export default function DeviceHero() {
           {/* Mellette a szöveg */}
           <div className="text-center lg:text-left">
             <p className="section-label">Üdvözlünk a Lobelle oldalán</p>
-            <h1 className="mt-4 font-serif text-[2rem] font-medium leading-[1.12] text-ink sm:text-4xl lg:text-[2.55rem] xl:text-[2.95rem]">
+            <h1 className="mt-4 font-serif text-[2rem] font-medium leading-[1.12] text-ink sm:text-4xl lg:text-[2.3rem] xl:text-[2.7rem]">
               Az innovatív füllyukasztás új generációja
             </h1>
 
