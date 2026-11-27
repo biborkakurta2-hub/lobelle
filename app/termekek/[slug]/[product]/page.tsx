@@ -10,7 +10,13 @@ import { formatPrice, getAllProducts, getProduct, getProductsByCategory } from "
 
 type Props = { params: { slug: string; product: string } };
 
-export const dynamicParams = false;
+/**
+ * Óránként újragenerálódik, és a build óta a Shopifyba felvett termék is
+ * megkapja a maga oldalát az első megnyitáskor. Ismeretlen termék esetén
+ * marad a 404.
+ */
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const products = await getAllProducts();

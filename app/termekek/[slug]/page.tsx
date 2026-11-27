@@ -18,6 +18,12 @@ import { getProductsByCategory } from "@/lib/shop";
 
 type Props = { params: { slug: string } };
 
+/**
+ * Óránként újragenerálódik, így a Shopifyban átírt ár vagy új termék
+ * magától megjelenik az oldalon — nem kell újra kirakni az egészet.
+ */
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return PRODUCT_CATEGORIES.map((category) => ({ slug: category.slug }));
 }

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "scrape": "node scripts/scrape-lobelle.mjs"
+    "scrape": "node scripts/scrape-lobelle.mjs",
+    "shopify:check": "node scripts/shopify-check.mjs"
   },
   "dependencies": {
     "next": "^14.2.15",

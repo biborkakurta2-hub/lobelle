@@ -84,13 +84,21 @@ function toInteger(amount: string | null | undefined): number | null {
   return Number.isFinite(value) && value > 0 ? value : null;
 }
 
-let cache: Promise<ShopProduct[]> | null = null;
+/**
+ * A lekérés eredményét rövid ideig megjegyezzük, hogy egy build vagy egy
+ * oldalújragenerálás alatt egyszer kérdezzük le a Shopifyt. Lejárati idő
+ * nélkül a futó szerver örökre a régi adatot adná vissza, és a Shopifyban
+ * átírt ár sosem jelenne meg.
+ */
+const CACHE_TTL_MS = 5 * 60 * 1000;
+let cache: { at: number; value: Promise<ShopProduct[]> } | null = null;
 
 /** A teljes termékkínálat — Shopifyból, vagy helyi adatból */
 export function getAllProducts(): Promise<ShopProduct[]> {
-  if (cache) return cache;
+  const now = Date.now();
+  if (cache && now - cache.at < CACHE_TTL_MS) return cache.value;
 
-  cache = (async () => {
+  const value = (async () => {
     if (!isShopifyConfigured()) return LOCAL_PRODUCTS;
 
     try {
@@ -133,7 +141,8 @@ export function getAllProducts(): Promise<ShopProduct[]> {
     }
   })();
 
-  return cache;
+  cache = { at: now, value };
+  return value;
 }
 
 export async function getProductsByCategory(categorySlug: string): Promise<ShopProduct[]> {
