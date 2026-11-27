@@ -54,9 +54,20 @@ const LOCAL_PRODUCTS: ShopProduct[] = Array.isArray(localCatalog.products)
   ? localCatalog.products
   : [];
 
-/** Magyar kategórianév -> kategória slug, a Shopify címkék megfeleltetéséhez */
+/**
+ * Magyar kategórianév -> kategória slug, a Shopify címkék megfeleltetéséhez.
+ *
+ * A kategória minden ismert nevén szerepel (teljes név, rövid név, oldalcím
+ * és a felsorolt másodnevek), mert a Shopify címkéje ritkán egyezik szó
+ * szerint. Ha egy termék egyik néven sem ismerhető fel, nem jelenik meg az
+ * oldalon — ezt mutatja meg az `npm run shopify:check`.
+ */
 const CATEGORY_BY_NAME = new Map(
-  PRODUCT_CATEGORIES.map((c) => [c.name.toLowerCase(), c.slug])
+  PRODUCT_CATEGORIES.flatMap((c) =>
+    [c.name, c.shortName, c.title, ...(c.aliases ?? [])].map(
+      (label) => [label.trim().toLowerCase(), c.slug] as const
+    )
+  )
 );
 const CATEGORY_SLUGS = new Set(PRODUCT_CATEGORIES.map((c) => c.slug));
 

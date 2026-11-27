@@ -20,6 +20,12 @@ export type ProductCategory = {
   longDescription: string;
   /** A megfelelő kategória útvonala a lobelle.hu oldalon (a letöltő szkripthez) */
   sourcePath: string;
+  /**
+   * További elnevezések, amelyeken ez a kategória felismerhető. A Shopifyban
+   * a termékek címkéje vagy gyűjteménye nem feltétlenül szó szerint egyezik
+   * az itteni névvel; ezek alapján is ide kerülnek.
+   */
+  aliases?: string[];
 };
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
@@ -32,6 +38,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     longDescription:
       "Implantátum minőségű, ASTM F136 szabványú Grade 23 titánból készült fülbevalók, amelyeket korosztálytól függetlenül bárki biztonsággal viselhet. Teljesen nikkelmentesek, nem oxidálódnak és nem színeződnek el — a rendkívül vékony szár és a lekerekített hátsó kapocs pedig a mindennapi viseletet is kényelmessé teszi.",
     sourcePath: "/Standard-ekszerek-korosztaly-nelkul",
+    aliases: ["Standard ékszerek"],
   },
   {
     slug: "gyerek-ekszerek",
@@ -42,6 +49,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     longDescription:
       "Gyerekeknek tervezett titánium fülbevalók: játékos formák, biztonságos, lekerekített hátsó kapocs, amely alvás közben sem szúr. A nikkelmentes, biokompatibilis anyag az érzékeny gyerekbőrnek is kíméletes — a szülő nyugalma pedig nem extra, hanem alapfelszereltség.",
     sourcePath: "/Gyerek-ekszerek",
+    aliases: ["Gyermek ékszerek"],
   },
   {
     slug: "baba-ekszerek",
@@ -52,6 +60,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     longDescription:
       "Az első fülbevaló egyszeri alkalom — ehhez méltó kivitelben kínáljuk. Minden baba ékszer elegáns díszdobozban érkezik, így ajándéknak is tökéletes. A rendkívül vékony titánium szár kíméletes lyukasztást tesz lehetővé, a lekerekített kapocs pedig a legkisebbeknek is kényelmes.",
     sourcePath: "/Baba-ekszerek-dobozzal-egyutt",
+    aliases: ["Baba ékszerek", "Baba ékszerek dobozzal"],
   },
   {
     slug: "orr-piercingek",
@@ -72,6 +81,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     longDescription:
       "Minden, ami a professzionális munkához kell: utóápoló oldatok, speciális eltávolító csipeszek, sebészeti jelölőtollak, fertőtlenítők és gyakorló kellékek. Ugyanazzal az igényességgel válogatva, mint az ékszereink — mert a prémium szolgáltatás a részleteken múlik.",
     sourcePath: "/Kellekek",
+    aliases: ["Kellékek", "Eszközök", "Kellékek és eszközök"],
   },
   {
     slug: "ful-es-orrlyukaszto-keszulek",
@@ -82,6 +92,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     longDescription:
       "A Lobelle-rendszer szíve: professzionális fül- és orrlyukasztó készülék, amelyet kifejezetten a rendkívül vékony titánium ékszereinkhez terveztek. A precíz mechanika kíméletes, alig érezhető lyukasztást tesz lehetővé — babáknál és felnőtteknél egyaránt.",
     sourcePath: "/spg/610176/Ful-es-orrlyukaszto-keszulek",
+    aliases: ["Lyukasztó készülék", "Fül- és orrlyukasztó készülék"],
   },
 ];
 

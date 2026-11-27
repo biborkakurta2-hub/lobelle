@@ -16,12 +16,24 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const API_VERSION = "2024-10";
 
-/* A hat kategória — a lib/products.ts-ből kiolvasva, hogy ne csússzon szét */
+/* A hat kategória — a lib/products.ts-ből kiolvasva, hogy ne csússzon szét.
+   Minden ismert nevet összeszedünk, ahogy a lib/shop.ts is teszi. */
 function readCategories() {
   const src = readFileSync(join(ROOT, "lib/products.ts"), "utf8");
-  const slugs = [...src.matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
-  const names = [...src.matchAll(/name:\s*"([^"]+)"/g)].map((m) => m[1]);
-  return slugs.map((slug, i) => ({ slug, name: names[i] ?? slug }));
+  return src
+    .split(/\n\s*slug:\s*"/)
+    .slice(1)
+    .map((block) => {
+      const slug = block.slice(0, block.indexOf('"'));
+      const one = (key) => block.match(new RegExp(`\\b${key}:\\s*"([^"]+)"`))?.[1];
+      const aliases =
+        block
+          .match(/aliases:\s*\[([^\]]*)\]/)?.[1]
+          .match(/"([^"]+)"/g)
+          ?.map((s) => s.slice(1, -1)) ?? [];
+      const labels = [one("name"), one("shortName"), one("title"), ...aliases].filter(Boolean);
+      return { slug, name: one("shortName") ?? slug, labels };
+    });
 }
 
 function loadEnv() {
@@ -94,7 +106,9 @@ async function main() {
 
   const categories = readCategories();
   const bySlug = new Set(categories.map((c) => c.slug));
-  const byName = new Map(categories.map((c) => [c.name.toLowerCase(), c.slug]));
+  const byName = new Map(
+    categories.flatMap((c) => c.labels.map((l) => [l.trim().toLowerCase(), c.slug]))
+  );
 
   const resolve = (collections, tags) => {
     for (const c of collections) {
